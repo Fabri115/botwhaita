@@ -66,6 +66,30 @@ DIGITA QUESTI COMANDI:
 > sh start.sh
 ```
 
+### `FOR WINDOWS/VPS/RDP USER`
+
+* Download And Install Git [`Click Here`](https://git-scm.com/downloads)
+* Download And Install NodeJS [`Click Here`](https://nodejs.org/en/download)
+* Download And Install FFmpeg [`Click Here`](https://ffmpeg.org/download.html) (**Don't Forget Add FFmpeg to PATH enviroment variables**)
+* Download And Install ImageMagick [`Click Here`](https://imagemagick.org/script/download.php)
+
+```bash
+git clone https://github.com/Fabri115/BotWhaIta
+cd BotWhaIta
+npm install
+npm update
+```
+
+---------
+
+### `Run`
+
+```bash
+node .
+```
+
+---------
+
 ### `—◉ 📝 NOTE 𝑴☁️ 📝`
 - IL BOT 𝑴☁️ E' COMPATIBILE CON WHATSAPP BUSINESS E WHATSAPP NORMALE
 - PER BLOCCARE GLI UTENTI IN PRIVATO ESEGUI IL COMANDO .attiva antiprivato
