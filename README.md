@@ -6,7 +6,7 @@
   
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU REPLIT 🌌`
 
-[![Attiva su Repl.it](https://repl.it/badge/github.com/Fabri115/BotWhaIta.git)](https://repl.it/github.com/Fabri115/BotWhaIta.git)  
+[![Attiva su Repl.it](https://repl.it/badge/github.com/@Fabri115/BotWhaIta)](https://https://replit.com/@Fabri115/BotWhaIta)  
 
 ### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
 - CLONARE LA REPOSITORY [qui](https://github.com/Fabri115/BotWhaIta/fork)
