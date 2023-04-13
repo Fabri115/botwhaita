@@ -1,30 +1,44 @@
+
 let handler = async (m, { conn, participants, groupMetadata }) => {
 const pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || './src/avatar_contact.png'
-const { antiToxic, antiTraba, antiviewonce, isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, antiLink2, modohorny, autosticker, modoadmin, audios, delete: del } = global.db.data.chats[m.chat]
+const { antiToxic, antiTraba, antiArab, antiviewonce, isBanned, welcome, detect, sWelcome, sBye, sPromote, sDemote, antiLink, antilinkbase, modohorny, antiSpam, autosticker, modoadmin, audios, delete: del } = global.db.data.chats[m.chat]
 const groupAdmins = participants.filter(p => p.admin)
 const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
 let text = `*「 Info gruppo 」*\n
-Nome
-${groupMetadata.subject}
+┃⋄ Nome
+   • ${groupMetadata.subject}
 
-Descrizione
-${groupMetadata.desc?.toString() || 'nessuna descrizione'}
+┃⋄ Descrizione
+   • ${groupMetadata.desc?.toString() || 'nessuna descrizione'}
 
-Membri
-${participants.length} Participantes
+┃⋄ Membri
+   • ${participants.length} Participanti
 
-Founder
-@${owner.split('@')[0]}
+┃⋄ Founder
+   • ${owner.split('@')[0]}
 
-Admin
-${listAdmin}
 
+┃⋄ *🪢 Configurazione del gruppo:*
+   • ${isBanned ? '✅' : '❎'} Gruppo Ban
+   • ${welcome ? '✅' : '❎'} Benvenuto
+   • ${detect ? '✅' : '❎'} Detect sul bot
+   • ${del ? '❎' : '✅'} Anti Delete
+   • ${antiLink ? '✅' : '❎'} Anti Link HARD
+   • ${antilinkbase ? '✅' : '❎'} Anti Link 
+   • ${antiArab ? '✅' : '❎'} Anti Paki
+   • ${antiSpam ? '✅' : '❎'} Anti Spam
+   • ${modoadmin ? '✅' : '❎'} ModoAdmin
+   • ${antiTraba ? '✅' : '❎'} Anti Trava
+
+*┃⋄  📬 Configurazione messaggi:*
+   • Benvenuto: ${sWelcome}
+   • Addio: ${sBye}
 `.trim()
-conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
+conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, { reply: [...participants.map(v => v.id), owner] })
 }
 handler.help = ['infogrup']
 handler.tags = ['group']
-handler.command = /^(infogrupo|gro?upinfo|info(gro?up|gc))$/i
+handler.command = /^(infogruppo|status|info(gro?up|gc))$/i
 handler.group = true
 export default handler
