@@ -44,7 +44,7 @@ ${sortedItem.slice(page * 5, page * 5 + 5).map((user, i) => `${i + 1}. ${partici
 }
 handler.help = ['leaderboard *jumlah user*', 'lb *jumlah user*']
 handler.tags = ['xp']
-handler.command = /^(gin)$/i
+handler.command = /^(gruppi)$/i
 
 export default handler
 
