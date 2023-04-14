@@ -43,7 +43,8 @@ const sections = [
 {
 title: `✦ 𝐌ΞИ𝐔𝐁Ꮻ𝐓  ✦ ✨ seleziona qui bro`,
 rows: [
-       {title: "𝑪𝒐𝒖𝒏𝒕𝑴𝒆𝒔𝒔𝒂𝒈𝒆", description: "mostra la top 100 degli utenti con piu messaggi", rowId: `${usedPrefix}lb messaggi 19`},
+       {title: "𝑪𝒐𝒖𝒏𝒕𝑴𝒆𝒔𝒔𝒂𝒈𝒆", description: "mostra la top 50 degli utenti con piu messaggi", rowId: `${usedPrefix}top messaggi`},
+{title: "𝑪𝒐𝒖𝒏𝒕𝑴𝒆𝒔𝒔𝒂𝒈𝒆𝑮𝒓𝒖𝒑𝒑𝒐", description: "mostra la top 5 dei gruppi con piu messaggi", rowId: `${usedPrefix}gruppi messaggi`},
        {title: "𝑴𝒆𝒏𝒖𝑮𝒓𝒖𝒑𝒑𝒐", description: "mostra le funzioni per i gruppi", rowId: `${usedPrefix}menugruppo`},
         {title: "𝒎𝒆𝒏𝒖 𝒎𝒆𝒅𝒊𝒂", description: "mostra le funzioni per i media", rowId: `${usedPrefix}menumedia`},
          {title: "𝒎𝒆𝒏𝒖 𝒑𝒓𝒐𝒑𝒓𝒊𝒆𝒕𝒂𝒓𝒊𝒐", description: "mostra le funzioni per i proprietari del bot", rowId: `${usedPrefix}menuowner`},
@@ -73,7 +74,7 @@ sections }
 conn.sendMessage(m.chat, listMessage)
 }
 handler.tags = ['group', 'owner']
-handler.command = /^(gesu|menu)$/i
+handler.command = /^(menuios)$/i
 export default handler
 
 
