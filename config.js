@@ -9,8 +9,8 @@ global.owner = [
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.mods = ['393518398856'] 
-global.prems = ['393518398856', '13345214029']
+global.mods = ['393209387337'] 
+global.prems = ['393209387337']
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -49,8 +49,8 @@ global.imagen1 = ['./media/menu1.jpg']
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
 // Sticker WM
-global.packname = 'SUPERFABRIBOT-MD'
-global.author = 'SUPERFABRIBOT-MD'
+global.packname = 'BOTMATTO-MD'
+global.author = 'BOTMATTO-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
@@ -58,18 +58,18 @@ global.fgig = 'https://github.com/fabriziodee/superbot2023'
  
 global.yt = ''
 
-global.fgpyp = 'https://www.tiktok.com/@3r1z10'
+global.fgpyp = 'https://instagram.com/matteo_lauriola_?igshid=Yjk4NWM2ZWVkMw=='
 
 global.faceb = ''
 
 global.vs = 'Mi0 2.1'
 
-global.lb = 'SUPERFABRIBOT-MD'
+global.lb = 'BOTMATTO-MD'
 global.lolibot = lb
 
-global.dygp = 'https://chat.whatsapp.com/BHZDSUDHuwWEed4Ut8aeUQ' //grupo del bot
+global.dygp = 'https://chat.whatsapp.com/B6j6BuG1fKZByqDnChcWks' //grupo del bot
 
-global.nna = 'https://chat.whatsapp.com/BHZDSUDHuwWEed4Ut8aeUQ' //UPDATE
+global.nna = 'https://chat.whatsapp.com/B6j6BuG1fKZByqDnChcWks' //UPDATE
 
 global.fglog = 'https://telegra.ph/file/1861aab98389b13db8588.png' 
 
@@ -78,7 +78,7 @@ global.maxwarn = '4' // máxima advertencias
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-global.wm = 'SUPERFABRIBOT-MD'
+global.wm = 'BOTMATTO-MD'
 global.wait = '*⌛ _Caricando..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
 global.dmoji = '🤭'
