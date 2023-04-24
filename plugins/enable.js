@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 const grup = './Menu2.jpg'
 	const sections = [
    {
-	title: ` Lista Attiva/Disattiva `,
+	title: `Lista Attiva/Disattiva`,
 	rows: [
       {title: "✨ | Benvenuto", rowId: `${usedPrefix + command} benvenuto`},
 	{title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
@@ -34,7 +34,7 @@ title: null,
 buttonText: " ✦ 𝐌ΞИ𝐔  ✦ ", 
 sections }
 
-  let isEnable = /true|enable|(turn)?on|1/i.test(command)
+  let isEnable = /true|enable|attiva|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
   let user = global.db.data.users[m.sender]
   let bot = global.db.data.settings[conn.user.jid] || {}
@@ -232,7 +232,7 @@ break
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
       throw false
   }
-conn.sendButton(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? '𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
+conn.reply(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? 'disabilita' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
 
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
