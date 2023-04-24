@@ -24,7 +24,7 @@ let info = `
   ඬ ${usedPrefix}MENUANDROID
   ඬ ${usedPrefix}MENUIOS
 ─✦ *𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝ ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
-  https://chat.whatsapp.com/IXUpI1rQzNoAHsnBpfHtgV `.trim() 
+   https://chat.whatsapp.com/JgshFc8KChtAai6ZfbI9QZ `.trim() 
 conn.reply(m.chat, info, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
