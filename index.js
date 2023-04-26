@@ -20,7 +20,7 @@ gradient: ['white', 'blue']})
 say(`BOT`, {
 font: 'slick',
 align: 'center',
-gradient: ['gray', 'blue']})
+gradient: ['grey', 'blue']})
 
 var isRunning = false
 /**
