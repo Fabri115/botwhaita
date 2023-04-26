@@ -14,13 +14,13 @@ const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
 say('MOONCLOUDS', {
-font: 'shade',
+font: 'shade', 
 align: 'center',
-gradient: ['white', 'blue']})
+gradient: ['blue', 'white']})
 say(`BOT`, {
 font: 'slick',
 align: 'center',
-gradient: ['grey', 'blue']})
+gradient: ['white', 'cyan']})
 
 var isRunning = false
 /**
