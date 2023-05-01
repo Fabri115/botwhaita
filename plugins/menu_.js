@@ -17,8 +17,26 @@ const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
+let user =
+global.db.data.users[m.sender]
+let { money, joincount } =
+global.db.data.users[m.sender]
+let { exp, diamond, registered, self,
+level, role } =
+global.db.data.users[m.sender]
+let taguser = +
+m.sender.split("@s.whatsapp.net")[0]
+let week =
+d.toLocaleDateString(locale,
+{ weekday: 'long' })
+let date = d.toLocaleDateString(locale,
+giorno: 'numeric',
+mese: 'long',
+anno: 'numeric'
+}}
 
 let info = ` 
+ciao ${name} in base a quale dispositivo hai, esegui il comando!
 ──⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mənū☁️*
   ඬ ${usedPrefix}MENUANDROID
   ඬ ${usedPrefix}MENUIOS
