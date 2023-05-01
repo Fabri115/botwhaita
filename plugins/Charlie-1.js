@@ -5,7 +5,7 @@ let handler  = async (m, { conn }) => {
 
  handler.help = ['si o no']
 handler.tags = ['si o no']
-handler.customPrefix = /si/i
+handler.customPrefix = /si|no/i
 handler.command = new RegExp
 
 
