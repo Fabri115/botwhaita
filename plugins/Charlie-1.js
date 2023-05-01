@@ -6,31 +6,12 @@ ${author}
    `, m) 
  } 
 
- handler.help = ['ᴄʜᴀʀʟɪᴇ'] 
+ handler.help = ['si o no']
+handler.tags = ['si o no']
+handler.customPrefix = /si/i
+handler.command = new RegExp
+export default handler
 
- handler.tags = ['juegos'] 
-
- handler.command = /^(Say)$/i 
-
- handler.owner = false 
-
- handler.mods = false 
-
- handler.premium = false 
-
- handler.group = false  
-
- handler.private = false 
-
-  
-
- handler.admin = false 
-
- handler.botAdmin = false 
-
-  
-
- handler.fail = null 
 
   
 
