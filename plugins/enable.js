@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 const grup = './Menu2.jpg'
 	const sections = [
    {
-	title: `Lista Attiva/Disattiva`,
+	title: ` Lista Attiva/Disattiva `,
 	rows: [
       {title: "✨ | Benvenuto", rowId: `${usedPrefix + command} benvenuto`},
 	{title: "🚫 | Antidelete", rowId: `${usedPrefix + command} antidelete`},
@@ -22,6 +22,7 @@ const grup = './Menu2.jpg'
 	{title: "😐 | AntiPrivato", rowId: `${usedPrefix + command} antiprivato`},
 	{title: "☑️ | Autoread", rowId: `${usedPrefix + command} autoread`},
 	{title: "💬 | SoloPrivato", rowId: `${usedPrefix + command} soloprivato`},
+	{title: "💬 | ChatBot", rowId: `${usedPrefix + command} chatbot`},
 	{title: "🏢 | SoloGruppo", rowId: `${usedPrefix + command} sologruppo`},
 	{title: "📷 | StatusOnly", rowId: `${usedPrefix + command} swonly`},
 	]
@@ -72,6 +73,15 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.delete = isEnable
+break
+case 'chatbot':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}
+}
+chat.chatbot = isEnable
 break
 case 'antielimina':
 if (m.isGroup) {
@@ -232,7 +242,7 @@ break
       if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
       throw false
   }
-conn.reply(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? 'disabilita' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
+conn.reply(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? 'disabilita ' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m)}
 
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
