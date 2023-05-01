@@ -18,9 +18,8 @@ let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
 
-let info = `
-════ •⊰❂⊱• ════ 
-──⭓ *MENU*
+let info = ` 
+──⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓_menu_☁️*
   ඬ ${usedPrefix}MENUANDROID
   ඬ ${usedPrefix}MENUIOS
 ─✦ *𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝ ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
