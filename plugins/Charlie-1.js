@@ -1,7 +1,5 @@
 let handler  = async (m, { conn }) => { 
-
    conn.reply(m.chat,` ${author} *ha detto* \n*“${pickRandom(global.charlie)}”*\n   
-${author} 
    `, m) 
  } 
 
