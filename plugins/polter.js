@@ -18,7 +18,7 @@ let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
 let info = `
-Ciao, mi chiamo polter e trascorro tutto il tempo della mia vita a buzonare e rimuovere unlimited per non essere full raidato.`.trim() 
+Ciao, .`.trim() 
 conn.reply(m.chat, info, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
