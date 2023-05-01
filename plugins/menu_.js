@@ -29,11 +29,6 @@ m.sender.split("@s.whatsapp.net")[0]
 let week =
 d.toLocaleDateString(locale,
 { weekday: 'long' })
-let date = d.toLocaleDateString(locale,
-giorno: 'numeric',
-mese: 'long',
-anno: 'numeric'
-}}
 
 let info = ` 
 ciao ${name} in base a quale dispositivo hai, esegui il comando!
