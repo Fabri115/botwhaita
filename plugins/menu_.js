@@ -17,15 +17,6 @@ const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
 let speed = neww - old
-let user =
-global.db.data.users[m.sender]
-let { money, joincount } =
-global.db.data.users[m.sender]
-let { exp, diamond, registered, self,
-level, role } =
-global.db.data.users[m.sender]
-let taguser = +
-m.sender.split("@s.whatsapp.net")[0]
 let name = await
 conn.getName(m.sender)
 const listMessage = {
