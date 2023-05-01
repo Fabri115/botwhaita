@@ -4,7 +4,6 @@ let handler = async (m, { conn }) => {
 
 let res = await fetch(`https://docs-jojo.herokuapp.com/api/fake_identity?lang=en&type=json`) 
 
-let json = await res.json() 
 
 m.reply(`╭═✧═•⛩️•𝐈𝐃𝐄𝐍𝐓𝐈𝐓𝐀•⛩️•═✧═╮
 *𓆩✧𓆪* Nome: ${json.name}
