@@ -10,7 +10,7 @@ ${author}
 handler.tags = ['si o no']
 handler.customPrefix = /si/i
 handler.command = new RegExp
-export default handler
+
 
 
   
