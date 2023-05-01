@@ -26,10 +26,6 @@ level, role } =
 global.db.data.users[m.sender]
 let taguser = +
 m.sender.split("@s.whatsapp.net")[0]
-let week =
-d.toLocaleDateString(locale,
-{ weekday: 'long' })
-
 let info = ` 
 ciao ${name} in base a quale dispositivo hai, esegui il comando!
 ──⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mənū☁️*
