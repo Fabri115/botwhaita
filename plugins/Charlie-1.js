@@ -28,40 +28,40 @@ handler.command = new RegExp
 
  global.charlie = [ 
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",  
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",  
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No",   
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi",   
 
- "Si","No","Si","No", "Si","No", "Si","No", "Si","No" 
+ "Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi","Si, puoi","No, non puoi"
 
  ] 
