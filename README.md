@@ -1,4 +1,8 @@
 # `☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓☁️`
+
+### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
+- CLONARE LA REPOSITORY [qui](https://github.com/Fabri115/BotWhaIta/fork)
+- CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/Fabri115/BotWhaIta/blob/master/config.js)
   
 ### `—◉ 💥 ATTIVA SU KOYEB 💥`
 
@@ -8,9 +12,6 @@
 
 [![Attiva su Repl.it](https://repl.it/badge/github/Fabri115/BotWhaIta)](https://repl.it/github/Fabri115/BotWhaIta)  
 
-### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
-- CLONARE LA REPOSITORY [qui](https://github.com/Fabri115/BotWhaIta/fork)
-- CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/Fabri115/BotWhaIta/blob/master/config.js)
 
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
 https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
