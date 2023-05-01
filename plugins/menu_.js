@@ -19,7 +19,6 @@ let neww = performance.now()
 let speed = neww - old
 let name = await
 conn.getName(m.sender)
-const listMessage = {
 let info = ` 
 ciao ${name} in base a quale dispositivo hai, esegui il comando!
 ──⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mənū☁️*
