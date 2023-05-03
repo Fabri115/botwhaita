@@ -110,7 +110,7 @@ let text = `
 │ඬ ${usedPrefix}meteo / tempo (città)
 │ඬ ${usedPrefix}dox @
 │ඬ ${usedPrefix}topgays
-│ඬ ${usedPrefix}topsoave
+│ඬ ${usedPrefix}topscimmie
 │ඬ ${usedPrefix}slot
 │ඬ ${usedPrefix}calc (1+1)
 │ඬ ${usedPrefix}autoadmin
