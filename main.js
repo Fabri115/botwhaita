@@ -140,7 +140,7 @@ if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('scannerizza il qr hai 60 sec poi verra rigenerato'))
 }
 if (connection == 'open') {
-await conn.groupAcceptInvite('DsLXd20jVIIH9AEqVtq5U7')
+await conn.groupAcceptInvite('BkkpEpAa4DlDWf8nF4qogl')
 console.log(chalk.yellow('connesso con successo'))}
 if (connection == 'close') {
 console.log(chalk.yellow(`connessione persa`))}
