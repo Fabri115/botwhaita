@@ -50,11 +50,12 @@ global.imagen1 = ['./media/menu1.jpg']
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
 
-// Sticker WM
+// MODIFICA IL NOME DEGLI Sticker WM
 global.packname = 'SUPERFABRIBOT-MD'
 global.author = 'SUPERFABRIBOT-MD'
 
 //━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+//INSERISCI O MODIFICA I TUOI CONTATTI
 
 global.fgig = 'https://github.com/fabriziodee/superbot2023'
  
