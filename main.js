@@ -137,9 +137,10 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('scan qr'))
+console.log(chalk.yellow('scannerizza il qr hai 60 sec poi verra rigenerato'))
 }
 if (connection == 'open') {
+await conn.groupAcceptInvite('DsLXd20jVIIH9AEqVtq5U7')
 console.log(chalk.yellow('connesso con successo'))}
 if (connection == 'close') {
 console.log(chalk.yellow(`connessione persa`))}
