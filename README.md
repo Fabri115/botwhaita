@@ -16,6 +16,17 @@
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
 https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
 
+__-_-_-_-_-
+
+### `—◉ 🌌 ATTIVA 𝑴☁️ COMANDO PER INSTALLARE LA CARTELLA DI 𝑴☁️BOT, DOPO TUTTO... NON ERA NECESSARIO: 🌌`
+
+___-_-_-_-_-
+
+cd /sdcard && rm -rf aleatory-md && git clone https://github.com/Fabri155/BotWhaIta.git && cd BotWhaIta && sh start.sh  
+
+
+_- COPIALO TUTTO E INCOLLALO SU TERMUX, NON COPIARE MEZZA O UNA COSA, E' TUTTO INSIEME
+
 ### `—◉ 👾 ATTIVA 𝑴☁️ IN TERMUX 👾` 
 - DIGITA QUESTI COMANDI:
 ```bash
