@@ -115,7 +115,22 @@ node .
 ```
 
 ---------
+### `—◉ 👽 OTTIENI UN ALTRO CODICE QR 𝑴☁️ 👽`
 
+DIGITA QUESTI COMANDI:
+```bash
+> cd 
+```
+```bash
+> cd BotWhaIta
+```
+```bash
+> rm MysticSession
+```
+```bash
+> sh start.sh
+```
+---------
 ### `—◉ 📝 NOTE 𝑴☁️ 📝`
 - IL BOT 𝑴☁️ E' COMPATIBILE CON WHATSAPP BUSINESS E WHATSAPP NORMALE
 - PER BLOCCARE GLI UTENTI IN PRIVATO ESEGUI IL COMANDO .attiva antiprivato
