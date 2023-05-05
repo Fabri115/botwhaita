@@ -58,16 +58,22 @@ sh start.sh
 ```
 
 ### `—◉ ✔️ AVVIA 𝑴☁️ IN TERMUX ✔️`
-```bash
+
 DIGITA QUESTI COMANDI:
+```bash
 > cd 
+```
+```bash
 > cd BotWhaIta
+```
+```bash
 > sh start.sh
 ```
 
 ### `—◉ 👽 OTTIENI UN ALTRO CODICE QR 𝑴☁️ 👽`
-```bash
+
 DIGITA QUESTI COMANDI:
+```bash
 > cd 
 > cd BotWhaIta
 > rm -rf MysticSession
