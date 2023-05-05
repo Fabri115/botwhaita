@@ -18,9 +18,9 @@ https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(a
 
 
 ### `—◉ ⇝ ATTIVA 𝑴☁️. COMANDO PER INSTALLARE LA CARTELLA DI 𝑴☁️BOT 🌌`
-
+```bash
 cd /sdcard && rm -rf aleatory-md && git clone https://github.com/Fabri155/BotWhaIta.git && cd BotWhaIta && sh start.sh  
-
+```
 COPIALO TUTTO E INCOLLALO SU TERMUX, NON COPIARE MEZZA O UNA COSA, E' TUTTO INSIEME
 
 ### `—◉ 👾 ATTIVA 𝑴☁️ IN TERMUX 👾` 
