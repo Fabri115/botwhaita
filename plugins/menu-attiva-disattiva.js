@@ -21,21 +21,22 @@ let speed = (neww - old).toFixed(5)
 let text = `
 
 ┌──⭓ *ATTIVA|DISATTIVA*
-│⭔ .attiva/disabilita restrict
-│⭔ .attiva/disabilita antiprivato
-│⭔ .attiva/disabilita sologruppo
-│⭔ .attiva/disabilita autoread
-│⭔   .attiva/disabilita benvenuto
-│⭔  .attiva/disabilita antilink
-│⭔  .attiva/disabilita antilinkhttps
-│⭔  .attiva/disabilita antispam
-│⭔   .attiva/disabilita detect
-│⭔  .attiva/disabilita antielimina
-│⭔  .attiva/disabilita antiviewonce
-│⭔  .attiva/disabilita antitrava
-│⭔  .attiva/disabilita antipaki
-│⭔  .attiva/disabilita modoadmin
-│⭔  .attiva/disabilita autosticker
+│⭔ ${usedPrefix}attiva/disabilita restrict
+│⭔ ${usedPrefix}attiva/disabilita antiprivato
+│⭔ ${usedPrefix}attiva/disabilita sologruppo
+│⭔ ${usedPrefix}attiva/disabilita autoread
+│⭔ ${usedPrefix}attiva/disabilita benvenuto
+│⭔ ${usedPrefix}attiva/disabilita antilink
+│⭔ ${usedPrefix}attiva/disabilita antilinkhttps
+│⭔ ${usedPrefix}attiva/disabilita antispam
+│⭔ ${usedPrefix}attiva/disabilita detect
+│⭔ ${usedPrefix}attiva/disabilita antielimina
+│⭔ ${usedPrefix}attiva/disabilita antiviewonce
+│⭔ ${usedPrefix}attiva/disabilita antitrava
+│⭔ ${usedPrefix}attiva/disabilita antipaki
+│⭔ ${usedPrefix}attiva/disabilita modoadmin
+│⭔ ${usedPrefix}attiva/disabilita autosticker
+│⭔ ${usedPrefix}attiva/disabilita chatbot
 └───────⭓
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
