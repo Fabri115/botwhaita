@@ -149,8 +149,8 @@ DIGITA QUESTI COMANDI:
   
 | [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
 |----|
-| [꧁𓊈𒆜ＡＬＩＥＮ ＡＬＦＡ𒆜𓊉꧂](https://github.com/Fabri115) |
-|  𒆜Bug Fixes, Modules, updates𒆜 |
+| [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
+|  𒆜Bug report, Modules, updates, news, info𒆜 |
   
   </div>
 
