@@ -152,7 +152,7 @@ DIGITA QUESTI COMANDI:
 | [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
 |----|
 | [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
-|  𒆜Bug report, Modules, updates, news, info𒆜 |
+|  𒆜Bug report,updates, news, 𒆜 |
   
   </div>
 
