@@ -22,37 +22,37 @@ let text = `
 
 
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
-│⭔ .kick / addio / ban @
-│⭔ .warn @
-│⭔ .unwarn @
-│⭔ .del (msg)
-│⭔ .stermina +92
-│⭔ .listanum +1
-│⭔ .attiva/disabilita benvenuto
-│⭔ .attiva/disabilita antilink
-│⭔ .attiva/disabilita antilinkhttps
-│⭔ .attiva/disabilita antispam
-│⭔ .attiva/disabilita detect
-│⭔ .attiva/disabilita antielimina
-│⭔ .attiva/disabilita antiviewonce
-│⭔ .attiva/disabilita antitrava
-│⭔ .attiva/disabilita antipaki
-│⭔ .attiva/disabilita modoadmin
-│⭔ .attiva/disabilita autosticker
-│⭔ .link
-│⭔ .reimposta
-│⭔ .hidetag (txt)
-│⭔ .tagall / marcar (txt)
-│⭔ .inattivi
-│⭔ .promuovi / mettiadmin @
-│⭔ .retrocedi / togliadmin @
-│⭔ .gruppo aperto / chiuso
-│⭔ .nome (txt)
-│⭔ .setbenvenuto (@user txt)
-│⭔ .setaddio (@user txt)
-│⭔ .admin
-│⭔ .ping
-│⭔ .menu2
+│⭔ ${usedPrefix}kick / addio / ban @
+│⭔ ${usedPrefix}warn @
+│⭔ ${usedPrefix}unwarn @
+│⭔ ${usedPrefix}del (msg)
+│⭔ ${usedPrefix}stermina +92
+│⭔ ${usedPrefix}listanum +1
+│⭔ ${usedPrefix}attiva/disabilita benvenuto
+│⭔ ${usedPrefix}attiva/disabilita antilink
+│⭔ ${usedPrefix}attiva/disabilita antilinkhttps
+│⭔ ${usedPrefix}attiva/disabilita antispam
+│⭔ ${usedPrefix}attiva/disabilita detect
+│⭔ ${usedPrefix}attiva/disabilita antielimina
+│⭔ ${usedPrefix}attiva/disabilita antiviewonce
+│⭔ ${usedPrefix}attiva/disabilita antitrava
+│⭔ ${usedPrefix}attiva/disabilita antipaki
+│⭔ ${usedPrefix}attiva/disabilita modoadmin
+│⭔ ${usedPrefix}attiva/disabilita autosticker
+│⭔ ${usedPrefix}link
+│⭔ ${usedPrefix}reimposta
+│⭔ ${usedPrefix}hidetag (txt)
+│⭔ ${usedPrefix}tagall / marcar (txt)
+│⭔ ${usedPrefix}inattivi
+│⭔ ${usedPrefix}promuovi / mettiadmin @
+│⭔ ${usedPrefix}retrocedi / togliadmin @
+│⭔ ${usedPrefix}gruppo aperto / chiuso
+│⭔ ${usedPrefix}nome (txt)
+│⭔ ${usedPrefix}setbenvenuto (@user txt)
+│⭔ ${usedPrefix}setaddio (@user txt)
+│⭔ ${usedPrefix}admin
+│⭔ ${usedPrefix}ping
+│⭔ ${usedPrefix}allmenu
 └───────⭓
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
