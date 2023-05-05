@@ -1,1 +1,0 @@
-cd /sdcard && rm -rf MIO3 && git clone https://github.com/fabriziodee/MIO3.git && cd MIO3 && sh start.sh
