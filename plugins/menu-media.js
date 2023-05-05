@@ -22,29 +22,27 @@ let text = `
 
 
 ┌──⭓ 𝐌𝐄𝐃𝐈𝐀
-│⭔ .attp (txt)
-│⭔ .ttp (txt)
-│⭔ .gtts (txt)
-│⭔ .dado
-│⭔ .sticker / s (foto/video)
-│⭔ .wm (sticker)
-│⭔ .emojimix (emoji+emoji)
-│⭔ .play (canzone)
-│⭔ .playdoc (canzone)
-│⭔ .playlist (canzone)
-│⭔ .pinterest / cerca 
-│⭔ .whatmusic (audio)
-│⭔ .qrcode (txt)
-│⭔ .leggi (foto)
-│⭔ .styletext (txt)
-│⭔ .destrava
-│⭔ .tovideo (sticker)
-│⭔ .togif (sticker)
-│⭔ .togifaud (video)
-│⭔ .tomp3 (video/audio)
-│⭔ .toaudio (video/audio)
-│⭔ .toptt (video)
-│⭔ .tourl (foto/video)
+│⭔ ${usedPrefix}attp (txt)
+│⭔ ${usedPrefix}ttp (txt)
+│⭔ ${usedPrefix}gtts (txt)
+│⭔ ${usedPrefix}dado
+│⭔ ${usedPrefix}sticker / s (foto/video)
+│⭔ ${usedPrefix}wm (sticker)
+│⭔ ${usedPrefix}emojimix (emoji+emoji)
+│⭔ ${usedPrefix}spotify (canzone)
+│⭔ ${usedPrefix}pinterest / cerca 
+│⭔ ${usedPrefix}whatmusic (audio)
+│⭔ ${usedPrefix}qrcode (txt)
+│⭔ ${usedPrefix}leggi (foto)
+│⭔ ${usedPrefix}styletext (txt)
+│⭔ ${usedPrefix}destrava
+│⭔ ${usedPrefix}tovideo (sticker)
+│⭔ ${usedPrefix}togif (sticker)
+│⭔ ${usedPrefix}togifaud (video)
+│⭔ ${usedPrefix}tomp3 (video/audio)
+│⭔ ${usedPrefix}toaudio (video/audio)
+│⭔ ${usedPrefix}toptt (video)
+│⭔ ${usedPrefix}tourl (foto/video)
 └───────⭓
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
