@@ -143,4 +143,14 @@ DIGITA QUESTI COMANDI:
 ### `—◉ 📝 NOTE 𝑴☁️ 📝`
 - IL BOT 𝑴☁️ E' COMPATIBILE CON WHATSAPP BUSINESS E WHATSAPP NORMALE
 - PER BLOCCARE GLI UTENTI IN PRIVATO ESEGUI IL COMANDO .attiva antiprivato
+- SE DOVESSI VEDERE I MSG DEL BOT 'IN ATTESA' ELIMINA LA CARTELLA 'MYSTICSESSION' DA BOT ATTIVO
+## ⚠️ Developers
+  <div align="center">
+  
+| [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
+|----|
+| [꧁𓊈𒆜ＡＬＩＥＮ ＡＬＦＡ𒆜𓊉꧂](https://github.com/Fabri115) |
+|  𒆜Bug Fixes, Modules, updates𒆜 |
+  
+  </div>
 
