@@ -75,8 +75,14 @@ DIGITA QUESTI COMANDI:
 DIGITA QUESTI COMANDI:
 ```bash
 > cd 
+```
+```bash
 > cd BotWhaIta
+```
+```bash
 > rm -rf MysticSession
+```
+```bash
 > sh start.sh
 ```
 
@@ -89,8 +95,14 @@ DIGITA QUESTI COMANDI:
 
 ```bash
 git clone https://github.com/Fabri115/BotWhaIta
+```
+```bash
 cd BotWhaIta
+```
+```bash
 npm install
+```
+```bash
 npm update
 ```
 
