@@ -1,5 +1,10 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)
 
+<h1 align="center">
+<p>
+<img src= "https://telegra.ph/file/4f50b847d0d078a954055.jpg" alt="SAKURA BOT" width="720">
+</p>
+
 ### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
 - CLONARE LA REPOSITORY [qui](https://github.com/Fabri115/BotWhaIta/fork)
 - CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/Fabri115/BotWhaIta/blob/master/config.js)
