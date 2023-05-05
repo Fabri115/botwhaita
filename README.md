@@ -6,6 +6,10 @@
 </p>
 
 ### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
+###`USA IL BOTTONE PER ESEGUIRE IL FORK`
+  
+  <a href="https://github.com/Fabri115/BotWhaIta/fork"><img title="bot" src="https://github.com/Alien-alfa/Alien-alfa/blob/beta/img/pngegg.png?raw=true" width="200"></a>
+<br>
 - CLONARE LA REPOSITORY [qui](https://github.com/Fabri115/BotWhaIta/fork)
 - CAMBIARE NUMERO DEL PROPRIETARIO [qui](https://github.com/Fabri115/BotWhaIta/blob/master/config.js)
   
