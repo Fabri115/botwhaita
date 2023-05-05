@@ -50,9 +50,6 @@ let texto1 = `┌──⭓ ✧𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}sticker / s (foto/video)
 │⭔ ${usedPrefix}wm (sticker)
 │⭔ ${usedPrefix}emojimix (emoji+emoji)
-│⭔ ${usedPrefix}play (canzone)
-│⭔ ${usedPrefix}playdoc (canzone)
-│⭔ ${usedPrefix}playlist (canzone)
 │⭔ ${usedPrefix}pinterest / cerca 
 │⭔ ${usedPrefix}whatmusic (audio)
 │⭔ ${usedPrefix}qrcode (txt)
@@ -75,11 +72,11 @@ let texto1 = `┌──⭓ ✧𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}nera @
 │⭔ ${usedPrefix}random @
 │⭔ ${usedPrefix}amore @
-│⭔ ${usedPrefix}andre (AI)
+│⭔ ${usedPrefix}ia (AI)
 │⭔ ${usedPrefix}wikipedia (txt)
 │⭔ ${usedPrefix}dox @
 │⭔ ${usedPrefix}topgays
-│⭔ ${usedPrefix}topnazi
+│⭔ ${usedPrefix}topscimmie
 │⭔ ${usedPrefix}slot
 │⭔ ${usedPrefix}calc (1+1)
 │⭔ ${usedPrefix}autoadmin
