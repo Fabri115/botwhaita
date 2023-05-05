@@ -22,6 +22,52 @@ let text = `
 
 ✦✧✧𝐁Ꮻ𝐓✧✧✦
 
+┌──⭓ *MENU NOVITA'*
+│⭔ ${usedPrefix}spotify (+ nome song)
+│⭔ ${usedPrefix}attiva chatbot 
+│⭔ ${usedPrefix}abbraccio + @
+│⭔ ${usedPrefix}schiaffo + @
+│⭔ ${usedPrefix}trigger + @
+│⭔ ${usedPrefix}txt/txt1 + (txt)
+│⭔ ${usedPrefix}bal (checkativo)
+│⭔ ${usedPrefix}top messaggi
+│⭔ ${usedPrefix}gruppi messaggi
+│⭔ ${usedPrefix}gatto
+│⭔ ${usedPrefix}anime
+│⭔ ${usedPrefix}bluur
+│⭔ ${usedPrefix}bonk
+└───────⭓
+
+┌──⭓ *MENU 'FABRI'*
+|- fabri funziona senza uso
+|  di prefisso.
+|  per attivarlo:
+|⭔ ON: sveglia fabri 
+|⭔ OFF: dormi fabri 
+└───────⭓
+
+┌──⭓ *MENU 'RISPOSTA'*
+│⭔ insulta + @
+│⭔ minaccia + @ 
+│⭔ zizzania + @
+│⭔ segreto + @
+│⭔ bestemmia
+│⭔ moneta (testa o croce)
+└───────⭓
+┌──⭓ *MENU 'AUDIO'*
+|⭔ Drama|Fail|Game Over|TG5
+│⭔ Timida|Ma che fai|rutto
+│⭔ Sei una monella|Soddisfazione
+│⭔ Io pago|Renzi|Rosario Muniz
+│⭔ Mio figlio poteva morire|Dio cancaro
+└───────⭓
+┌──⭓ *MENU 'STICKER'*
+│⭔ Steve Jobs
+│⭔ Non ci sono
+│⭔ Banana
+|⭔ Cesso
+└───────⭓
+
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
 │ඬ ${usedPrefix}kick / addio / ban @
 │ඬ ${usedPrefix}warn @
@@ -29,6 +75,7 @@ let text = `
 │ඬ ${usedPrefix}cringe @ '𝓷𝓮𝔀
 │ඬ ${usedPrefix}bal (countmsg) @ '𝓷𝓮𝔀
 │ඬ ${usedPrefix}top messaggi '𝓷𝓮𝔀
+│ඬ ${usedPrefix}classifica '𝓷𝓮𝔀
 │ඬ ${usedPrefix}gruppi messaggi '𝓷𝓮𝔀
 │ඬ ${usedPrefix}del (msg)
 │ඬ ${usedPrefix}stermina +92
@@ -110,15 +157,15 @@ let text = `
 │ඬ ${usedPrefix}meteo / tempo (città)
 │ඬ ${usedPrefix}dox @
 │ඬ ${usedPrefix}topgays
-│ඬ ${usedPrefix}topsoave
+│ඬ ${usedPrefix}topscimmie
 │ඬ ${usedPrefix}slot
 │ඬ ${usedPrefix}calc (1+1)
 │ඬ ${usedPrefix}autoadmin
 │ඬ ${usedPrefix}ruba (admin) '𝓷𝓮𝔀
 │ඬ ${usedPrefix}regalo (admin) '𝓷𝓮𝔀
- regalo e ruba hanno effetto su tutti
+│ regalo e ruba hanno effetto su tutti
 │ඬ ${usedPrefix}top messaggi '𝓷𝓮𝔀
-│ඬ ${usedPrefix}virus '𝓷𝓮𝔀
+│ඬ ${usedPrefix}virus1/1/2/3ecc '𝓷𝓮𝔀
 └───────⭓
 
  ════ •⊰❂⊱• ════ 
