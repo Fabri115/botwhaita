@@ -21,22 +21,22 @@ let speed = (neww - old).toFixed(5)
 let text = `
 
 ┌──⭓ 𝐏𝐑𝐎𝐏𝐑𝐈𝐄𝐓𝐀𝐑𝐈𝐎
-│⭔ .attiva/disabilita restrict
-│⭔ .attiva/disabilita antiprivato
-│⭔ .attiva/disabilita sologruppo
-│⭔ .attiva/disabilita autoread
-│⭔ .banuser @
-│⭔ .unbanuser @
-│⭔ .block @
-│⭔ .unblock @
-│⭔ .join
-│⭔ .out
-│⭔ .spamgp (link)
-│⭔ .cleartmp
-│⭔ .blocklist
-│⭔ .banlist
-│⭔ .banchat
-│⭔ .unbanchat
+│⭔ ${usedPrefix}attiva/disabilita restrict
+│⭔ ${usedPrefix}attiva/disabilita antiprivato
+│⭔ ${usedPrefix}attiva/disabilita sologruppo
+│⭔ ${usedPrefix}attiva/disabilita autoread
+│⭔ ${usedPrefix}banuser @
+│⭔ ${usedPrefix}unbanuser @
+│⭔ ${usedPrefix}block @
+│⭔ ${usedPrefix}unblock @
+│⭔ ${usedPrefix}join
+│⭔ ${usedPrefix}out
+│⭔ ${usedPrefix}spamgp (link)
+│⭔ ${usedPrefix}cleartmp
+│⭔ ${usedPrefix}blocklist
+│⭔ ${usedPrefix}banlist
+│⭔ ${usedPrefix}banchat
+│⭔ ${usedPrefix}unbanchat
 └───────⭓
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
