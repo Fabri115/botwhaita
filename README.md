@@ -2,7 +2,7 @@
 
 <h1 align="center">
 <p>
-<img src= "https://telegra.ph/file/4f50b847d0d078a954055.jpg" alt="SAKURA BOT" width="720">
+<img src= "https://i.imgur.com/BqCg8Ao.png" alt="SAKURA BOT" width="720">
 </p>
 
 ### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
