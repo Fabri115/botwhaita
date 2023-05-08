@@ -25,6 +25,40 @@
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
 https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
 
+### `—◉ 👾 ATTIVA TERMUX 👾` 
+
+Comandi termux di base, necessari per l'avvio del bot:
+
+-_1 COMANDO :
+
+termux-change-repo
+
+Conferma, segna la terza casella e conferma e continua >
+
+-_2 COMANDO :
+
+apt-get upgrade
+
+Dovrai digitare y e confermare ogni volta che lo chiedi.
+
+-_3 COMANDO :
+
+apt-get update
+
+Dovrai digitare y e confermare ogni volta che lo chiedi.
+
+-_4 Comando :
+
+pkg upgrade -y && pkg update -y && pkg install nodejs -y && pkg install nodejs-lts -y && pkg install ffmpeg -y && pkg install wget -y && pkg install git -y
+
+-_5 COMANDO :
+
+termux-setup-storage
+
+e conferma.
+
+----_-
+
 
 ### `—◉ ⇝ ATTIVA 𝑴☁️. COMANDO PER INSTALLARE LA CARTELLA DI 𝑴☁️BOT 🌌`
 ```bash
