@@ -15,20 +15,32 @@ const used = process.memoryUsage()
 const { restrict } = global.db.data.settings[conn.user.jid] || {}
 const { autoread } = global.opts
 const grup = './no.png'
+let name = await
+conn.getName(m.sender)
 let old = performance.now()
 let neww = performance.now()
 let speed = (neww - old).toFixed(5)
+let prova = {"key": {
+"participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast","fromMe": false, "id": "Halo"
+}, "message": {
+"contactMessage": { displayName: '𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝ ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³',
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+}}, "participant": "0@s.whatsapp.net"
+}
 let text = `
 
 ┌──⭓ *MENU NOVITA'*
 │⭔ .spotify (+ nome song)
+│⭔ .muta @user
+│⭔ .smuta @user 
+│⭔ .mutati (lista)
 │⭔ .attiva chatbot 
 │⭔ .abbraccio + @
 │⭔ .schiaffo + @
-│⭔ .trigger + @
+│⭔ .toanime @foto
 │⭔ .txt/txt1 + (txt)
 │⭔ .bal (checkativo)
-│⭔ .top messaggi
+│⭔ .classifica
 │⭔ .gruppi messaggi
 │⭔ .gatto
 │⭔ .anime
@@ -68,7 +80,8 @@ let text = `
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
 `.trim() 
-conn.sendFile(m.chat, grup, 'errop.jpg', text, m, false, )
+conn.reply(m.chat, text, prova, m, false, )
+
 }
 handler.help = ['menu']
 handler.tags = ['menu']
