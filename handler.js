@@ -43,6 +43,7 @@ export async function handler(chatUpdate) {
                 global.db.data.users[m.sender] = {}
             if (user) {
                 if (!isNumber(user.messaggi)) user.messaggi = 0
+                if (!isNumber(user.bestemmie)) user.bestemmie = 0
                 if (!isNumber(user.msg)) user.msg = {}
                 if (!isNumber(user.exp)) user.exp = 0
                 if (!('premium' in user)) user.premium = false
@@ -51,6 +52,7 @@ export async function handler(chatUpdate) {
                 if (!('registered' in user)) user.registered = false
             if (!user.registered) {
                 if (!('name' in user)) user.name = m.name
+                if (!('muto' in user)) user.muto = false
                 if (!isNumber(user.age)) user.age = -1
                 if (!isNumber(user.anggur)) user.anggur = 0
                 if (!isNumber(user.apel)) user.apel = 0
@@ -477,6 +479,7 @@ if (!isNumber(user.antispam)) user.antispam = 0
             } else
                 global.db.data.users[m.sender] = {
                     messaggi: 0,
+                    bestemmie: 0,
 		            afk: -1,
                     afkReason: '',
                     age: -1,
@@ -492,6 +495,7 @@ if (!isNumber(user.antispam)) user.antispam = 0
                     anakphonix: 0,
                     anakrubah: 0,
                     anakserigala: 0,
+                    muto: false,
                     anggur: 0,
                     anjing: 0,
                     anjinglastclaim: 0,
@@ -1229,11 +1233,22 @@ antiSpam: false,
         //console.log(global.db.data.users[m.sender])
         let chat, user, stats = global.db.data.stats
         if (m) {
+let utente = global.db.data.users[m.sender]
+if (utente.muto == true) {
+let bang = m.key.id
+let cance = m.key.participant
+await conn.sendMessage(m.chat, {
+delete: {
+remoteJid: m.chat, fromMe: false, id: bang, participant: cance }
+})
+}
             if (m.sender && (user = global.db.data.users[m.sender]) && (chat = global.db.data.chats[m.chat])) {
                 user.exp += m.exp
                 user.limit -= m.limit * 1
                 user.messaggi +=1
                 chat.messaggi +=1
+               user.bestemmie +=1
+    
             }
 
             let stat
