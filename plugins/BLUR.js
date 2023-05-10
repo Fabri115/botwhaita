@@ -1,3 +1,4 @@
+script src =
 import jimp from 'jimp'
 
 let handler = async (m, { conn, text }) => {
