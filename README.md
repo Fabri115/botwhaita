@@ -69,20 +69,40 @@ COPIALO TUTTO E INCOLLALO SU TERMUX, NON COPIARE MEZZA O UNA COSA, E' TUTTO INSI
 ### `—◉ 👾 ATTIVA 𝑴☁️ IN TERMUX 👾` 
 - DIGITA QUESTI COMANDI:
 ```bash
-cd && termux-setup-storage
+termux-setup-storage
 ```
 
 ```bash
-apt-get update -y && apt-get upgrade -y
+pkg upgrade -y && pkg update -y
 ```
 
 ```bash
-pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
+pkg install git -y
 ```
+  
+```bash
+pkg install nodejs -y  
+```
+  
+```bash
+pkg install ffmpeg -y
+```  
+  
+```bash
+pkg install imagemagick -y
+``` 
 
 ```bash
-git clone https://github.com/Fabri115/BotWhaIta && cd BotWhaIta
+pkg install yarn
+```    
+
+```bash
+git clone https://github.com/Fabri115/botwhaita.git
 ```
+  
+```bash
+cd botwhaita
+```  
 
 ```bash
 yarn install
@@ -112,6 +132,12 @@ DIGITA QUESTI COMANDI:
 ```bash
 > sh start.sh
 ```
+  
+### `—◉ ✔️ For 24/7 Activation 𝑴☁️ TERMUX ✔️`
+  
+ ```bash
+> npm i -g pm2 && pm2 start xeon.js && pm2 save && pm2 logs
+  ```
 
 ### `—◉ 👽 OTTIENI UN ALTRO CODICE QR 𝑴☁️ 👽`
 
