@@ -1,7 +1,7 @@
 {
-    "name": "Enemies-Bot-MD",
-    "version": "2.0.0",
-    "description": "r",
+    "name": "MoonClouds-Bot-MD",
+    "version": "1.0.0",
+    "description": "Subs. al profilo per news - TEAM",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -14,30 +14,32 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/unlimited787/Enemies-md-ofc",
+    "homepage": "https://github.com/Fabri115/botwhaita",
     "author": {
-        "name": "unlimited787"
+        "name": "Fabri115"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/unlimited787/Enemies-md-ofc.git"
+        "url": "git+https://github.com/Fabri115/botwhaita.git"
     },
     "bugs": {
-        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+        "url": "https://github.com/Fabri115/botwhaita/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "^4.1.0",
+        "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@^6.1.0",
+        "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^8.0.0",
         "@shineiichijo/marika": "^2.0.6",
+        "@xct007/frieren-scraper": "^0.0.2",
         "acrcloud": "^1.4.0",
         "api-dylux": "^1.2.2",
+        "aptoide-scraper": "^1.0.1",
         "awesome-phonenumber": "^2.68.0",
         "axios": "^0.24.0",
         "cfonts": "^2.10.0",
         "chalk": "^5.0.0",
-        "ffmpeg": "^0.0.4",
         "cheerio": "^1.0.0-rc.10",
         "colors": "1.4.0",
         "express": "^4.17.3",
@@ -50,7 +52,7 @@
         "human-readable": "^0.2.1",
         "instagram-url-direct": "^1.0.12",
         "jsdom": "^19.0.0",
-        "link-preview-js": "^2.1.13",
+        "link-preview-js": "^3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^3.0.0",
         "moment-timezone": "^0.5.34",
@@ -58,6 +60,7 @@
         "node-fetch": "^3.2.0",
         "node-gtts": "^2.0.2",
         "node-webpmux": "^3.1.1",
+        "openai": "^3.1.0",
         "pdfkit": "^0.13.0",
         "perf_hooks": "^0.0.1",
         "pino": "^7.8.0",
@@ -71,6 +74,8 @@
         "terminal-image": "^2.0.0",
         "url-regex-safe": "^3.0.0",
         "wa-sticker-formatter": "^4.3.2",
-        "yargs": "^17.3.1"
+        "yargs": "^17.3.1",
+        "yt-search": "^2.10.3",
+        "ytdl-core": "^4.11.4"
     }
 }
