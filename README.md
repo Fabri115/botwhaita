@@ -19,7 +19,7 @@
   
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU REPLIT 🌌`
 
-[![Attiva su Repl.it](https://repl.it/badge/github/Fabri115/BotWhaIta)](https://repl.it/github/Fabri115/BotWhaIta)  
+[![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
 
 
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
