@@ -8,7 +8,6 @@ import { fileURLToPath, pathToFileURL } from 'url'
 import { platform } from 'process'
 import * as ws from 'ws';
 import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from 'fs';
-//import watch from 'glob-fs'
 import yargs from 'yargs';
 import { spawn } from 'child_process';
 import lodash from 'lodash';
@@ -22,7 +21,7 @@ import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
-const { DisconnectReason, useMultiFileAuthState } = await import('@adiwajshing/baileys')
+const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion } = await import('@adiwajshing/baileys')
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
@@ -35,11 +34,13 @@ global.__filename = function filename(pathURL = import.meta.url, rmPrefix = plat
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 
 global.timestamp = { start: new Date }
+global.videoList = [];
+global.videoListXXX = [];
 
 const __dirname = global.__dirname(import.meta.url)
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.prefix = new RegExp('^[' + (opts['prefix'] || '.\\#').replace(/[|\\{}()[\]^$+*?\-\^]/g, '\\.') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-.@aA').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`))
 
@@ -68,14 +69,52 @@ global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
+/* Creditos a Otosaka (https://wa.me/51993966345) */
+
+global.chatgpt = new Low(new JSONFile(path.join(__dirname, "/db/chatgpt.json")));
+global.loadChatgptDB = async function loadChatgptDB() {
+if (global.chatgpt.READ)
+return new Promise((resolve) =>
+setInterval(async function () {
+if (!global.chatgpt.READ) {
+clearInterval(this);
+resolve( global.chatgpt.data === null ? global.loadChatgptDB() : global.chatgpt.data );
+}}, 1 * 1000));
+if (global.chatgpt.data !== null) return;
+global.chatgpt.READ = true;
+await global.chatgpt.read().catch(console.error);
+global.chatgpt.READ = null;
+global.chatgpt.data = {
+users: {},
+...(global.chatgpt.data || {}),
+};
+global.chatgpt.chain = lodash.chain(global.chatgpt.data);
+};
+loadChatgptDB();
+
+/*------------------------------------------------*/
+
 global.authFile = `MysticSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
+const msgRetryCounterMap = MessageRetryMap => { }
+let { version } = await fetchLatestBaileysVersion();
 
 const connectionOptions = {
 printQRInTerminal: true,
+patchMessageBeforeSending: (message) => {
+const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
+if (requiresPatch) { message = { viewOnceMessage: { message: { messageContextInfo: { deviceListMetadataVersion: 2, deviceListMetadata: {}, }, ...message, },},};}
+return message;},
+getMessage: async (key) => {
+if (store) {
+const msg = await store.loadMessage(key.remoteJid, key.id)
+return msg.message || undefined }
+return { conversation: "hello, i'm BrunoSobrino" }},   
+msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
-browser: ['Bot','Safari','9.7.0']
+browser: ['MysticBot','Safari','9.7.0'],
+version   
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -89,10 +128,6 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
-function clearTmp() {
-const tmp = [tmpdir(), join(__dirname, './tmp')]
-const filename = []
-tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
    
      /* Y ese fue el momazo mas bueno del mundo
         Aunque no dudara tan solo un segundo
@@ -104,29 +139,75 @@ tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(d
         Por que la grasa es un sentimiento
         - El waza 👻👻👻👻 (Aiden)            */
    
-/*readdirSync("./jadibts").forEach(file => {
-const btprs = function (folder) {
-console.log(folder)
-let status = false
-Object.keys(global.conns).forEach((key) => {
-if (global.conns[key].uniqid == folder) status = true });
-return status }
-let lrp = btprs(file)
-console.log(lrp)
-if (!lrp) {rmSync("./jadibts/" + file, { recursive: true, force: true })}
-else if (lrp){
-try {
-readdirSync("./jadibts/" + file).forEach(file2 => {
-if (file2 !== "creds.json") { unlinkSync("./jadibts/" + file + "/" + file2) }})
-} catch {}}})*/
+   /* Yo tambien se hacer momazos Aiden... 
+      ahi te va el ajuste de los borrados 
+      inteligentes de las sesiones y de los sub-bot  
+      By (Rey Endymion 👺👍🏼) */
+/*ninguno es mejor que tilin god 
+atte: sk1d*/
        
-readdirSync("./MysticSession").forEach(file => {
-if (file !== 'creds.json') {
-unlinkSync("./MysticSession/" + file, { recursive: true, force: true })}})    
+function clearTmp() {
+const tmp = [tmpdir(), join(__dirname, './tmp')]
+const filename = []
+tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
 return filename.map(file => {
-const stats = statSync(file)
-if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-return false })}
+    const stats = statSync(file)
+    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+    return false })}
+
+function purgeSession() {
+    let prekey = []
+    let directorio = readdirSync("./MysticSession")
+    let filesFolderPreKeys = directorio.filter(file => {
+        return file.startsWith('pre-key-')
+    })
+    prekey = [...prekey, ...filesFolderPreKeys]
+    filesFolderPreKeys.forEach(files => {
+    unlinkSync(`./MysticSession/${files}`)
+})
+
+}  
+function purgeSessionSB() {
+let listaDirectorios = readdirSync('./jadibts/');
+//console.log(listaDirectorios)
+      let SBprekey = []
+listaDirectorios.forEach(filesInDir => {
+    let directorio = readdirSync(`./jadibts/${filesInDir}`)
+    //console.log(directorio)
+    let DSBPreKeys = directorio.filter(fileInDir => {
+    return fileInDir.startsWith('pre-key-')
+    })
+    SBprekey = [...SBprekey, ...DSBPreKeys]
+    DSBPreKeys.forEach(fileInDir => {
+        unlinkSync(`./jadibts/${filesInDir}/${fileInDir}`) 
+    })
+    })
+    
+}
+
+function purgeOldFiles() {
+const directories = ['./MysticSession/', './jadibts/']
+const oneHourAgo = Date.now() - (60 * 60 * 1000) 
+directories.forEach(dir => {
+    readdirSync(dir, (err, files) => {
+        if (err) throw err
+        files.forEach(file => {
+            const filePath = path.join(dir, file)
+            stat(filePath, (err, stats) => {
+                if (err) throw err;
+                if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
+                    unlinkSync(filePath, err => {  
+                        if (err) throw err
+                        console.log(`Archivo ${file} borrado con éxito`)
+                    })
+                } else {  
+                    console.log(`Archivo ${file} no borrado`) 
+                } 
+            }) 
+        }) 
+    }) 
+})
+}
 
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin } = update
@@ -139,13 +220,13 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('scannerizza il qr hai 60 sec poi verra rigenerato'))
+console.log(chalk.yellow('🚩ㅤscannerizza il qr hai 60 sec poi verra rigenerato.'))
 }
 if (connection == 'open') {
 await conn.groupAcceptInvite('BkkpEpAa4DlDWf8nF4qogl')
-console.log(chalk.yellow('connesso con successo'))}
+console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO CON SUCCESSO ✅\n│\n▣──────────────────────────────···'))}
 if (connection == 'close') {
-console.log(chalk.yellow(`connessione persa`))}
+console.log(chalk.yellow(`🚩ㅤConnessione chiusa, eliminare la cartella ${global.authFile} e scannerizza di nuovo il QR`))}
 }
 
 process.on('uncaughtException', console.error)
@@ -193,6 +274,15 @@ conn.onCall = handler.callUpdate.bind(global.conn)
 conn.connectionUpdate = connectionUpdate.bind(global.conn)
 conn.credsUpdate = saveCreds.bind(global.conn, true)
 
+const currentDateTime = new Date();
+const messageDateTime = new Date(conn.ev);
+if (currentDateTime >= messageDateTime) {
+    let chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map(v => v[0])
+  //console.log(chats, conn.ev); 
+} else {
+    let chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map(v => v[0])}
+ //console.log(chats, 'Omitiendo mensajes en espera.'); }
+
 conn.ev.on('messages.upsert', conn.handler)
 conn.ev.on('group-participants.update', conn.participantsUpdate)
 conn.ev.on('groups.update', conn.groupsUpdate)
@@ -203,6 +293,36 @@ conn.ev.on('creds.update', conn.credsUpdate)
 isInit = false
 return true
 }
+
+/*
+
+const pluginFolder = join(__dirname, './plugins');
+const pluginFilter = filename => /\.js$/.test(filename);
+global.plugins = {};
+
+async function filesInit(folder) {
+  for (let filename of readdirSync(folder).filter(pluginFilter)) {
+    try {
+      let file = join(folder, filename);
+      const module = await import(file);
+      global.plugins[file] = module.default || module;
+    } catch (e) {
+      console.error(e);
+      delete global.plugins[filename];
+    }
+  }
+
+  for (let subfolder of readdirSync(folder)) {
+    const subfolderPath = join(folder, subfolder);
+    if (statSync(subfolderPath).isDirectory()) {
+      await filesInit(subfolderPath);
+    }
+  }
+}
+
+await filesInit(pluginFolder).then(_ => Object.keys(global.plugins)).catch(console.error);
+
+*/
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
@@ -264,24 +384,40 @@ new Promise(resolve => {
 p.on('error', _ => resolve(false))
 })])}))
 let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test
-  console.log(test)
-  let s = global.support = {
-    ffmpeg,
-    ffprobe,
-    ffmpegWebp,
-    convert,
-    magick,
-    gm,
-    find
- }
-  // require('./lib/sticker').support = s
-  Object.freeze(global.support)
-
-  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
-  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
-  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
+let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find }
+Object.freeze(global.support)
 }
-
+setInterval(async () => {
+if (stopped == 'close') return
+var a = await clearTmp()        
+console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`))
+}, 180000)
+setInterval(async () => {
+    await purgeSession()
+console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
+setInterval(async () => {
+     await purgeSessionSB()
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
+setInterval(async () => {
+    await purgeOldFiles()
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+}, 1000 * 60 * 60)
+setInterval(async () => {
+if (stopped == 'close') return        
+const status = global.db.data.settings[conn.user.jid] || {}
+let _uptime = process.uptime() * 1000    
+let uptime = clockString(_uptime)
+let bio = `🤖 Attivo da: ${uptime} ┃ 👑 ʙʏ brizio fabrizio ┃ 🔗 ᴄᴜᴇɴᴛᴀs ᴏғᴄ: https://github.com/Fabri115`
+await conn.updateProfileStatus(bio).catch(_ => _)
+}, 60000)
+function clockString(ms) {
+let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+return [d, ' Día(s) ️', h, ' Hora(s) ', m, ' Minuto(s) ', s, ' Segundo(s) '].map(v => v.toString().padStart(2, 0)).join('')}
 _quickTest()
-  .then(() => conn.logger.info('Quick Test Done'))
-  .catch(console.error)
+.then(() => conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`))
+.catch(console.error)
