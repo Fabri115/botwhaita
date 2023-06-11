@@ -1,7 +1,7 @@
 {
-    "name": "MoonClouds-Bot-MD",
+    "name": "TheMystic-Bot-MD",
     "version": "1.0.0",
-    "description": "Subs. al profilo per news - TEAM",
+    "description": "Subs. al canal de YT The Shadow Borkers - TEAM",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -14,20 +14,20 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/Fabri115/botwhaita",
+    "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
     "author": {
-        "name": "Fabri115"
+        "name": "BrunoSobrino"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Fabri115/botwhaita.git"
+        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/Fabri115/botwhaita/issues"
+        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@^6.1.0",
+        "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@^6.2.1",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^8.0.0",
