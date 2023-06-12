@@ -1206,6 +1206,7 @@ antiSpam: false,
                                     m.reply(`errore`.trim(), data.jid)
                             }
                         m.reply(text)
+			 await m.reply(text)
                     }
                 } finally {
                     // m.reply(util.format(_user))

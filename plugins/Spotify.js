@@ -3,10 +3,10 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 if (!text)
 throw `Inserisci con il comando, il nome della canzone da cercare! esempio`
 try {
-let res = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkeysapi}&query=${text}`)
+let res = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=059cd524890a2bbb5d6edb46&query=${text}`)
 let json = await res.json()
 let {link} = json.result[0]
-let res2 = await fetch(`https://api.lolhuman.xyz/api/spotify?apikey=${lolkeysapi}&url=${link}`)
+let res2 = await fetch(`https://api.lolhuman.xyz/api/spotify?apikey=059cd524890a2bbb5d6edb46&url=${link}`)
 let json2 = await res2.json()
 let {title, artists} = json2.result
 m.reply(`🎵 ${title}\n\n 🗣 ${artists}\n\n⏳️ carico..`)
