@@ -12,7 +12,7 @@
 [`paypal > fabri115`](https://paypal.me/fabri115i)
 
 
-form action="https://www.paypal.com/donate" method="post">
+<form action="https://www.paypal.com/donate" method="post">
  <!-- Identify your business so that you can collect the payments. -->
  <input type="hidden" name="business" value="donations@fabri115.org">
  <!-- Specify details about the contribution -->
