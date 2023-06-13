@@ -4,6 +4,22 @@
 [`paypal > fabri115`](https://paypal.me/fabri115i)
 
 
+form action="https://www.paypal.com/donate" method="post">
+ <!-- Identify your business so that you can collect the payments. -->
+ <input type="hidden" name="business" value="donations@fabri115.org">
+ <!-- Specify details about the contribution -->
+ <input type="hidden" name="no_recurring" value="0">
+ <input type="hidden" name="item_name" value="Friends of the Park">
+ <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
+ <input type="hidden" name="amount" value="25.00">
+ <input type="hidden" name="currency_code" value="USD">
+ <!-- Display the payment button. -->
+ <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+ <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+</form>
+
+
 <h1 align="center">
 <p>
 <img src= "https://i.imgur.com/BqCg8Ao.png" alt="BOT" width="720">
