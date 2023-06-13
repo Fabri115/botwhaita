@@ -12,7 +12,7 @@ const require = createRequire(__dirname)
 const { name, author } = require(join(__dirname, './package.json')) 
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
-const keep_alive = require('./keep_alive.js')
+
 
 say('MOONCLOUDS', {
 font: 'shade', 
