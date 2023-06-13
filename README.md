@@ -21,7 +21,12 @@
 
 [![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
 
+### `—◉ 🌌 ATTIVA 𝑴☁️ SU HEROKU 🌌`
+  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Fabri115/botwhaita)
 
+  
+  
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
 https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
 
