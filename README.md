@@ -9,7 +9,7 @@
 
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
-[`paypal > fabri115`](https://paypal.me/donate/fabri115i)
+[`paypal > fabri115`](https://paypal.me/fabri115i)
 
 
 <form action="https://www.paypal.com/donate" method="post">
