@@ -1,5 +1,9 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)
 
+```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
+[`paypal > fabri115`](https://paypal.me/fabri115i)
+
+
 <h1 align="center">
 <p>
 <img src= "https://i.imgur.com/BqCg8Ao.png" alt="BOT" width="720">
