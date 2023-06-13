@@ -34,7 +34,7 @@ let text = `─⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓
   ඬ ${usedPrefix}MENUIOS
   ඬ ${usedPrefix}NEWS
  ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
-   https://chat.whatsapp.com/JgshFc8KChtAai6ZfbI9QZ `.trim() 
+ https://chat.whatsapp.com/InZqSk4lsyzKJUtSWfsdjF `.trim() 
 conn.reply(m.chat, text, prova, m, false, )
 }
 handler.help = ['menu']
