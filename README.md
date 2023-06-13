@@ -4,7 +4,7 @@
 
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
-[`paypal > fabri115`](https://www.paypal.com/donate/buttons/manage/UFXMRNHNJVDL2)
+[`paypal > fabri115`](https://www.paypal.me/Fabri115i)
 
 
 
