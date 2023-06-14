@@ -1,6 +1,6 @@
 services:
-  - type: web
+    type: web
     name: botwhaita
     env: docker
-    region: Milan 
+    region: Milano
     plan: free
