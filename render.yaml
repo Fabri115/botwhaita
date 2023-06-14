@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rtxzy-md
+    name: botwhaita
     env: docker
-    region: Singapore 
+    region: Milan 
     plan: free
