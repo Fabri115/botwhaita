@@ -34,7 +34,7 @@
 
 [![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
  
-_ `Scan the QR and upload guru.data.json to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️`
+_ `Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️`
  
 <a href='https://replit.com/@Fabri115/botwhaita-11?v=1' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
