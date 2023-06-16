@@ -1,2 +1,2 @@
 language="nodejs"
-run="npm install && npm start index.js"
+run="npm i && node index.js --server"
