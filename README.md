@@ -5,6 +5,14 @@
 <img width="" src="https://img.shields.io/github/repo-size/fabri115/botwhaita?color=red&label=Repo%20Size&style=for-the-badge&logo=appveyor">
 </p>
 
+
+
+
+[Click Here To Scan](https://botwhaita-2.fabri115.repl.co/)
+
+
+
+
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
 [`paypal > fabri115` > `https://www.paypal.me/Fabri115i`](https://www.paypal.com/donate?campaign_id=KTBZ6VBY927VA&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT001640&utm_unptid=23c96436-0a01-11ee-8170-3cfdfeec12a8&ppid=RT001640&cnac=IT&rsta=it_IT%28it-IT%29&cust=3ZENKTZ28SZAE&unptid=23c96436-0a01-11ee-8170-3cfdfeec12a8&calc=f7960484092de&unp_tpcid=donate-button-campaign-created&page=main%3Aemail%3ART001640&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.177.0&xt=104038%2C127632)
 
