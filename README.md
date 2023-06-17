@@ -6,14 +6,6 @@
 </p>
 
 
-<a href="https://botwhaita-2.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
-<br>
-<div>
-<br>
- 
-[Click Here To Scan](https://botwhaita-2.fabri115.repl.co/)
-
-
 
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
@@ -45,9 +37,12 @@
 
 [![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
  
-_ `Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️`
+### `Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️`
  
-<a href='https://replit.com/@Fabri115/botwhaita-11?v=1' target="_blank"><img alt='SCAN QR' src='https://img.shields.io/badge/Scan_qr-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+<a href="https://botwhaita-2.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
+<br>
+<div>
+<br>
 
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU HEROKU 🌌`
   
