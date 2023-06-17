@@ -33,10 +33,6 @@
 
 [![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
  
-### `—◉ 🌌 Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️ 🌌`
- 
-<a href="https://botwhaita-3.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
-
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU HEROKU 🌌`
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Fabri115/botwhaita)
