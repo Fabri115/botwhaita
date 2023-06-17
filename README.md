@@ -6,12 +6,8 @@
 </p>
 
 
-
-
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
 [`paypal > fabri115` > `https://www.paypal.me/Fabri115i`](https://www.paypal.com/donate?campaign_id=KTBZ6VBY927VA&v=1&utm_source=unp&utm_medium=email&utm_campaign=RT001640&utm_unptid=23c96436-0a01-11ee-8170-3cfdfeec12a8&ppid=RT001640&cnac=IT&rsta=it_IT%28it-IT%29&cust=3ZENKTZ28SZAE&unptid=23c96436-0a01-11ee-8170-3cfdfeec12a8&calc=f7960484092de&unp_tpcid=donate-button-campaign-created&page=main%3Aemail%3ART001640&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.177.0&xt=104038%2C127632)
-
-
 
 
 <h1 align="center">
@@ -37,19 +33,14 @@
 
 [![Run on Repl.it](https://replit.com/badge/github/Fabri115/botwhaita)](https://replit.com/new/github/Fabri115/botwhaita)
  
-### `Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️`
+### `—◉ 🌌 Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️ 🌌`
  
 <a href="https://botwhaita-2.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
-<br>
-<div>
-<br>
 
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU HEROKU 🌌`
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Fabri115/botwhaita)
 
-  
-  
 ### `—◉ VERSIONE DI TERMUX NECESSARIA: ` 
 https://www.mediafire.com/file/0npdmv51pnttps0/com.termux_0.119.1-119_minAPI21(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk/file
 
