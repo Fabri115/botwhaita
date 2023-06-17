@@ -29,12 +29,17 @@ let prova = {
 }}, "participant": "0@s.whatsapp.net"
 }
 let text = `─⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mənū☁️*
-*ciao ${name} in base a quale dispositivo hai, esegui il comando!*
-  ඬ ${usedPrefix}MENUANDROID
-  ඬ ${usedPrefix}MENUIOS
-  ඬ ${usedPrefix}NEWS
- ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
- https://chat.whatsapp.com/InZqSk4lsyzKJUtSWfsdjF `.trim() 
+*ciao ${name} ecco i comandi principali!*
+
+${usedPrefix}  COMANDI
+${usedPrefix}  NEWS
+─
+*Scaricare 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓*
+https://github.com/Fabri115/botwhaita.git
+─
+*Entra in 𝐌ꮻꮻ𝖓☾︎ℓꮻ𝕦𝜕𝖘*
+https://chat.whatsapp.com/InZqSk4lsyzKJUtSWfsdjF 
+ ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*`.trim() 
 conn.reply(m.chat, text, prova, m, false, )
 }
 handler.help = ['menu']
