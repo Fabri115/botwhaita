@@ -6,9 +6,7 @@
 </p>
 
 
-<a href="https://botwhaita-2.fabri115.repl.co/"><img align="center" src="/language/replit-scan.png" alt="Scan QR" height="112" width="300" /></a>
-<br>
-
+<i class="[ibio-replit](https://botwhaita-2.fabri115.repl.co/)"></i>
 [Click Here To Scan](https://botwhaita-2.fabri115.repl.co/)
 
 
