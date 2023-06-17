@@ -35,7 +35,7 @@
  
 ### `—◉ 🌌 Scan the QR and upload datafile.js to your fork(will recieve it on your bot number after scanning)𝑴☁️ ⚙️ 🌌`
  
-<a href="https://botwhaita-2.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
+<a href="https://botwhaita-3.fabri115.repl.co/"><img align="center" src="https://i.imgur.com/dzPTA6u.png" alt="Scan QR" height="112" width="300" /></a>
 
 ### `—◉ 🌌 ATTIVA 𝑴☁️ SU HEROKU 🌌`
   
