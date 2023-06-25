@@ -3,7 +3,7 @@ let info = `
 *Elenco più ampio di lista buzon*
 aggiornato*
 ╔════⪼ཊ༼⚚༿𖤍༾⚚༽ཏ⪻════╗
-Elenco di: ⍣m𝒐𝒐𝒏
+Elenco di: ⍣𝐌ꮻꮻ𝖓☾︎ℓꮻ𝕦𝜕𝖘
 ---------------------------
 
 Stati Uniti +1
