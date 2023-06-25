@@ -241,7 +241,12 @@ prevedere
 ╚════⪼ཊ༼⚚༿𖤍༾⚚༽ཏ⪻════╝
 `.trim() 
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 Fabri115*', 'status@broadcast')
+conn.reply(m.chat, info, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
+title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
+body: '𝐁Ꮻ𝐓',         
+previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
+sourceUrl: `https://github.com/Fabri115/botwhaita`}}})
 }
 handler.command = /^(buzon|spoof)$/i
 
