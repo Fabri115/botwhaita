@@ -31,8 +31,13 @@ let prova = {
 let text = `─⭓ *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mənū☁️*
 *ciao ${name} ecco i comandi principali!*
 
-${usedPrefix}  COMANDI
-${usedPrefix}  NEWS
+ඬ ${usedPrefix} MENUOWNER
+ඬ ${usedPrefix} MENUATTIVA
+ඬ ${usedPrefix} MENUGRUPPO
+ඬ ${usedPrefix} MENUAUDIO
+ඬ ${usedPrefix} MENUMEDIA
+ඬ ${usedPrefix} COMANDI
+ඬ ${usedPrefix} NEWS
 ─
 *Scaricare 𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓*
 https://github.com/Fabri115/botwhaita.git
