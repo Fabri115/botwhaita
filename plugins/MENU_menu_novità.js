@@ -30,52 +30,55 @@ let prova = {"key": {
 let text = `
 
 ┌──⭓ *MENU NOVITA'*
-│⭔ .spotify (+ nome song)
-│⭔ .muta @user
-│⭔ .smuta @user 
-│⭔ .mutati (lista)
-│⭔ .attiva chatbot 
-│⭔ .abbraccio + @
-│⭔ .schiaffo + @
-│⭔ .toanime @foto
-│⭔ .txt/txt1 + (txt)
-│⭔ .bal (checkativo)
-│⭔ .classifica
-│⭔ .gruppi messaggi
-│⭔ .gatto
-│⭔ .anime
-│⭔ .bluur
-│⭔ .bonk
+│ඬ  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}attiva chatbot 
+│ඬ  ${usedPrefix}abbraccio + @
+│ඬ  ${usedPrefix}schiaffo + @
+│ඬ  ${usedPrefix}trigger + @
+│ඬ  ${usedPrefix}txt/txt1 + (txt)
+│ඬ  ${usedPrefix}bal (checkativo)
+│ඬ  ${usedPrefix}top messaggi
+│ඬ  ${usedPrefix}gruppi messaggi
+│ඬ  ${usedPrefix}gatto
+│ඬ  ${usedPrefix}toanime
+│ඬ  ${usedPrefix}cartoon'𝓷𝓮𝔀
+│ඬ  ${usedPrefix}bluur
+│ඬ  ${usedPrefix}bonk
 └───────⭓
 
 ┌──⭓ *MENU 'FABRI'*
 |- fabri funziona senza uso
 |  di prefisso.
 |  per attivarlo:
-|⭔ ON: sveglia fabri 
-|⭔ OFF: dormi fabri 
+|ඬ  ON: sveglia fabri 
+|ඬ  OFF: dormi fabri 
 └───────⭓
 
 ┌──⭓ *MENU 'RISPOSTA'*
-│⭔ insulta + @
-│⭔ minaccia + @ 
-│⭔ zizzania + @
-│⭔ segreto + @
-│⭔ bestemmia
-│⭔ moneta (testa o croce)
+│ඬ  insulta + @
+│ඬ   minaccia + @ 
+│ඬ  zizzania + @
+│ඬ  segreto + @
+│ඬ  bestemmia
+│ඬ  moneta (testa o croce)
 └───────⭓
 ┌──⭓ *MENU 'AUDIO'*
-|⭔ Drama|Fail|Game Over|TG5
-│⭔ Timida|Ma che fai|rutto
-│⭔ Sei una monella|Soddisfazione
-│⭔ Io pago|Renzi|Rosario Muniz
-│⭔ Mio figlio poteva morire|Dio cancaro
+|ඬ  Drama|Fail|Game Over|TG5
+│ඬ  Timida|Ma che fai|rutto
+│ඬ  Sei una monella|Soddisfazione
+│ඬ  Io pago|Renzi|Rosario Muniz
+│ඬ  Mio figlio poteva morire|Dio cancaro
 └───────⭓
 ┌──⭓ *MENU 'STICKER'*
-│⭔ Steve Jobs
-│⭔ Non ci sono
-│⭔ Banana
-|⭔ Cesso
+│ඬ  Steve Jobs
+│ඬ  Non ci sono
+│ඬ  Banana
+|ඬ  Cesso
 └───────⭓
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
 ✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
