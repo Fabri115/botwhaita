@@ -23,49 +23,55 @@ let text = `
 ✦✧✧𝐁Ꮻ𝐓✧✧✦
 
 ┌──⭓ *MENU NOVITA'*
-│⭔ ${usedPrefix}spotify (+ nome song)
-│⭔ ${usedPrefix}attiva chatbot 
-│⭔ ${usedPrefix}abbraccio + @
-│⭔ ${usedPrefix}schiaffo + @
-│⭔ ${usedPrefix}trigger + @
-│⭔ ${usedPrefix}txt/txt1 + (txt)
-│⭔ ${usedPrefix}bal (checkativo)
-│⭔ ${usedPrefix}top messaggi
-│⭔ ${usedPrefix}gruppi messaggi
-│⭔ ${usedPrefix}gatto
-│⭔ ${usedPrefix}anime
-│⭔ ${usedPrefix}bluur
-│⭔ ${usedPrefix}bonk
+│ඬ  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
+│ඬ  ${usedPrefix}attiva chatbot 
+│ඬ  ${usedPrefix}abbraccio + @
+│ඬ  ${usedPrefix}schiaffo + @
+│ඬ  ${usedPrefix}trigger + @
+│ඬ  ${usedPrefix}txt/txt1 + (txt)
+│ඬ  ${usedPrefix}bal (checkativo)
+│ඬ  ${usedPrefix}top messaggi
+│ඬ  ${usedPrefix}gruppi messaggi
+│ඬ  ${usedPrefix}gatto
+│ඬ  ${usedPrefix}toanime
+│ඬ  ${usedPrefix}cartoon'𝓷𝓮𝔀
+│ඬ  ${usedPrefix}bluur
+│ඬ  ${usedPrefix}bonk
 └───────⭓
 
 ┌──⭓ *MENU 'FABRI'*
 |- fabri funziona senza uso
 |  di prefisso.
 |  per attivarlo:
-|⭔ ON: sveglia fabri 
-|⭔ OFF: dormi fabri 
+|ඬ  ON: sveglia fabri 
+|ඬ  OFF: dormi fabri 
 └───────⭓
 
 ┌──⭓ *MENU 'RISPOSTA'*
-│⭔ insulta + @
-│⭔ minaccia + @ 
-│⭔ zizzania + @
-│⭔ segreto + @
-│⭔ bestemmia
-│⭔ moneta (testa o croce)
+│ඬ  insulta + @
+│ඬ   minaccia + @ 
+│ඬ  zizzania + @
+│ඬ  segreto + @
+│ඬ  bestemmia
+│ඬ  moneta (testa o croce)
 └───────⭓
 ┌──⭓ *MENU 'AUDIO'*
-|⭔ Drama|Fail|Game Over|TG5
-│⭔ Timida|Ma che fai|rutto
-│⭔ Sei una monella|Soddisfazione
-│⭔ Io pago|Renzi|Rosario Muniz
-│⭔ Mio figlio poteva morire|Dio cancaro
+|ඬ  Drama|Fail|Game Over|TG5
+│ඬ  Timida|Ma che fai|rutto
+│ඬ  Sei una monella|Soddisfazione
+│ඬ  Io pago|Renzi|Rosario Muniz
+│ඬ  Mio figlio poteva morire|Dio cancaro
 └───────⭓
 ┌──⭓ *MENU 'STICKER'*
-│⭔ Steve Jobs
-│⭔ Non ci sono
-│⭔ Banana
-|⭔ Cesso
+│ඬ  Steve Jobs
+│ඬ  Non ci sono
+│ඬ  Banana
+|ඬ  Cesso
 └───────⭓
 
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
@@ -73,6 +79,9 @@ let text = `
 │ඬ ${usedPrefix}warn @
 │ඬ ${usedPrefix}unwarn @
 │ඬ ${usedPrefix}cringe @ '𝓷𝓮𝔀
+│ඬ ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│ඬ ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│ඬ ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
 │ඬ ${usedPrefix}bal (countmsg) @ '𝓷𝓮𝔀
 │ඬ ${usedPrefix}top messaggi '𝓷𝓮𝔀
 │ඬ ${usedPrefix}classifica '𝓷𝓮𝔀
@@ -117,9 +126,6 @@ let text = `
 │ඬ ${usedPrefix}sticker / s (foto/video)
 │ඬ ${usedPrefix}wm (sticker)
 │ඬ ${usedPrefix}emojimix (emoji+emoji)
-│ඬ ${usedPrefix}play (canzone)
-│ඬ ${usedPrefix}playdoc (canzone)
-│ඬ ${usedPrefix}playlist (canzone)
 │ඬ ${usedPrefix}pinterest / cerca 
 │ඬ ${usedPrefix}whatmusic (audio)
 │ඬ ${usedPrefix}qrcode (txt)
@@ -152,7 +158,8 @@ let text = `
 │ඬ ${usedPrefix}nera @
 │ඬ ${usedPrefix}random @
 │ඬ ${usedPrefix}amore @
-│ඬ ${usedPrefix}ia (AI)
+│ඬ ${usedPrefix}aii (AI)
+│ඬ ${usedPrefix}ai_voce (AI_voce)
 │ඬ ${usedPrefix}wikipedia (txt)
 │ඬ ${usedPrefix}meteo / tempo (città)
 │ඬ ${usedPrefix}dox @
@@ -192,7 +199,7 @@ let text = `
 ════ •⊰❂⊱• ════ 
 
 ┌──⭓ 𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓
-│⭔ .installa
+│ඬ  .installa
 └───✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
 `.trim() 
 conn.sendFile(m.chat, grup, 'errop.jpg', text, m, false, )
