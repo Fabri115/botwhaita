@@ -20,28 +20,29 @@ let neww = performance.now()
 let speed = neww - old
 let text = `
 
-✦✧✧𝐁Ꮻ𝐓✧✧✦
+✦✧✧𝓜𝓸𝓸𝓷 𝓑𝓸𝓽✧✧✦
 
-┌──⭓ *MENU NOVITA'*
-│ඬ  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}attiva chatbot 
-│ඬ  ${usedPrefix}abbraccio + @
-│ඬ  ${usedPrefix}schiaffo + @
-│ඬ  ${usedPrefix}trigger + @
-│ඬ  ${usedPrefix}txt/txt1 + (txt)
-│ඬ  ${usedPrefix}bal (checkativo)
-│ඬ  ${usedPrefix}top messaggi
-│ඬ  ${usedPrefix}gruppi messaggi
-│ඬ  ${usedPrefix}gatto
-│ඬ  ${usedPrefix}toanime
-│ඬ  ${usedPrefix}cartoon'𝓷𝓮𝔀
-│ඬ  ${usedPrefix}bluur
-│ඬ  ${usedPrefix}bonk
+┌──⭓ *𝐍𝐎𝐕𝐈𝐓𝐀'*
+│➤  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
+│➤  ${usedPrefix}deletesesion (4err 'wait message') '𝓷𝓮𝔀
+│➤  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
+│➤  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
+│➤  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}cartoon'𝓷𝓮𝔀
+│➤  ${usedPrefix}attiva chatbot 
+│➤  ${usedPrefix}abbraccio + @
+│➤  ${usedPrefix}schiaffo + @
+│➤  ${usedPrefix}trigger + @
+│➤  ${usedPrefix}txt/txt1 + (txt)
+│➤  ${usedPrefix}bal (checkativo)
+│➤  ${usedPrefix}top messaggi
+│➤  ${usedPrefix}gruppi messaggi
+│➤  ${usedPrefix}gatto
+│➤  ${usedPrefix}toanime
+│➤  ${usedPrefix}bluur
+│➤  ${usedPrefix}bonk
 └───────⭓
 
 ┌──⭓ *MENU 'FABRI'*
@@ -74,126 +75,132 @@ let text = `
 |ඬ  Cesso
 └───────⭓
 
-┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎
-│ඬ ${usedPrefix}kick / addio / ban @
-│ඬ ${usedPrefix}warn @
-│ඬ ${usedPrefix}unwarn @
-│ඬ ${usedPrefix}cringe @ '𝓷𝓮𝔀
-│ඬ ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
-│ඬ ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
-│ඬ ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
-│ඬ ${usedPrefix}bal (countmsg) @ '𝓷𝓮𝔀
-│ඬ ${usedPrefix}top messaggi '𝓷𝓮𝔀
-│ඬ ${usedPrefix}classifica '𝓷𝓮𝔀
-│ඬ ${usedPrefix}gruppi messaggi '𝓷𝓮𝔀
-│ඬ ${usedPrefix}del (msg)
-│ඬ ${usedPrefix}stermina +92
-│ඬ ${usedPrefix}listanum +1
-│ඬ ${usedPrefix}attiva/disabilita benvenuto
-│ඬ ${usedPrefix}attiva/disabilita antilink
-│ඬ ${usedPrefix}attiva/disabilita antilinkhttps
-│ඬ ${usedPrefix}attiva/disabilita antispam
-│ඬ ${usedPrefix}attiva/disabilita detect
-│ඬ ${usedPrefix}attiva/disabilita antielimina
-│ඬ ${usedPrefix}attiva/disabilita antiviewonce
-│ඬ ${usedPrefix}attiva/disabilita antitrava
-│ඬ ${usedPrefix}attiva/disabilita antipaki
-│ඬ ${usedPrefix}attiva/disabilita modoadmin
-│ඬ ${usedPrefix}attiva/disabilita autosticker
-│ඬ ${usedPrefix}link
-│ඬ ${usedPrefix}reimposta
-│ඬ ${usedPrefix}hidetag (txt)
-│ඬ ${usedPrefix}tagall / marcar (txt)
-│ඬ ${usedPrefix}inattivi
-│ඬ ${usedPrefix}viainattivi
-│ඬ ${usedPrefix}promuovi / mettiadmin @
-│ඬ ${usedPrefix}retrocedi / togliadmin @
-│ඬ ${usedPrefix}gruppo aperto / chiuso
-│ඬ ${usedPrefix}nome (txt)
-│ඬ ${usedPrefix}setbenvenuto (@user txt)
-│ඬ ${usedPrefix}setaddio (@user txt)
-│ඬ ${usedPrefix}admin
-│ඬ ${usedPrefix}ping
+┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎 
+│➤ ${usedPrefix}kick / addio / ban @
+│➤ ${usedPrefix}warn @
+│➤ ${usedPrefix}unwarn @
+│➤ ${usedPrefix}cringe @ '𝓷𝓮𝔀
+│➤ ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│➤ ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│➤ ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
+│➤ ${usedPrefix}bal (countmsg) @ '𝓷𝓮𝔀
+│➤ ${usedPrefix}top messaggi '𝓷𝓮𝔀
+│➤ ${usedPrefix}classifica '𝓷𝓮𝔀
+│➤ ${usedPrefix}gruppi messaggi '𝓷𝓮𝔀
+│➤ ${usedPrefix}del (msg)
+│➤ ${usedPrefix}stermina +92
+│➤ ${usedPrefix}listanum +1
+│➤ ${usedPrefix}link
+│➤ ${usedPrefix}reimposta
+│➤ ${usedPrefix}hidetag (txt)
+│➤ ${usedPrefix}tagall / marcar (txt)
+│➤ ${usedPrefix}inattivi
+│➤ ${usedPrefix}viainattivi
+│➤ ${usedPrefix}promuovi / mettiadmin @
+│➤ ${usedPrefix}retrocedi / togliadmin @
+│➤ ${usedPrefix}gruppo aperto / chiuso
+│➤ ${usedPrefix}nome (txt)
+│➤ ${usedPrefix}setbenvenuto (@user txt)
+│➤ ${usedPrefix}setaddio (@user txt)
+│➤ ${usedPrefix}admin
+│➤ ${usedPrefix}ping
 └───────⭓
 
 ════ •⊰❂⊱• ════ 
 
 ┌──⭓ 𝐌𝐄𝐃𝐈𝐀
-│ඬ ${usedPrefix}attp (txt)
-│ඬ ${usedPrefix}ttp (txt)
-│ඬ ${usedPrefix}gtts (txt)
-│ඬ ${usedPrefix}dado
-│ඬ ${usedPrefix}sticker / s (foto/video)
-│ඬ ${usedPrefix}wm (sticker)
-│ඬ ${usedPrefix}emojimix (emoji+emoji)
-│ඬ ${usedPrefix}pinterest / cerca 
-│ඬ ${usedPrefix}whatmusic (audio)
-│ඬ ${usedPrefix}qrcode (txt)
-│ඬ ${usedPrefix}leggi (foto)
-│ඬ ${usedPrefix}styletext (txt)
-│ඬ ${usedPrefix}destrava
-│ඬ ${usedPrefix}tovideo (sticker)
-│ඬ ${usedPrefix}togif (sticker)
-│ඬ ${usedPrefix}togifaud (video)
-│ඬ ${usedPrefix}tomp3 (video/audio)
-│ඬ ${usedPrefix}toaudio (video/audio)
-│ඬ ${usedPrefix}toptt (video)
-│ඬ ${usedPrefix}tourl (foto/video)
+│➤ ${usedPrefix}attp (txt)
+│➤ ${usedPrefix}ttp (txt)
+│➤ ${usedPrefix}gtts (txt)
+│➤ ${usedPrefix}dado
+│➤ ${usedPrefix}sticker / s (foto/video)
+│➤ ${usedPrefix}wm (sticker)
+│➤ ${usedPrefix}emojimix (emoji+emoji)
+│➤ ${usedPrefix}pinterest / cerca 
+│➤ ${usedPrefix}whatmusic (audio)
+│➤ ${usedPrefix}qrcode (txt)
+│➤ ${usedPrefix}leggi (foto)
+│➤ ${usedPrefix}styletext (txt)
+│➤ ${usedPrefix}destrava
+│➤ ${usedPrefix}tovideo (sticker)
+│➤ ${usedPrefix}togif (sticker)
+│➤ ${usedPrefix}togifaud (video)
+│➤ ${usedPrefix}tomp3 (video/audio)
+│➤ ${usedPrefix}toaudio (video/audio)
+│➤ ${usedPrefix}toptt (video)
+│➤ ${usedPrefix}tourl (foto/video)
 └───────⭓
 
  ════ •⊰❂⊱• ════ 
 
 ┌──⭓ 𝐋𝐎𝐆𝐇𝐈
-│ඬ ${usedPrefix}menuloghi
+│➤ ${usedPrefix}menuloghi
 └───────⭓
 
  ════ •⊰❂⊱• ════ 
 ┌──⭓ 𝐒𝐏𝐄𝐂𝐈𝐀𝐋𝐈
-│ඬ ${usedPrefix}gay @
-│ඬ ${usedPrefix}frocio @
-│ඬ ${usedPrefix}lesbica @
-│ඬ ${usedPrefix}puttana @
-│ඬ ${usedPrefix}puttaniere @
-│ඬ ${usedPrefix}nero @
-│ඬ ${usedPrefix}nera @
-│ඬ ${usedPrefix}random @
-│ඬ ${usedPrefix}amore @
-│ඬ ${usedPrefix}aii (AI)
-│ඬ ${usedPrefix}ai_voce (AI_voce)
-│ඬ ${usedPrefix}wikipedia (txt)
-│ඬ ${usedPrefix}meteo / tempo (città)
-│ඬ ${usedPrefix}dox @
-│ඬ ${usedPrefix}topgays
-│ඬ ${usedPrefix}topscimmie
-│ඬ ${usedPrefix}slot
-│ඬ ${usedPrefix}calc (1+1)
-│ඬ ${usedPrefix}autoadmin
-│ඬ ${usedPrefix}ruba (admin) '𝓷𝓮𝔀
-│ඬ ${usedPrefix}regalo (admin) '𝓷𝓮𝔀
+│➤ ${usedPrefix}gay @
+│➤ ${usedPrefix}frocio @
+│➤ ${usedPrefix}lesbica @
+│➤ ${usedPrefix}puttana @
+│➤ ${usedPrefix}puttaniere @
+│➤ ${usedPrefix}nero @
+│➤ ${usedPrefix}nera @
+│➤ ${usedPrefix}random @
+│➤ ${usedPrefix}amore @
+│➤ ${usedPrefix}aii (AI)
+│➤ ${usedPrefix}ai_voce (AI_voce)
+│➤ ${usedPrefix}wikipedia (txt)
+│➤ ${usedPrefix}meteo / tempo (città)
+│➤ ${usedPrefix}dox @
+│➤ ${usedPrefix}topgays
+│➤ ${usedPrefix}topscimmie
+│➤ ${usedPrefix}slot
+│➤ ${usedPrefix}calc (1+1)
+│➤ ${usedPrefix}autoadmin
+│➤ ${usedPrefix}ruba (admin) '𝓷𝓮𝔀
+│➤ ${usedPrefix}regalo (admin) '𝓷𝓮𝔀
 │ regalo e ruba hanno effetto su tutti
-│ඬ ${usedPrefix}top messaggi '𝓷𝓮𝔀
-│ඬ ${usedPrefix}virus1/1/2/3ecc '𝓷𝓮𝔀
+│➤ ${usedPrefix}top messaggi '𝓷𝓮𝔀
+│➤ ${usedPrefix}virus1/1/2/3ecc '𝓷𝓮𝔀
 └───────⭓
 
  ════ •⊰❂⊱• ════ 
 
 ┌──⭓ 𝐏𝐑𝐎𝐏𝐑𝐈𝐄𝐓𝐀𝐑𝐈𝐎
-│ඬ ${usedPrefix}attiva/disabilita restrict
-│ඬ ${usedPrefix}attiva/disabilita antiprivato
-│ඬ ${usedPrefix}attiva/disabilita sologruppo
-│ඬ ${usedPrefix}attiva/disabilita autoread
-│ඬ ${usedPrefix}banuser @
-│ඬ ${usedPrefix}unbanuser @
-│ඬ ${usedPrefix}block @
-│ඬ ${usedPrefix}unblock @
-│ඬ ${usedPrefix}join
-│ඬ ${usedPrefix}out
-│ඬ ${usedPrefix}spamgp (link)
-│ඬ ${usedPrefix}cleartmp
-│ඬ ${usedPrefix}blocklist
-│ඬ ${usedPrefix}banlist
-│ඬ ${usedPrefix}banchat
-│ඬ ${usedPrefix}unbanchat
+│➤ ${usedPrefix}banuser @
+│➤ ${usedPrefix}unbanuser @
+│➤ ${usedPrefix}block @
+│➤ ${usedPrefix}unblock @
+│➤ ${usedPrefix}join
+│➤ ${usedPrefix}out
+│➤ ${usedPrefix}spamgp (link)
+│➤ ${usedPrefix}cleartmp
+│➤ ${usedPrefix}blocklist
+│➤ ${usedPrefix}banlist
+│➤ ${usedPrefix}banchat
+│➤ ${usedPrefix}unbanchat
+└───────⭓
+
+════ •⊰❂⊱• ════ 
+
+┌──⭓ 𝐀𝐓𝐓𝐈𝐕𝐀
+│➤ ${usedPrefix}attiva/disabilita restrict
+│➤ ${usedPrefix}attiva/disabilita antiprivato
+│➤ ${usedPrefix}attiva/disabilita sologruppo
+│➤ ${usedPrefix}attiva/disabilita autoread
+│➤ ${usedPrefix}attiva/disabilita benvenuto
+│➤ ${usedPrefix}attiva/disabilita antilink
+│➤ ${usedPrefix}attiva/disabilita antilinkhttps
+│➤ ${usedPrefix}attiva/disabilita antispam
+│➤ ${usedPrefix}attiva/disabilita detect
+│➤ ${usedPrefix}attiva/disabilita antielimina
+│➤ ${usedPrefix}attiva/disabilita antiviewonce
+│➤ ${usedPrefix}attiva/disabilita antitrava
+│➤ ${usedPrefix}attiva/disabilita antipaki
+│➤ ${usedPrefix}attiva/disabilita modoadmin
+│➤ ${usedPrefix}attiva/disabilita autosticker
+│➤ ${usedPrefix}attiva/disabilita chatbot
 └───────⭓
 
 ════ •⊰❂⊱• ════ 
