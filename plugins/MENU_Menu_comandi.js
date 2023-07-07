@@ -23,10 +23,14 @@ let text = `
 ✦✧✧𝓜𝓸𝓸𝓷 𝓑𝓸𝓽✧✧✦
 
 ┌──⭓ *𝐍𝐎𝐕𝐈𝐓𝐀'*
-│➤  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
-│➤  ${usedPrefix}deletesesion (4err 'wait message') '𝓷𝓮𝔀
+│➤  ${usedPrefix}spotify (+ nome song) '𝒇𝒊𝒙
+│➤  ${usedPrefix}deletesesion (4err 'wait message') '𝒇𝒊𝒙
+│➤  ${usedPrefix}saveplugin  '𝓷𝓮𝔀
+│➤  ${usedPrefix}deleteplugin  '𝓷𝓮𝔀
+│➤  ${usedPrefix}savefile  '𝒇𝒊𝒙
+│➤  ${usedPrefix}getfile  '𝒇𝒊𝒙
 │➤  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
-│➤  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
+│➤  ${usedPrefix}ai_voce (+ richiesta) '𝒇𝒊𝒙
 │➤  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
 │➤  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
 │➤  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
@@ -49,30 +53,31 @@ let text = `
 |- fabri funziona senza uso
 |  di prefisso.
 |  per attivarlo:
-|ඬ  ON: sveglia fabri 
-|ඬ  OFF: dormi fabri 
+|➤  ON: sveglia fabri 
+|➤  OFF: dormi fabri 
 └───────⭓
 
 ┌──⭓ *MENU 'RISPOSTA'*
-│ඬ  insulta + @
-│ඬ   minaccia + @ 
-│ඬ  zizzania + @
-│ඬ  segreto + @
-│ඬ  bestemmia
-│ඬ  moneta (testa o croce)
+│➤  insulta + @
+│➤   minaccia + @ 
+│➤  zizzania + @
+│➤  segreto + @
+│➤  bestemmia
+│➤  moneta (testa o croce)
 └───────⭓
 ┌──⭓ *MENU 'AUDIO'*
-|ඬ  Drama|Fail|Game Over|TG5
-│ඬ  Timida|Ma che fai|rutto
-│ඬ  Sei una monella|Soddisfazione
-│ඬ  Io pago|Renzi|Rosario Muniz
-│ඬ  Mio figlio poteva morire|Dio cancaro
+|➤  Drama|Fail|Game Over|TG5
+│➤  Timida|Ma che fai|rutto
+│➤  Sei una monella|Soddisfazione
+│➤  Io pago|Renzi|Rosario Muniz
+│➤  Mio figlio poteva morire|Dio cancaro
 └───────⭓
 ┌──⭓ *MENU 'STICKER'*
-│ඬ  Steve Jobs
-│ඬ  Non ci sono
-│ඬ  Banana
-|ඬ  Cesso
+│➤  Steve Jobs
+│➤  Non ci sono
+│➤  Banana
+|➤  Cesso
+|➤  Cesare
 └───────⭓
 
 ┌──⭓ 𝐆𝐑𝐔𝐏𝐏𝐎 
