@@ -29,59 +29,66 @@ let prova = {"key": {
 }
 let text = `
 
-┌──⭓ *MENU NOVITA'*
-│ඬ  ${usedPrefix}spotify (+ nome song) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}ai_voce (+ richiesta) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
-│ඬ  ${usedPrefix}attiva chatbot 
-│ඬ  ${usedPrefix}abbraccio + @
-│ඬ  ${usedPrefix}schiaffo + @
-│ඬ  ${usedPrefix}trigger + @
-│ඬ  ${usedPrefix}txt/txt1 + (txt)
-│ඬ  ${usedPrefix}bal (checkativo)
-│ඬ  ${usedPrefix}top messaggi
-│ඬ  ${usedPrefix}gruppi messaggi
-│ඬ  ${usedPrefix}gatto
-│ඬ  ${usedPrefix}toanime
-│ඬ  ${usedPrefix}cartoon'𝓷𝓮𝔀
-│ඬ  ${usedPrefix}bluur
-│ඬ  ${usedPrefix}bonk
+┌──⭓ *𝐍𝐎𝐕𝐈𝐓𝐀'*
+│➤  ${usedPrefix}spotify (+ nome song) '𝒇𝒊𝒙
+│➤  ${usedPrefix}deletesesion (4err 'wait message') '𝒇𝒊𝒙
+│➤  ${usedPrefix}saveplugin  '𝓷𝓮𝔀
+│➤  ${usedPrefix}deleteplugin  '𝓷𝓮𝔀
+│➤  ${usedPrefix}savefile  '𝒇𝒊𝒙
+│➤  ${usedPrefix}getfile  '𝒇𝒊𝒙
+│➤  ${usedPrefix}aii (+ richiesta) '𝓷𝓮𝔀
+│➤  ${usedPrefix}ai_voce (+ richiesta) '𝒇𝒊𝒙
+│➤  ${usedPrefix}muta (+ user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}mutetime (+ m/h + user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}smuta (+ user) '𝓷𝓮𝔀
+│➤  ${usedPrefix}cartoon'𝓷𝓮𝔀
+│➤  ${usedPrefix}attiva chatbot 
+│➤  ${usedPrefix}abbraccio + @
+│➤  ${usedPrefix}schiaffo + @
+│➤  ${usedPrefix}trigger + @
+│➤  ${usedPrefix}txt/txt1 + (txt)
+│➤  ${usedPrefix}bal (checkativo)
+│➤  ${usedPrefix}top messaggi
+│➤  ${usedPrefix}gruppi messaggi
+│➤  ${usedPrefix}gatto
+│➤  ${usedPrefix}toanime
+│➤  ${usedPrefix}bluur
+│➤  ${usedPrefix}bonk
 └───────⭓
 
 ┌──⭓ *MENU 'FABRI'*
 |- fabri funziona senza uso
 |  di prefisso.
 |  per attivarlo:
-|ඬ  ON: sveglia fabri 
-|ඬ  OFF: dormi fabri 
+|➤  ON: sveglia fabri 
+|➤  OFF: dormi fabri 
 └───────⭓
 
 ┌──⭓ *MENU 'RISPOSTA'*
-│ඬ  insulta + @
-│ඬ   minaccia + @ 
-│ඬ  zizzania + @
-│ඬ  segreto + @
-│ඬ  bestemmia
-│ඬ  moneta (testa o croce)
+│➤  insulta + @
+│➤   minaccia + @ 
+│➤  zizzania + @
+│➤  segreto + @
+│➤  bestemmia
+│➤  moneta (testa o croce)
 └───────⭓
 ┌──⭓ *MENU 'AUDIO'*
-|ඬ  Drama|Fail|Game Over|TG5
-│ඬ  Timida|Ma che fai|rutto
-│ඬ  Sei una monella|Soddisfazione
-│ඬ  Io pago|Renzi|Rosario Muniz
-│ඬ  Mio figlio poteva morire|Dio cancaro
+|➤  Drama|Fail|Game Over|TG5
+│➤  Timida|Ma che fai|rutto
+│➤  Sei una monella|Soddisfazione
+│➤  Io pago|Renzi|Rosario Muniz
+│➤  Mio figlio poteva morire|Dio cancaro
 └───────⭓
 ┌──⭓ *MENU 'STICKER'*
-│ඬ  Steve Jobs
-│ඬ  Non ci sono
-│ඬ  Banana
-|ඬ  Cesso
+│➤  Steve Jobs
+│➤  Non ci sono
+│➤  Banana
+|➤  Cesso
+|➤  Cesare
 └───────⭓
+
 𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
-✦✧✧𝐁Ꮻ𝐓 ✧✧✦ 
+✦✧✧𝓜𝓸𝓸𝓷 𝓑𝓸𝓽✧✧✦
 `.trim() 
 conn.reply(m.chat, text, prova, m, false, )
 
