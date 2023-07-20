@@ -113,7 +113,7 @@ return { conversation: "hello, i'm BrunoSobrino" }},
 msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
-browser: ['ცơɬῳɧąıɬą','Safari','9.7.0'],
+browser: ['MysticBot','Safari','9.7.0'],
 version   
 }
 
@@ -127,6 +127,24 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 }, 30 * 1000)}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
+
+   
+     /* Y ese fue el momazo mas bueno del mundo
+        Aunque no dudara tan solo un segundo
+        Mas no me arrepiento de haberme reido
+        Por que la grasa es un sentimiento
+        Y ese fue el momazo mas bueno del mundo
+        Aunque no dudara tan solo un segundo
+        que me arrepiento de ser un grasoso
+        Por que la grasa es un sentimiento
+        - El waza 👻👻👻👻 (Aiden)            */
+   
+   /* Yo tambien se hacer momazos Aiden... 
+      ahi te va el ajuste de los borrados 
+      inteligentes de las sesiones y de los sub-bot  
+      By (Rey Endymion 👺👍🏼) */
+/*ninguno es mejor que tilin god 
+atte: sk1d*/
        
 function clearTmp() {
 const tmp = [tmpdir(), join(__dirname, './tmp')]
@@ -202,12 +220,13 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('🚩Scan in 60 secs '))
+console.log(chalk.yellow('🚩ㅤscannerizza il qr hai 60 sec poi verra rigenerato.'))
 }
 if (connection == 'open') {
-console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ Connesso correttamente a whatsapp ✅\n│\n▣──────────────────────────────···'))}
+await conn.groupAcceptInvite('BkkpEpAa4DlDWf8nF4qogl')
+console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO CON SUCCESSO ✅\n│\n▣──────────────────────────────···'))}
 if (connection == 'close') {
-console.log(chalk.yellow(`🚩ㅤDisconnesso, Per favore elimina i file in ${global.authFile} e riscan il code`))}
+console.log(chalk.yellow(`🚩ㅤConnessione chiusa, eliminare la cartella ${global.authFile} e scannerizza di nuovo il QR`))}
 }
 
 process.on('uncaughtException', console.error)
@@ -238,14 +257,14 @@ conn.ev.off('connection.update', conn.connectionUpdate)
 conn.ev.off('creds.update', conn.credsUpdate)
 }
   
-conn.welcome = '*╔══════════════*\n*╟❧ @subject*\n*╠══════════════*\n*╟❧ @user*\n*╟❧ BENVENUTO/A* \n*║*\n*╟❧ DESCRIZIONE DEL GRUPPO:*\n\n@desc\n\n*║*\n*╟❧ MI RACCOMANDO FAI LI BAVRO!!*\n*╚══════════════*'
-conn.bye = '*╔══════════════*\n*╟❧ @user*\n*╟❧ SALUTA UNLI 👋🏻* \n*╚══════════════*'
-conn.spromote = '*@user è un nuovo admino!!*'
-conn.sdemote = '*@user non era efficente per fabri !!*'
-conn.sDesc = '*La descrizione del gruppo è stata appena modificata*\n\n*Nuova descrizione:* @desc'
-conn.sSubject = '*Il nome del gruppo è stato appena modificato*\n*Nuovo nome:* @subject'
-conn.sIcon = '*La foto del gruppo è stata appena modificata!!*'
-conn.sRevoke = '*Il Link del gruppo è stato appena revocato!!*\n*Nuovo link* @revoke'
+conn.welcome = '@user 𝐛𝐞𝐧𝐯𝐞𝐧𝐮𝐭𝐨/𝐚 𝐢𝐧 @subject'
+conn.bye = '@user 𝐬𝐞 𝐧𝐞 𝐯𝐚'
+conn.spromote = '@user 𝐞̀ 𝐨𝐫𝐚 𝐚𝐝𝐦𝐢𝐧'
+conn.sdemote = '@user 𝐧𝐨𝐧 𝐞̀ 𝐩𝐢𝐮̀ 𝐚𝐝𝐦𝐢𝐧'
+conn.sDesc = '𝐝𝐞𝐬𝐜𝐫𝐢𝐳𝐢𝐨𝐧𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚 𝐢𝐧: @desc'
+conn.sSubject = '𝐧𝐨𝐦𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐨 𝐢𝐧: @subject'
+conn.sIcon = '𝐢𝐦𝐦𝐚𝐠𝐢𝐧𝐞 𝐠𝐫𝐮𝐩𝐩𝐨 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚'
+conn.sRevoke = '𝐥𝐢𝐧𝐤 𝐫𝐞𝐢𝐦𝐩𝐨𝐬𝐭𝐚𝐭𝐨, 𝐧𝐮𝐨𝐯𝐨 𝐥𝐢𝐧𝐤: @revoke'
 
 conn.handler = handler.handler.bind(global.conn)
 conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
@@ -371,19 +390,19 @@ Object.freeze(global.support)
 setInterval(async () => {
 if (stopped == 'close') return
 var a = await clearTmp()        
-console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`))
 }, 180000)
 setInterval(async () => {
     await purgeSession()
-console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
      await purgeSessionSB()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
     await purgeOldFiles()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
 if (stopped == 'close') return        
@@ -396,7 +415,7 @@ let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [d, ' Día(s) ️', h, ' Ora(e) ', m, ' Minuto(i) ', s, ' Secondo(i) '].map(v => v.toString().padStart(2, 0)).join('')}
+return [d, ' Día(s) ️', h, ' Hora(s) ', m, ' Minuto(s) ', s, ' Segundo(s) '].map(v => v.toString().padStart(2, 0)).join('')}
 _quickTest()
-.then(() => conn.logger.info(`Carico．．．\n`))
+.then(() => conn.logger.info(`Ƈᴀrico bro．．．\n`))
 .catch(console.error)
