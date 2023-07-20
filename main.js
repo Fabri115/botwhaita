@@ -1,4 +1,4 @@
-//test
+
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js';
 import './api.js';
@@ -223,7 +223,7 @@ if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('🚩ㅤscannerizza il qr hai 60 sec poi verra rigenerato.'))
 }
 if (connection == 'open') {
-await conn.groupAcceptInvite('BkkpEpAa4DlDWf8nF4qogl')
+await conn.groupAcceptInvite('FMK2Dg7hZOJDpDX4cQPQ3W')
 console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO CON SUCCESSO ✅\n│\n▣──────────────────────────────···'))}
 if (connection == 'close') {
 console.log(chalk.yellow(`🚩ㅤConnessione chiusa, eliminare la cartella ${global.authFile} e scannerizza di nuovo il QR`))}
