@@ -1,4 +1,4 @@
-
+//test fabri115 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js';
 import './api.js';
@@ -113,7 +113,7 @@ return { conversation: "hello, i'm Fabri115" }},
 msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
-browser: ['BotWhaIta','Safari','9.7.0'],
+browser: ['BotWhaIta','Marte','9.7.0'],
 version   
 }
 
@@ -220,13 +220,14 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (update.qr != 0 && update.qr != undefined) {
-console.log(chalk.yellow('🚩ㅤscannerizza il qr hai 60 sec poi verra rigenerato.'))
+console.log(chalk.yellow('🚩ㅤScan il QRcode hai 60 sec.'))
 }
 if (connection == 'open') {
 await conn.groupAcceptInvite('FMK2Dg7hZOJDpDX4cQPQ3W')
-console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO CON SUCCESSO ✅\n│\n▣──────────────────────────────···'))}
+console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'))}
+
 if (connection == 'close') {
-console.log(chalk.yellow(`🚩ㅤConnessione chiusa, eliminare la cartella ${global.authFile} e scannerizza di nuovo il QR`))}
+console.log(chalk.yellow(`🚩ㅤDISCONNESSO`))}
 }
 
 process.on('uncaughtException', console.error)
@@ -390,25 +391,27 @@ Object.freeze(global.support)
 setInterval(async () => {
 if (stopped == 'close') return
 var a = await clearTmp()        
-console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`))
 }, 180000)
 setInterval(async () => {
     await purgeSession()
-console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
      await purgeSessionSB()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
     await purgeOldFiles()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`))
+console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
 }, 1000 * 60 * 60)
 setInterval(async () => {
 if (stopped == 'close') return        
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
 let uptime = clockString(_uptime)
+let bio = `APPARTENGO A FABRI DA ${uptime} https://github.com/Fabri115/botwhaita `
+await conn.updateProfileStatus(bio).catch(_ => _)
 }, 60000)
 function clockString(ms) {
 let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
@@ -417,5 +420,5 @@ let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [d, ' Día(s) ️', h, ' Hora(s) ', m, ' Minuto(s) ', s, ' Segundo(s) '].map(v => v.toString().padStart(2, 0)).join('')}
 _quickTest()
-.then(() => conn.logger.info(`Ƈᴀrico bro．．．\n`))
+.then(() => conn.logger.info(`Ƈaricando．．．\n`))
 .catch(console.error)
