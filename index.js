@@ -1,4 +1,4 @@
-console.log('Ci siamo quasi')
+console.log('✅ㅤCi siamo quasi...')
 import { join, dirname } from 'path'
 import { createRequire } from "module";
 import { fileURLToPath } from 'url'
@@ -13,18 +13,14 @@ const { name, author } = require(join(__dirname, './package.json'))
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('MOONCLOUDS', {
-font: 'shade', 
+say('BOTWHAITA', {
+font: 'block', 
 align: 'center',
 gradient: ['blue', 'white']})
 say('ediz fab & dan', {
-font: 'tiny',
+font: 'block',
 align: 'center',
 gradient: ['red', 'blue']})
-say(`SUPERFABRI-BOT`, {
-font: 'slick',
-align: 'center',
-gradient: ['white', 'cyan']})
 
 var isRunning = false
 /**
@@ -39,7 +35,7 @@ let args = [join(__dirname, file), ...process.argv.slice(2)]
 say('scan codice qr', {
 font: 'console',
 align: 'center',
-gradient: ['red', 'magenta']})
+gradient: ['white', 'red']})
   
 setupMaster({
 exec: args[0],
@@ -58,16 +54,18 @@ p.send(process.uptime())
 break }})
 p.on('exit', (_, code) => {
 isRunning = false
-console.error('Errore inaspettato', code)
+console.error('❎ㅤErrore inaspettato:', code)
   
 p.process.kill()
 isRunning = false
 start.apply(this, arguments)
   
-if (code === 0) return
-watchFile(args[0], () => {
-unwatchFile(args[0])
-start(file)})})
+if (process.env.pm_id) {
+process.exit(1)
+} else {
+process.exit()
+}
+})
 let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 if (!opts['test'])
 if (!rl.listenerCount()) rl.on('line', line => {
