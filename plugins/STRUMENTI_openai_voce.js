@@ -3,8 +3,6 @@ import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 import { join } from 'path'
 
-//choose the language you want to use to play
-//
 const defaultLang = 'it'
 
 let handler = async (m, { text, conn, args, usedPrefix, command }) => {
