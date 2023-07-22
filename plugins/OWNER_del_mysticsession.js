@@ -13,7 +13,7 @@ let handler = async (m, { conn }, args) => {
   }
 
   try {
-    const sessionPath = "./MysticSession/";
+    const sessionPath = "./BotWhaItaSession/";
     const files = await fs.readdir(sessionPath);
     for (const file of files) {
       await fs.unlink(path.join(sessionPath, file));
@@ -26,6 +26,6 @@ let handler = async (m, { conn }, args) => {
 
 handler.help = ['deletebot'];
 handler.tags = ['jadibot'];
-handler.command = /^(deletebot|eliminarsesion|deletesesion|ds)$/i;
+handler.command = /^(deletebot|eliminarsesion|deletesession|ds)$/i;
 handler.owner = true;
 export default handler;
