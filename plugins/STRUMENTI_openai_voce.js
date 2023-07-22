@@ -3,6 +3,7 @@ import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 import { join } from 'path'
 
+//choose the language you want to use to play the OPEN_AI_VOCE plugin
 const defaultLang = 'it'
 
 let handler = async (m, { text, conn, args, usedPrefix, command }) => {
@@ -10,7 +11,7 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
   await m.reply('Aspetta un attimo...')
 
-  let zykomd = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=SGWN&text=${text}&user=user-unique-id`)
+  let zykomd = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino_2&text=${text}&user=user-unique-id`)
   let hasil = await zykomd.json()
 
   let lang = args[0]
