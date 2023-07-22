@@ -94,7 +94,7 @@ loadChatgptDB();
 
 /*------------------------------------------------*/
 
-global.authFile = `MysticSession`
+global.authFile = `BotWhaItaSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = MessageRetryMap => { }
 let { version } = await fetchLatestBaileysVersion();
@@ -157,13 +157,13 @@ return filename.map(file => {
 
 function purgeSession() {
     let prekey = []
-    let directorio = readdirSync("./MysticSession")
+    let directorio = readdirSync("./BotWhaItaSession")
     let filesFolderPreKeys = directorio.filter(file => {
         return file.startsWith('pre-key-')
     })
     prekey = [...prekey, ...filesFolderPreKeys]
     filesFolderPreKeys.forEach(files => {
-    unlinkSync(`./MysticSession/${files}`)
+    unlinkSync(`./BotWhaItaSession/${files}`)
 })
 
 }  
@@ -186,7 +186,7 @@ listaDirectorios.forEach(filesInDir => {
 }
 
 function purgeOldFiles() {
-const directories = ['./MysticSession/', './jadibts/']
+const directories = ['./BotWhaItaSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000) 
 directories.forEach(dir => {
     readdirSync(dir, (err, files) => {
@@ -198,10 +198,10 @@ directories.forEach(dir => {
                 if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
                     unlinkSync(filePath, err => {  
                         if (err) throw err
-                        console.log(`Archivo ${file} borrado con éxito`)
+                        console.log(`Archivo ${file} eliminato`)
                     })
                 } else {  
-                    console.log(`Archivo ${file} no borrado`) 
+                    console.log(`Archivo ${file} non eliminato`) 
                 } 
             }) 
         }) 
@@ -418,7 +418,7 @@ let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [d, ' Día(s) ️', h, ' Hora(s) ', m, ' Minuto(s) ', s, ' Segundo(s) '].map(v => v.toString().padStart(2, 0)).join('')}
+return [d, ' Giorn(i) ️', h, ' Ora(e) ', m, ' Minuto() ', s, ' Secondo(i) '].map(v => v.toString().padStart(2, 0)).join('')}
 _quickTest()
 .then(() => conn.logger.info(`Ƈaricando．．．\n`))
 .catch(console.error)
