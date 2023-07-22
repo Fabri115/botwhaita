@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { text,  usedPrefix,  command }) => {
     if (!text) throw `dica??`
 await m.reply('aspe...')
-let zykomd = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=SGWN&text=${text}&user=user-unique-id`)
+let zykomd = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino_2&text=${text}&user=user-unique-id`)
 let hasil = await zykomd.json()
  m.reply(`${hasil.result}`.trim())
     }  
