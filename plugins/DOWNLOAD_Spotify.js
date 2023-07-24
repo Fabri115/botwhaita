@@ -1,31 +1,30 @@
 import fetch from 'node-fetch'
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-if (!text)
-throw `Inserisci con il comando, il nome della canzone da cercare! esempio`
+import Spotify from "spotifydl-x"
+import fs from 'fs'
+let handler = async(m, { conn, text }) => {
+if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] INSERISCI IL NOME DELLA CANZONE DA CERCARE*`
 try {
-let res = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=SGWN&query=${text}`)
-let json = await res.json()
-let {link} = json.result[0]
-let res2 = await fetch(`https://api.lolhuman.xyz/api/spotify?apikey=SGWN&url=${link}`)
-let json2 = await res2.json()
-let {title, artists} = json2.result
-m.reply(`🎵 ${title}\n\n 🗣 ${artists}\n\n⏳️ carico..`)
-let aa =
-conn.sendMessage(m.chat, {
-audio: {
-url: json2.result.link
-}, ptt: true, mimetype: 'audio/mpeg', fileName: `Audio.mp3`
-}, {
-quoted: m
-})
-if (!aa) return conn.sendFile(m.chat, json2.result.link, 'Audio.mp3', null, m, false, {
-mimetype: 'audio/mp4'
-})}
-catch {
-throw 'Ho riscontrato un errore, assicurati di aver digitato correttamente il nome della canzone o riprova più tardi'
-}
-return}
-handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
-handler.tags = ['downloader']
-handler.command = /^spotify?$/i
+let resDL = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkeysapi}&query=${text}`)
+let jsonDL = await resDL.json()
+let linkDL = jsonDL.result[0].link
+let spty = await spotifydl(linkDL)
+const getRandom = (ext) => {
+return `${Math.floor(Math.random() * 10000)}${ext}`}
+let randomName = getRandom(".mp3")
+const filePath = `./tmp/${randomName}`
+fs.writeFileSync(filePath, spty.audio)
+let spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TITOLO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *LINK*: ${linkDL}\n┴`
+await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m)
+await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: "audio/mp4", }, { quoted: m })    
+} catch {
+throw '*[❗𝐈𝐍𝐅𝐎❗] ERRORE RIPROVA PIU TARDI O ASSICURATI DI AVER SCRITTO IL NOME CORRETTAMENTE*'
+}}
+handler.command = /^(spotify)$/i
 export default handler
+
+const credentials = { clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3', clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009' }
+const spotify = new Spotify.default(credentials)
+async function spotifydl(url) {
+const res = await spotify.getTrack(url).catch(() => {
+return { error: 'Fallo la descarga' }})
+return { data: res, audio: await spotify.downloadTrack(url) }}
