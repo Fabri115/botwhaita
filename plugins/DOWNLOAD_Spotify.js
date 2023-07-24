@@ -26,5 +26,5 @@ const credentials = { clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3', clientSecret
 const spotify = new Spotify.default(credentials)
 async function spotifydl(url) {
 const res = await spotify.getTrack(url).catch(() => {
-return { error: 'Fallo la descarga' }})
+return { error: 'Errore nel Download' }})
 return { data: res, audio: await spotify.downloadTrack(url) }}
