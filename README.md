@@ -227,7 +227,7 @@ DIGITA QUESTI COMANDI:
 > cd BotWhaIta
 ```
 ```bash
-> rm MysticSession
+> rm BotWhaItaSession
 ```
 ```bash
 > npm start
