@@ -228,6 +228,14 @@ DIGITA QUESTI COMANDI:
 |----|
 | [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
 |  𒆜Bug report,updates, news, 𒆜 |
+
+
+  </div>
+
+| [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
+|----|
+| [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
+|  𒆜Bug report,updates, news, 𒆜 |
   
   </div>
 
