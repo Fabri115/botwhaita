@@ -234,7 +234,7 @@ DIGITA QUESTI COMANDI:
 
 | [![MoonContentCreator](https://github.com/MoonContentCreator.png?size=200)](https://github.com/MoonContentCreator) |
 |----|
-|   [꧁𓊈𒆜   DANIEL    𒆜𓊉꧂](https://github.com/MoonContentCreator) |
+|   [꧁𓊈𒆜   DANIEL 𝐁𝐢𝐱𝐛𝐲🔮  𒆜𓊉꧂](https://github.com/MoonContentCreator) |
 |  𒆜Thanks to Creator of BixbyBot-Md |
   
   </div>
