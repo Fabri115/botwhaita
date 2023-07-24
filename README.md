@@ -8,7 +8,7 @@
 </p>
 
 ## Visitor вσтωнαιтα ƒαвяι115© 🔍
-<p align="center"><img src="https://profile-counter.glitch.me/{Fabri115}/count.svg" alt="neoxr :: Visitor's Count" /></p>
+<p align="center"><img src="https://profile-counter.glitch.me/{Fabri115}/count.svg" alt="neoxr :: Fork Count" /></p>
 
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
