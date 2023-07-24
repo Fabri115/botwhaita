@@ -33,10 +33,10 @@ global.mods = []
 global.d = new Date(new Date + 3600000)
 global.locale = 'it'
 global.dia = d.toLocaleDateString(locale, { weekday: 'long' })
-global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' })
-global.mes = d.toLocaleDateString('es', { month: 'long' })
-global.año = d.toLocaleDateString('es', { year: 'numeric' })
-global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+global.fecha = d.toLocaleDateString('it', { day: 'numeric', month: 'numeric', year: 'numeric' })
+global.mes = d.toLocaleDateString('it', { month: 'long' })
+global.año = d.toLocaleDateString('it', { year: 'numeric' })
+global.tiempo = d.toLocaleString('it', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //*****************************
 global.wm2 = `▸ ${dia} ${fecha}\n▸ ცơɬῳɧąıɬą`
 global.gt = '★ცơɬῳɧąıɬą★'
