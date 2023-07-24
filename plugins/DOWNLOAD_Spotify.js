@@ -15,7 +15,7 @@ const filePath = `./tmp/${randomName}`
 fs.writeFileSync(filePath, spty.audio)
 let spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TITOLO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *LINK*: ${linkDL}\n┴`
 await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m)
-await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: "audio/mp4", }, { quoted: m })    
+await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: "audio/mpeg", }, { quoted: m })    
 } catch {
 throw '*[❗𝐈𝐍𝐅𝐎❗] ERRORE RIPROVA PIU TARDI O ASSICURATI DI AVER SCRITTO IL NOME CORRETTAMENTE*'
 }}
