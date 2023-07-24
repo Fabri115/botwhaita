@@ -2,13 +2,11 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)
 
-
  <p align="center">
 <img width="" src="https://img.shields.io/github/repo-size/fabri115/botwhaita?color=red&label=Repo%20Size&style=for-the-badge&logo=appveyor">
 </p>
 
-## Visitor вσтωнαιтα ƒαвяι115© 🔍
-<p align="center"><img src="https://profile-counter.glitch.me/{Fabri115/botwhaita}/count.svg" alt="neoxr :: Fork Count" /></p>
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
