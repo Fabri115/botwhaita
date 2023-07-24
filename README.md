@@ -230,12 +230,12 @@ DIGITA QUESTI COMANDI:
 |  𒆜Bug report,updates, news, 𒆜 |
 
 
-  </div>
+  <div align="center">
 
-| [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
+| [![MoonContentCreator](https://github.com/MoonContentCreator.png?size=200)](https://github.com/MoonContentCreator) |
 |----|
-| [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
-|  𒆜Bug report,updates, news, 𒆜 |
+| [꧁𓊈𒆜DANIEL𒆜𓊉꧂](https://github.com/MoonContentCreator) |
+|  𒆜Thanks to Creator of BixbyBot-Md |
   
   </div>
 
