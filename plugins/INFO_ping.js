@@ -17,25 +17,34 @@ const { autoread } = global.opts
 let old = performance.now()
 let neww = performance.now()
 let speed = (neww - old).toFixed(5)
+let name = await
+conn.getName(m.sender)
+let prova = {
+"key": {
+"participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast","fromMe": false, "id": "Halo"
+}, "message": {
+"contactMessage": {
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+}}, "participant": "0@s.whatsapp.net"
+}
+let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
+let battery = ['100','99','98','97','96','95','94','93','92','91','90','89','88','87','86','85','84','83','82','81','80','79','78','77','76','75','74','73','72','71','70','69','68','67','66','65','64','63','62','61','60','59','58','57','56','55','54','53','52','51','50','49','48','47','46','45','44','43','42','41','40','39','38','37','36','35','34','33','32','31','30','29','28','27','26','25','24','23','22','21','20','19','18','17','16','15','14','13','12','11','10','9','8','7','6','5','4','3','2','1'][Math.floor(((d * 1) + gmt) / 8460) % 100]
 let info = `
- ════ •⊰❂⊱• ════ 
-
-𝐏𝐈𝐍𝐆 𝐁Ꮻ𝐓
-𝐀𝐓𝐓𝐈𝐕𝐈𝐓𝐀': ${uptime}
-𝐕𝐄𝐋𝐎𝐂𝐈𝐓𝐀': ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢
-
- ════ •⊰❂⊱• ════
+╭ ════ •⊰𝐏𝐈𝐍𝐆 𝐁Ꮻ𝐓⊱• ════ 
+┣
+┣➛ *𝓝𝓸𝓶𝓮 : ${name}* 
+┣➛ *𝓞𝔀𝓷𝓮𝓻 : Fabri115*
+┣➛ *𝓑𝓪𝓽𝓽𝓮𝓻𝓲𝓪 : ${battery}%* 
+┣➛ *𝓐𝓽𝓽𝓲𝓿𝓲𝓽à : ${uptime}* 
+┣➛ *𝓥𝓮𝓵𝓸𝓬𝓲𝓽à : ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢* 
+┣ 
+╰────❏
 `.trim() 
-conn.reply(m.chat, info, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: '𝙸𝙽𝙵𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃',
-body: '𝐁Ꮻ𝐓',         
-previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
-sourceUrl: `https://github.com/Fabri115/botwhaita`}}})
+conn.reply(m.chat, info,prova, m)
 }
 handler.help = ['infobot', 'speed']
 handler.tags = ['info', 'tools']
-handler.command = /^(ping|speed|infobot)$/i
+handler.command = /^(ping)$/i
 export default handler
 
 function clockString(ms) {
