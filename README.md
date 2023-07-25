@@ -244,11 +244,11 @@ DIGITA QUESTI COMANDI:
 
 
 ### `—◉ ⚠️ MOD & DEVELOPER 𝑴☁️ ⚠️ `
-  <div align="center">
+
   
 | [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
 |----|
-| [꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
+|   <div align="center">[꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
 |  𒆜Bug report,updates, news, 𒆜 |></a>
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
@@ -256,9 +256,15 @@ DIGITA QUESTI COMANDI:
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
+### `—◉ ⚠️ CONTRIBUTORS 𝑴☁️ ⚠️ `
+
 | [![MoonContentCreator](https://github.com/MoonContentCreator.png?size=200)](https://github.com/MoonContentCreator) |
 |----|
-|   [꧁𓊈𒆜   DANIEL 𝐁𝐢𝐱𝐛𝐲🔮  𒆜𓊉꧂](https://github.com/MoonContentCreator) |
+|   <div align="center">  [꧁𓊈𒆜   DANIEL 𝐁𝐢𝐱𝐛𝐲🔮  𒆜𓊉꧂](https://github.com/MoonContentCreator) |
 |  𒆜Thanks to Creator of BixbyBot-Md |
-  
+
+| [![BrunoSobrino](https://github.com/BrunoSobrino.png?size=200)](https://github.com/BrunoSobrino) |
+|----|
+|   [꧁𓊈𒆜   BrunoSobrino  𒆜𓊉꧂](https://github.com/BrunoSobrino) |
+|  𒆜Thanks to Creator of TheMystic-Bot-MD | 
   </div>
