@@ -114,7 +114,8 @@ msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
 browser: ['BotWhaIta','Marte','9.7.0'],
-version   
+version,
+defaultQueryTimeoutMs: undefined
 }
 
 global.conn = makeWASocket(connectionOptions)
