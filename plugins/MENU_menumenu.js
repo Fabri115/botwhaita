@@ -1,5 +1,4 @@
-/*
-import { xpRange } from '../lib/levelling.js'
+/* import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
