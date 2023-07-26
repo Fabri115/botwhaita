@@ -9,7 +9,7 @@ let handler = async (m, {}) => {
     if (res.status !== 200) throw res.statusText;
     let json = await res.json();
     m.reply(json?.ParsedResults?.[0]?.ParsedText);
-  } else throw "*[❗] ERROR, POR FAVOR VUELVE A INTENTARLO, NO OLVIDE RESPONDER A UNA IMAGEN*";
+  } else throw "*[❗] errore, rispondi ad un immagine*";
 };
 handler.command = /^ocr|totexto$/i;
 handler.command = true
