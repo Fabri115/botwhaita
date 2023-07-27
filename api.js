@@ -21,6 +21,7 @@ global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
 global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
 global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
+global.uptime = 'u2174024-985688424f30e19db6c607cf' //inserisci APIKEY di uptimerobot, se non ce l 'hai generala ===== https://uptimerobot.com/dashboard?ref=website-header#mySettings
 global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
 global.lolkeysapi = ['BrunoSobrino_2'] //['GataDios']
 global.itsrose = ['4b146102c4d500809da9d1ff']
