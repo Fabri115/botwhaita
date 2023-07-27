@@ -5,9 +5,28 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)  
 
 
-
- <p align="center">
+  <p align="center">
+<a href="https://github.com/Fabri115/followers"><img title="Followers" src="https://img.shields.io/github/followers/Fabri115?color=red&style=flat-square"></a>
+<a href="https://github.com/Fabri115/Fabri115/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Fabri115?color=blue&style=flat-square"></a>
+<a href="https://github.com/Fabri115/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Fabri115/botwhaita?color=red&style=flat-square"></a>
+<a href="https://komarev.com/ghpvc/?username=Fabri115&color=blue&style=flat-square&label=Profile+Visual"><img src="https://komarev.com/ghpvc/?username=Fabri115&color=blue&style=flat-square&label=Profile+Visual" />
+<a href="https://github.com/Fabri115/Fabri115/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Fabri115/botwhaita?label=Watcher'srepo&color=blue&style=flat-square"></a>
+<a href="https://github.com/Fabri115/botwhaita"><img title="Open Source" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
+<a href="https://github.com/Fabri115/AyGemuy/"><img title="Size" src="https://img.shields.io/github/repo-size/Fabri115/botwhaita?style=flat-square&color=green"></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFabri115%2Fhit-counter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+<a href="https://github.com/Fabri115/botwhaita/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a
 <img width="" src="https://img.shields.io/github/repo-size/fabri115/botwhaita?color=red&label=Repo%20Size&style=for-the-badge&logo=appveyor">
+<p align="center">
+<a href="https://wa.me/393518398856" target="_blank"><img src="https://img.shields.io/badge/Whatsapp-%808080.svg?&style=flat-square&logo=Whatsapp&logoColor=white" alt="WhatsApp"></a>
+<a href="https://github.com/Fabri115"><img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github"></a>
+<a href="https://chat.whatsapp.com/FMK2Dg7hZOJDpDX4cQPQ3W" target="_blank"><img src="https://img.shields.io/badge/Grupo-%808080.svg?&style=flat-square&logo=whatsapp&logoColor=white" alt="Whatsapp"></a>
+
+
+<p align="center">
+    <img src="https://img.shields.io/badge/OS-Windows-blue?&logo=Windows" />
+    <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+    <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
+<p align="center">
 <a href="https://www.buymeacoffee.com/Fabri115"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a candy&emoji=🍬&slug=Fabri115&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
 
 
