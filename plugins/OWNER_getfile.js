@@ -4,14 +4,19 @@ import path from 'path'
 
 const _fs = fs.promises
 
-let handler = async (m, { text, usedPrefix, command, __dirname }) => {
+let handler = async (m, { text, usedPrefix, command, __dirname, args }) => {
     if (!text) throw `
-✳️ usar  : ${usedPrefix + command} <name file>
+✳️ Uso  : ${usedPrefix + command} <name file>
 
-📌 Ejemplo:
+📌 Esempio:
         ${usedPrefix}getfile main.js
         ${usedPrefix}getplugin owner
 `.trim()
+let ar = Object.keys(plugins)
+let ar1 = ar.map(v => v.replace('.js', ''))
+if (!ar1.includes(args[0])) return m.reply(`*🗃️ non esiste questo plugin!*\n•••••••••••••••••••••••••••••••••••••••••••••••••••••••\n\n${ar1.map(v => ' ' + v).join`\n`}`)
+const file = join(__dirname, '../plugins/' + args[0] + '.js')
+unlinkSync(file)
     if (/p(lugin)?/i.test(command)) {
         const filename = text.replace(/plugin(s)\//i, '') + (/\.js$/i.test(text) ? '' : '.js')
         const pathFile = path.join(__dirname, filename)
@@ -24,7 +29,7 @@ let handler = async (m, { text, usedPrefix, command, __dirname }) => {
         })
         if (error) {
             await m.reply(`
-❎ Error encontrado en  *${filename}*:
+❎ Errore nel file  *${filename}*:
 
 ${error}
 
@@ -43,7 +48,7 @@ ${error}
             })
             if (error) {
                 await m.reply(`
-❎ Error encontrado en *${text}*:
+❎ Errore in *${text}*:
 
 ${error}
 
@@ -59,6 +64,6 @@ handler.help = ['plugin', 'file'].map(v => `get${v} <name file>`)
 handler.tags = ['owner']
 handler.command = /^g(et)?(p(lugin)?|f(ile)?)$/i
 
-handler.rowner = true
+handler.rowner = false
 
 export default handler
