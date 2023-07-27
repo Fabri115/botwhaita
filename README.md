@@ -1,6 +1,8 @@
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
-  
-  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)
+ 
+  <p align="center">
+    
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)  
 
 
 
@@ -12,16 +14,17 @@
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
-
+<h1 align="center"> 
+  `⚙️ CLICK THE PHOTO TO WATCH THE VIDEO TUTORIAL 𝑴☁️⚙️`
 <h1 align="center">
-<p>
-<img src= "https://i.imgur.com/BqCg8Ao.png" alt="BOT" width="720">
+<a href="https://youtu.be/6Cg1yUMz-Do"><img src= "https://i.imgur.com/BqCg8Ao.png" alt="BOT" width="720">
 </p>
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
 
 ### `—◉ ⚙️ CONFIGURAZIONE 𝑴☁️ ⚙️`
+
 `USA IL BOTTONE PER ESEGUIRE IL FORK`
   
   <a href="https://github.com/Fabri115/BotWhaIta/fork"><img title="bot" src="https://github.com/Alien-alfa/Alien-alfa/blob/beta/img/pngegg.png?raw=true" width="200"></a>
