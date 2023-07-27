@@ -1,12 +1,14 @@
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
   
   [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=35&pause=1000&center=true&width=435&lines=%E2%98%81%EF%B8%8F%F0%9D%91%B4%F0%9D%92%90%F0%9D%92%90%F0%9D%92%8F%F0%9D%91%AA%F0%9D%92%8D%F0%9D%92%90%F0%9D%92%96%F0%9D%92%85%F0%9D%92%94%E2%87%9D%F0%9D%90%81%E1%8F%AB%F0%9D%90%93%E2%98%81%EF%B8%8F)](https://git.io/typing-svg)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/fabri115/botwhaita/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/fabri115/botwhaita/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
+
 
 
  <p align="center">
 <img width="" src="https://img.shields.io/github/repo-size/fabri115/botwhaita?color=red&label=Repo%20Size&style=for-the-badge&logo=appveyor">
-</p>
+<a href="https://www.buymeacoffee.com/Fabri115"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a candy&emoji=🍬&slug=Fabri115&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
