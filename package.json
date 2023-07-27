@@ -49,7 +49,7 @@
         "file-type": "^17.1.1",
         "fluent-ffmpeg": "^2.1.2",
         "fs": "^0.0.1-security",
-        "formdata-node": "^4.3.2",
+        "formdata-node": "^5.0.1",
         "hispamemes": "^1.0.7",
         "human-readable": "^0.2.1",
         "instagram-url-direct": "^1.0.12",
