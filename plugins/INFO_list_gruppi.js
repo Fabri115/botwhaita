@@ -23,7 +23,7 @@ ${txt}
 handler.help = ['grouplist'] 
 handler.tags = ['group'] 
 
-handler.command = /^(group(s|list)|(s|list)|gig)$/i 
+handler.command = /^(listagruppi)$/i 
 
 
 export default handler
