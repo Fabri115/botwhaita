@@ -62,8 +62,8 @@ global.htki = '*⭑•̩̩͙⊱•••• ☪*'
 global.htka = '*☪ ••••̩̩͙⊰•⭑*'
 global.comienzo = '• • ◕◕════'
 global.fin = '════◕◕ • •'
-global.botdate = `⫹⫺ Date :  ${moment.tz('Europe/Italy').format('DD/MM/YY')}` //Asia/Jakarta
-global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Europe/Italy').format('HH:mm:ss')}`//America/Los_Angeles
+global.botdate = `⫹⫺ Date :  ${moment.tz('Europe/Berlin').format('DD/MM/YY')}` //Asia/Jakarta
+global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Europe/Berlin').format('HH:mm:ss')}`//America/Los_Angeles
 global.fgif = {key: { participant : '0@s.whatsapp.net'}, message: { "videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999',  'gifPlayback': 'true',  'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}}
 global.multiplier = 99
 //*************************
