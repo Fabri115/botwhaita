@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const MONITOR_API_KEY = `${global.uptime}`
 
 var handler = async (m, { conn }) => {
-  conn.reply(m.chat, 'Attualmente Caricamento delle informazioni sul monitor ... Attendi', m);
+  conn.reply(m.chat, 'Caricamento delle informazioni sul monitor ... Attendi', m);
 
   try {
     const [monitorResponse, accountResponse] = await Promise.all([
