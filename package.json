@@ -54,7 +54,7 @@
         "human-readable": "^0.2.1",
         "instagram-url-direct": "^1.0.12",
         "imagemaker.js": "^2.0.4",
-        "jsdom": "^19.0.0",
+        "jsdom": "^22.1.0",
         "link-preview-js": "^3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^3.0.0",
