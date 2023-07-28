@@ -21,6 +21,7 @@ import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
+import { error } from 'console';
 const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion } = await import('@adiwajshing/baileys')
 const { CONNECTING } = ws
 const { chain } = lodash
@@ -147,15 +148,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 /*ninguno es mejor que tilin god 
 atte: sk1d*/
        
-function clearTmp() {
-const tmp = [tmpdir(), join(__dirname, './tmp')]
-const filename = []
-tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
-return filename.map(file => {
-    const stats = statSync(file)
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-    return false })}
-
+/
 function purgeSession() {
     let prekey = []
     let directorio = readdirSync("./BotWhaItaSession")
@@ -224,7 +217,7 @@ if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('🚩ㅤScan il QRcode hai 60 sec.'))
 }
 if (connection == 'open') {
-await conn.groupAcceptInvite('FMK2Dg7hZOJDpDX4cQPQ3W')
+await conn.groupAcceptInvite('DrnPDROIs6W8ZGCLPvKL0t')
 console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'))}
 
 if (connection == 'close') {
@@ -390,23 +383,7 @@ let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, fin
 Object.freeze(global.support)
 }
 setInterval(async () => {
-if (stopped == 'close') return
-var a = await clearTmp()        
-console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`))
-}, 180000)
-setInterval(async () => {
-    await purgeSession()
-console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
-}, 1000 * 60 * 60)
-setInterval(async () => {
-     await purgeSessionSB()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
-}, 1000 * 60 * 60)
-setInterval(async () => {
-    await purgeOldFiles()
-console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
-}, 1000 * 60 * 60)
-setInterval(async () => {
+
 if (stopped == 'close') return        
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
@@ -419,7 +396,7 @@ let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [d, ' Giorn(i) ️', h, ' Ora(e) ', m, ' Minuto() ', s, ' Secondo(i) '].map(v => v.toString().padStart(2, 0)).join('')}
+return [d, ' Giorno(i) ️', h, ' Ora(e) ', m, ' Minuto() ', s, ' Secondo(i) '].map(v => v.toString().padStart(2, 0)).join('')}
 _quickTest()
-.then(() => conn.logger.info(`Ƈaricando．．．\n`))
+.then(() => conn.logger.info(`Ƈarico．．．\n`))
 .catch(console.error)
