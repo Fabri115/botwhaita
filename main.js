@@ -148,7 +148,15 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 /*ninguno es mejor que tilin god 
 atte: sk1d*/
        
-/
+function clearTmp() {
+  const tmp = [tmpdir(), join(__dirname, './tmp')]
+  const filename = []
+  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
+  return filename.map(file => {
+      const stats = statSync(file)
+      if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+      return false })}
+
 function purgeSession() {
     let prekey = []
     let directorio = readdirSync("./BotWhaItaSession")
@@ -383,7 +391,23 @@ let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, fin
 Object.freeze(global.support)
 }
 setInterval(async () => {
-
+  if (stopped == 'close') return
+  var a = await clearTmp()        
+  console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`))
+  }, 180000)
+  setInterval(async () => {
+      await purgeSession()
+  console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+  }, 1000 * 60 * 60)
+  setInterval(async () => {
+       await purgeSessionSB()
+  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+  }, 1000 * 60 * 60)
+  setInterval(async () => {
+      await purgeOldFiles()
+  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`))
+  }, 1000 * 60 * 60)
+setInterval(async () => {
 if (stopped == 'close') return        
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
