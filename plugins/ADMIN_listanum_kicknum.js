@@ -31,6 +31,6 @@ await delay(500)
 break            
 }}
 handler.command = /^(listanum|stermina)$/i
-handler.group = handler.botAdmin = handler.admin = true
+handler.group = handler.botAdmin = handler.owner = true
 handler.fail = null
 export default handler
