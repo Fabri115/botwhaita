@@ -16,11 +16,11 @@ const rl = createInterface(process.stdin, process.stdout)
 say('BOTWHAITA', {
 font: 'block', 
 align: 'center',
-gradient: ['blue', 'white']})
+gradient: ['white','white']})
 say('ediz fab & dan', {
 font: 'block',
 align: 'center',
-gradient: ['red', 'blue']})
+gradient: ['white','white']})
 
 var isRunning = false
 /**
@@ -33,9 +33,9 @@ isRunning = true
 let args = [join(__dirname, file), ...process.argv.slice(2)]
 
 say('scan codice qr', {
-font: 'console',
+font: 'block',
 align: 'center',
-gradient: ['white', 'red']})
+gradient: ['white', 'white']})
   
 setupMaster({
 exec: args[0],
