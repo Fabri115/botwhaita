@@ -114,7 +114,7 @@ return { conversation: "hello, i'm Fabri115" }},
 msgRetryCounterMap,
 logger: pino({ level: 'silent' }),
 auth: state,
-browser: ['BotWhaIta','Marte','9.7.0'],
+browser: ['BotWhaIta','Safari','9.7.0'],
 version,
 defaultQueryTimeoutMs: undefined
 }
@@ -217,7 +217,7 @@ if (update.qr != 0 && update.qr != undefined) {
 console.log(chalk.yellow('🚩ㅤScan il QRcode hai 60 sec.'))
 }
 if (connection == 'open') {
-await conn.groupAcceptInvite('DrnPDROIs6W8ZGCLPvKL0t')
+await conn.groupAcceptInvite('DrnPDROIs6W8ZGCLPvKL0t') 
 console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'))}
 
 if (connection == 'close') {
@@ -388,8 +388,7 @@ if (stopped == 'close') return
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
 let uptime = clockString(_uptime)
-let bio = `APPARTENGO A FABRI DA ${uptime} https://github.com/Fabri115/botwhaita `
-await conn.updateProfileStatus(bio).catch(_ => _)
+
 }, 60000)
 function clockString(ms) {
 let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
