@@ -1,3 +1,4 @@
+/* watch plugin DOWNLOAD_play.js :) ENJOY
 import fetch from 'node-fetch'
 import Spotify from "spotifydl-x"
 import fs from 'fs'
@@ -19,7 +20,7 @@ await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), 
 } catch {
 throw '*[❗𝐈𝐍𝐅𝐎❗] ERRORE RIPROVA PIU TARDI O ASSICURATI DI AVER SCRITTO IL NOME CORRETTAMENTE*'
 }}
-handler.command = /^(spotify)$/i
+handler.command = /^(spotifyy)$/i
 export default handler
 
 const credentials = { clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3', clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009' }
@@ -27,4 +28,4 @@ const spotify = new Spotify.default(credentials)
 async function spotifydl(url) {
 const res = await spotify.getTrack(url).catch(() => {
 return { error: 'Errore nel Download' }})
-return { data: res, audio: await spotify.downloadTrack(url) }}
+return { data: res, audio: await spotify.downloadTrack(url) }} */
