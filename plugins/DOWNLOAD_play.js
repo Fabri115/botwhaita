@@ -14,7 +14,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     } else if (command === 'play2') {
       additionalText = 'video 🎥';
     }
-    const texto1 =    `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TITOLO:* ${yt_play[0].title}\n├‣🗣️ *ARTISTA:* ${yt_play[0].author.name}\n├‣⌚ *DURATA*: ${secondString(yt_play[0].duration.seconds)}\n├‣🗣️ *ARTISTA:* ${yt_play[0].author.name}\n┴`.trim();
+    const texto1 =    `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TITOLO:* ${yt_play[0].title}\n├‣🗣️ *ARTISTA:* ${yt_play[0].author.name}\n├‣⌚ *DURATA*: ${secondString(yt_play[0].duration.seconds)}\n┴`.trim();
     conn.sendMessage(m.chat, {image: {url: yt_play[0].thumbnail}, caption: texto1}, {quoted: m});
     if (command == 'spotify') {
       try {
