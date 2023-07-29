@@ -1,11 +1,11 @@
-import {youtubeSearch} from '@bochilteam/scraper';
-import fetch from 'node-fetch';
-const handler = async (m, {conn, command, text, usedPrefix}) => {
-  try {
-    const buttons = [
-      {buttonId: `${usedPrefix}installa`, buttonText: {displayText: '𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓'}, type: 1},
-      {buttonId: `${usedPrefix}menuloghi`, buttonText: {displayText: '𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨'}, type: 1}];
-    const texto1 = `┌──⭓ ✧𝐁Ꮻ𝐓 ✧
+import { youtubeSearch } from '@bochilteam/scraper'
+import fetch from 'node-fetch'
+let handler = async (m, { conn, command, text, usedPrefix }) => {
+try {
+const buttons = [
+{ buttonId: `${usedPrefix}installa`, buttonText: { displayText: '𝐈𝐍𝐒𝐓𝐀𝐋𝐋𝐀𝐑𝐄 𝐈𝐋 𝐁𝐎𝐓' }, type: 1 },
+{ buttonId: `${usedPrefix}menuloghi`, buttonText: { displayText: '𝐌ΞИ𝐔 𝐋𝐎𝐆𝐇𝐈 🎨' }, type: 1 }, ]    
+let texto1 = `┌──⭓ ✧𝐁Ꮻ𝐓 ✧
 │⭔ ${usedPrefix}kick / addio / ban @
 │⭔ ${usedPrefix}warn @
 │⭔ ${usedPrefix}unwarn @
@@ -99,14 +99,12 @@ const handler = async (m, {conn, command, text, usedPrefix}) => {
 │⭔ ${usedPrefix}banlist
 │⭔ ${usedPrefix}banchat
 │⭔ ${usedPrefix}unbanchat
-└───────⭓`;
-    const buttonMessage = {image: fs.readFileSync('./Menu2.jpg'), caption: texto1, footer: '✦✧✧𝐁Ꮻ𝐓 ✧✧✦', buttons: buttons, headerType: 4};
-    await conn.sendMessage(m.chat, buttonMessage, {quoted: m});
-  } catch {
-    return;
-  }
-};
-handler.help = ['menu'].map((v) => v + ' <pencarian>');
-handler.tags = ['downloader'];
-handler.command = /^allmenu$/i;
-export default handler;
+└───────⭓`
+const buttonMessage = { image: fs.readFileSync("./Menu2.jpg"), caption: texto1, footer: '✦✧✧𝐁Ꮻ𝐓 ✧✧✦', buttons: buttons, headerType: 4 }
+await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+} catch {  
+return}}
+handler.help = ['menu'].map(v => v + ' <pencarian>')
+handler.tags = ['downloader']
+handler.command = /^allmenu$/i
+export default handler
