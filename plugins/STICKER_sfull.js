@@ -8,9 +8,9 @@ try {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('video troppo lungo')
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply('*[❗𝐈𝐍𝐅𝐎❗] Il video non può durare più di 10 sec*')
 let img = await q.download?.()
-if (!img) 
+if (!img) throw `*[❗𝐈𝐍𝐅𝐎❗] Rispondi ad un video, foto o link che termini per .𝚓𝚙𝚐 e sarà convertito in sticker. ES: tag @image/@video ${usedPrefix + command}*`
 let out
 try {
 stiker = await sticker(img, false, global.packname, global.author)
@@ -26,13 +26,13 @@ stiker = await sticker(false, out, global.packname, global.author)
 }}
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
-else return 
+else return m.reply('*[❗𝐈𝐍𝐅𝐎❗] link non valido deve terminare per .𝚓𝚙𝚐, Esempio: #s https://telegra.ph/file/0dc687c61410765e98de2.jpg*')
 }} catch (e) {
 console.error(e)
 if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
-else 
+else throw '*[❗𝐈𝐍𝐅𝐎❗] errore*'
 }}
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
 handler.tags = ['sticker']
