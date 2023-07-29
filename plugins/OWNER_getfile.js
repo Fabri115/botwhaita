@@ -12,14 +12,9 @@ let handler = async (m, { text, usedPrefix, command, __dirname, args }) => {
         ${usedPrefix}getfile main.js
         ${usedPrefix}getplugin owner
 `.trim()
-let ar = Object.keys(plugins)
-let ar1 = ar.map(v => v.replace('.js', ''))
-if (!ar1.includes(args[0])) return m.reply(`*🗃️ non esiste questo plugin!*\n•••••••••••••••••••••••••••••••••••••••••••••••••••••••\n\n${ar1.map(v => ' ' + v).join`\n`}`)
-const file = join(__dirname, '../plugins/' + args[0] + '.js')
-unlinkSync(file)
-    if (/p(lugin)?/i.test(command)) {
+  if (/p(lugin)?/i.test(command)) {
         const filename = text.replace(/plugin(s)\//i, '') + (/\.js$/i.test(text) ? '' : '.js')
-        const pathFile = path.join(__dirname, filename)
+const pathFile = path.join(__dirname, filename)
         const file = await _fs.readFile(pathFile, 'utf8')
         m.reply(file)
         const error = syntaxError(file, filename, {
@@ -29,7 +24,7 @@ unlinkSync(file)
         })
         if (error) {
             await m.reply(`
-❎ Errore nel file  *${filename}*:
+❎ Error encontrado en  *${filename}*:
 
 ${error}
 
@@ -48,7 +43,7 @@ ${error}
             })
             if (error) {
                 await m.reply(`
-❎ Errore in *${text}*:
+❎ Error encontrado en *${text}*:
 
 ${error}
 
