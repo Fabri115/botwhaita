@@ -1,9 +1,9 @@
-import fs from 'fs'
-function handler(m, { conn }) {
-let text = `ping frocetto`.trim()   
-conn.reply(m.chat, text, m, {
-})
+import fs from 'fs';
+function handler(m, {conn}) {
+  const text = `ping frocetto`.trim();
+  conn.reply(m.chat, text, m, {
+  });
 }
-handler.customPrefix = /(pong)/i
-handler.command = new RegExp
-export default handler
+handler.customPrefix = /(pong)/i;
+handler.command = new RegExp;
+export default handler;

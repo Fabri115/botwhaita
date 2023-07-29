@@ -1,7 +1,7 @@
-import fs from 'fs'
-let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
-let sticker = `./Media/Video/bot.mp4`
-let text = `
+import fs from 'fs';
+const handler = async (m, {conn, command, args, usedPrefix, DevMode}) => {
+  const sticker = `./Media/Video/bot.mp4`;
+  const text = `
 𝐂𝐨𝐦𝐚𝐧𝐝𝐢 𝐩𝐞𝐫 𝐓𝐄𝐑𝐌𝐔𝐗 📱
 
 > cd
@@ -43,10 +43,10 @@ VERSIONE DI TERMUX NECESSARIA:
 > rm -rf MysticSession
 
 Tutorial: https://www.youtube.com/watch?v=6Cg1yUMz-Do
-`.trim()   
+`.trim();
 
-conn.reply(m.chat, text, m,{
-})   
-}
-handler.command = /^(installa)/i
-export default handler
+  conn.reply(m.chat, text, m, {
+  });
+};
+handler.command = /^(installa)/i;
+export default handler;

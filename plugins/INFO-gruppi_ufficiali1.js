@@ -1,8 +1,8 @@
 
-let handler = async (m, { conn, usedPrefix }) => {
-let botol = global.wm
+const handler = async (m, {conn, usedPrefix}) => {
+  const botol = global.wm;
 
-m.reply(`
+  m.reply(`
  ✧──[ *Gruppo Ufficiale* ]──✧
 ┈┈┈┈┈┈┈┈┈┈┈┈
 *𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝ ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
@@ -40,12 +40,11 @@ m.reply(`
  ✧──[ *Gruppo Ufficiale* ]──✧
 *𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝ ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*
 ⟿ https://chat.whatsapp.com/JgshFc8KChtAai6ZfbI9QZ
-`)
+`);
+};
 
-}
+handler.help = ['support'];
+handler.tags = ['main'];
+handler.command = ['grupos', 'gp'];
 
-handler.help = ['support']
-handler.tags = ['main']
-handler.command = ['grupos', 'gp'] 
-
-export default handler
+export default handler;

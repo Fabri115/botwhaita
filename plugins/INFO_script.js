@@ -1,9 +1,9 @@
-let handler = async function (m, { conn, __dirname }) {
- m.reply(`*Assaggialoooooo:*\nhttps://github.com/Fabri115/botwhaita`)
-}
+const handler = async function(m, {conn, __dirname}) {
+  m.reply(`*Assaggialoooooo:*\nhttps://github.com/Fabri115/botwhaita`);
+};
 
-handler.help = ['script']
-handler.tags = ['main']
-handler.command = /^(sc|git|script)$/i
+handler.help = ['script'];
+handler.tags = ['main'];
+handler.command = /^(sc|git|script)$/i;
 
-export default handler
+export default handler;
