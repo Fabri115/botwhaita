@@ -2,28 +2,29 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     const grup = './Menu2.jpg';
     const menuText = `
 Lista Attiva/Disattiva:
-
-✨ | Benvenuto: ${usedPrefix + command} benvenuto
-🚫 | Antidelete: ${usedPrefix + command} antidelete
-🚫 | AntiPaki: ${usedPrefix + command} antipaki
-🚫 | Delete: ${usedPrefix + command} delete
-🌎 | Public: ${usedPrefix + command} public
-🔗 | Antilink: ${usedPrefix + command} antilink
-🔗 | AntilinkGP: ${usedPrefix + command} antilinkgp
-👁️ | Antiviewonce: ${usedPrefix + command} antiviewonce
-🚧 | Autosticker: ${usedPrefix + command} autosticker
-🚫 | AntiSpam: ${usedPrefix + command} antispam
-📛 | AntiTrava: ${usedPrefix + command} antitrava
-🔎 | Detect: ${usedPrefix + command} detect
-❗ | Restrict: ${usedPrefix + command} restrick
-😐 | AntiChiamata: ${usedPrefix + command} anticall
-😐 | AntiPrivato: ${usedPrefix + command} antiprivato
-☑️ | Autoread: ${usedPrefix + command} autoread
-💬 | SoloPrivato: ${usedPrefix + command} soloprivato
-💬 | ChatBot: ${usedPrefix + command} chatbot
-🏢 | SoloGruppo: ${usedPrefix + command} sologruppo
-📷 | StatusOnly: ${usedPrefix + command} swonly
-`;
+╭──» ${wm} 𓃠 «───✦ 
+┊ ✨ | Benvenuto: ${usedPrefix + command} benvenuto
+┊ 🚫 | Antidelete: ${usedPrefix + command} antidelete
+┊ 🚫 | AntiPaki: ${usedPrefix + command} antipaki
+┊ 🚫 | Delete: ${usedPrefix + command} delete
+┊ 🌎 | Public: ${usedPrefix + command} public
+┊ 🔗 | Antilink: ${usedPrefix + command} antilink
+┊ 🔗 | AntilinkGP: ${usedPrefix + command} antilinkgp
+┊ 🔗 | AntilinkINSTA: ${usedPrefix + command} antiinsta
+┊ 👁️ | Antiviewonce: ${usedPrefix + command} antiviewonce
+┊ 🚧 | Autosticker: ${usedPrefix + command} autosticker
+┊ 🚫 | AntiSpam: ${usedPrefix + command} antispam
+┊ 📛 | AntiTrava: ${usedPrefix + command} antitrava
+┊ 🔎 | Detect: ${usedPrefix + command} detect
+┊ ❗ | Restrict: ${usedPrefix + command} restrict
+┊ 😐 | AntiChiamata: ${usedPrefix + command} anticall
+┊ 😐 | AntiPrivato: ${usedPrefix + command} antiprivato
+┊ ☑️ | Autoread: ${usedPrefix + command} autoread
+┊ 💬 | SoloPrivato: ${usedPrefix + command} soloprivato
+┊ 💬 | ChatBot: ${usedPrefix + command} chatbot
+┊ 🏢 | SoloGruppo: ${usedPrefix + command} sologruppo
+┊ 📷 | StatusOnly: ${usedPrefix + command} swonly
+╰────────────✦`;
 
  
 let isEnable = /true|enable|attiva|(turn)?on|1/i.test(command)
@@ -45,6 +46,7 @@ throw false
 }
 chat.welcome = isEnable
 break
+
 case 'detect':
 if (!m.isGroup) {
 if (!isOwner) {
@@ -57,6 +59,7 @@ throw false
 }
 chat.detect = isEnable
 break
+
 case 'delete':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -65,6 +68,7 @@ throw false
 }}
 chat.delete = isEnable
 break
+
 case 'chatbot':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -74,6 +78,7 @@ throw false
 }
 chat.chatbot = isEnable
 break
+
 case 'antielimina':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -82,6 +87,7 @@ throw false
 }}
 chat.delete = !isEnable
 break
+
 case 'public':
 isAll = true
 if (!isROwner) {
@@ -90,7 +96,8 @@ throw false
 }
 global.opts['self'] = !isEnable
 break
-case 'antilinkhard':
+
+case 'antilink':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
@@ -98,22 +105,25 @@ throw false
 }}
 chat.antiLink = isEnable
 break
+
 case 'antilinkgp':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.antilinkbase = isEnable
+chat.antiLinkgp = isEnable
 break
-case 'antilink':
+
+case 'antiinsta':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
-chat.antilinkbase2 = isEnable
+chat.antiinsta = isEnable
 break
+
 case 'autosticker':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -122,6 +132,7 @@ throw false
 }}
 chat.autosticker = isEnable
 break
+
 case 'antispam':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -130,6 +141,7 @@ throw false
 }}
 chat.antiSpam = isEnable
 break
+
 case 'antiviewonce':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -138,6 +150,7 @@ throw false
 }}
 chat.antiviewonce = isEnable 
 break
+
 case 'modoadmin':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -145,7 +158,8 @@ global.dfail('admin', m, conn)
 throw false
 }}
 chat.modoadmin = isEnable          
-break    
+break  
+
 case 'audios':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -154,6 +168,7 @@ throw false
 }}
 chat.audios = isEnable          
 break
+
 case 'restrict':
 isAll = true
 if (!isOwner) {
@@ -161,7 +176,8 @@ global.dfail('owner', m, conn)
 throw false
 }
 bot.restrict = isEnable
-break    
+break 
+
 case 'autoread':
 isAll = true
 if (!isROwner) {
@@ -170,6 +186,7 @@ throw false
 }
 global.opts['autoread'] = isEnable
 break
+
 case 'pconly':
 case 'soloprivato':
 isAll = true
@@ -179,6 +196,7 @@ throw false
 }
 global.opts['pconly'] = isEnable
 break
+
 case 'gconly':
 case 'sologruppo':
 isAll = true
@@ -188,6 +206,7 @@ throw false
 }
 global.opts['gconly'] = isEnable
 break
+
 case 'swonly':
 case 'statusonly':
 isAll = true
@@ -197,6 +216,7 @@ throw false
 }
 global.opts['swonly'] = isEnable
 break
+
 case 'anticall':
 isAll = true
 if (!isROwner) {
@@ -205,6 +225,7 @@ throw false
 }
 bot.antiCall = isEnable
 break
+
 case 'antiprivato':
 isAll = true
 if (!isROwner) {
@@ -213,6 +234,7 @@ throw false
 }
 bot.antiPrivate = isEnable
 break
+
 case 'antitrava':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -221,6 +243,7 @@ throw false
 }}
 chat.antiTraba = isEnable
 break
+
 case 'antipaki':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -229,6 +252,7 @@ throw false
 }}
 chat.antiArab = isEnable  
 break
+
         default:
             conn.reply(m.chat, menuText, null, { contextInfo: { mentionedJid: [conn.user.jid] } });
             break;
