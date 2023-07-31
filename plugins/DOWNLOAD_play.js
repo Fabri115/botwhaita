@@ -9,14 +9,14 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
   try {
     const yt_play = await search(args.join(' '));
     let additionalText = '';
-    if (command === 'spotify') {
+    if (command === 'play') {
       additionalText = 'audio 🔊';
     } else if (command === 'play2') {
       additionalText = 'video 🎥';
     }
     const texto1 =    `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TITOLO:* ${yt_play[0].title}\n├‣🗣️ *ARTISTA:* ${yt_play[0].author.name}\n├‣⌚ *DURATA*: ${secondString(yt_play[0].duration.seconds)}\n┴`.trim();
     conn.sendMessage(m.chat, {image: {url: yt_play[0].thumbnail}, caption: texto1}, {quoted: m});
-    if (command == 'spotify') {
+    if (command == 'play') {
       try {
         const formats = await bestFormat(yt_play[0].url, 'audio');
         const dl_url = await getUrlDl(formats.url);
@@ -99,7 +99,7 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 };
 handler.help = ['play', 'play2'].map((v) => v + ' < busqueda >');
 handler.tags = ['downloader'];
-handler.command = /^spotify?$/i;
+handler.command = /^play2?$/i;
 export default handler;
 
 async function search(query, options = {}) {
