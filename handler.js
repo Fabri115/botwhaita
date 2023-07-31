@@ -464,6 +464,7 @@ if (!isNumber(user.antispam)) user.antispam = 0
                 if (!isNumber(user.vodka)) user.vodka = 0
                 if (!isNumber(user.wallet)) user.wallet = 0
                 if (!isNumber(user.warn)) user.warn = 0
+                if (!isNumber(user.warnInstagram)) user.warnInstagram = 0
                 if (!isNumber(user.weapon)) user.weapon = 0
                 if (!isNumber(user.weapondurability)) user.weapondurability = 0
                 if (!isNumber(user.wolf)) user.wolf = 0
@@ -876,6 +877,7 @@ if (!isNumber(user.antispam)) user.antispam = 0
                     vodka: 0,
                     wallet: 0,
                     warn: 0,
+                    warnInstagram: 0,
                     weapon: 0,
                     weapondurability: 0,
                     wolf: 0,
@@ -900,15 +902,9 @@ if (!isNumber(user.antispam)) user.antispam = 0
                 if (!('autosticker' in chat)) chat.autosticker = false                    
                 if (!('audios' in chat)) chat.audios = false                            
                 if (!('antiLink' in chat)) chat.antiLink = true
-if (!('antilinkbase' in chat)) chat.antilinkbase = false
-if (!('antitelegrambase' in chat)) chat.antitelegrambase = false
-if (!('antitiktokbase' in chat)) chat.antitiktokbase = false
-if (!('antitiktokhard' in chat)) chat.antitiktokhard = false
-if (!('antiinstahard' in chat)) chat.antiinstahard = false
-if (!('antiinstabase' in chat)) chat.antiinstabase = false
-if (!('antitelegramhard' in chat)) chat.antitelegramhard = false
-if (!('antiSpam' in chat)) chat.antiSpam = false
-                if (!('antiLink2' in chat)) chat.antiLink2 = false
+                if (!('antiinsta' in chat)) chat.antiinsta = false
+                if (!('antilinkgp' in chat)) chat.antilink2 = false
+                if (!('antiSpam' in chat)) chat.antiSpam = false
                 if (!('antiviewonce' in chat)) chat.antiviewonce = false
                 if (!('antiToxic' in chat)) chat.antiToxic = false
                 if (!('antiTraba' in chat)) chat.antiTraba = true
@@ -930,15 +926,9 @@ if (!('antiSpam' in chat)) chat.antiSpam = false
                     autosticker: false,
                     audios: false,
                     antiLink: true,
-antiSpam: false,
-                    antiLink2: false,
-                    antilinkbase: false,
-                    antitelegrambase: false,
-                    antitiktokbase: false,
-                    antiinstabase: false,
-                    antiinstahard: false,
-                    antitiktokhard: false,
-                    antitelegramhard: false,
+                    antiSpam: false,
+                    antiLinkgp: false,
+                    antiinsta: false,
                     antiviewonce: false,
                     antiToxic: false,
                     antiTraba: true,
@@ -998,7 +988,7 @@ antiSpam: false,
         if (m.isBaileys)
             return
         m.exp += Math.ceil(Math.random() * 10)
-
+        
         let usedPrefix
         let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
 
@@ -1248,7 +1238,7 @@ remoteJid: m.chat, fromMe: false, id: bang, participant: cance }
                 user.limit -= m.limit * 1
                 user.messaggi +=1
                 chat.messaggi +=1
-               user.bestemmie +=1
+                user.bestemmie +=1
     
             }
 
