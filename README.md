@@ -268,7 +268,7 @@ DIGITA QUESTI COMANDI:
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
 
-### `—◉ ⚠️ MOD & DEVELOPER 𝑴☁️ ⚠️ `
+### `—◉ ⚠️ MOD && DEVELOPER 𝑴☁️ ⚠️ `
 
   
 | [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
