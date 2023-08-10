@@ -281,15 +281,8 @@ DIGITA QUESTI COMANDI:
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#table-of-contents)
 
-### `—◉ ⚠️ CONTRIBUTORS 𝑴☁️ ⚠️ `
 
-| [![MoonContentCreator](https://github.com/MoonContentCreator.png?size=200)](https://github.com/MoonContentCreator) |
-|----|
-|   <div align="center">  [꧁𓊈𒆜   DANIEL 𝐁𝐢𝐱𝐛𝐲🔮  𒆜𓊉꧂](https://github.com/MoonContentCreator) |
-|  𒆜Thanks to Creator of BixbyBot-Md |
-
-| [![BrunoSobrino](https://github.com/BrunoSobrino.png?size=200)](https://github.com/BrunoSobrino) |
-|----|
-|   [꧁𓊈𒆜   BrunoSobrino  𒆜𓊉꧂](https://github.com/BrunoSobrino) |
-|  𒆜Thanks to Creator of TheMystic-Bot-MD | 
-  </div>
+### `—◉ ⚠️ THANKS to CONTRIBUTORS 𝑴☁️ ⚠️ `
+<a href="https://github.com/MoonContentCreator"><img src="https://github.com/MoonContentCreator.png" width="200" height="200" alt="MoonContentCreator"/></a>
+<a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="200" height="200" alt="BrunoSobrino"/></a>
+<a href="https://github.com/Davide116"><img src="https://github.com/Davide116.png" width="200" height="200" alt="Davide116"/></a>
