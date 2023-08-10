@@ -1,4 +1,4 @@
-import moment from 'moment-timezone'
+/*import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner, users, chatupdate }) => {
 let locale = 'es'
 let d = new Date(new Date + 3600000)
@@ -86,5 +86,5 @@ function clockString(ms) {
 }
 
 const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
+const readMore = more.repeat(4001)*/
 
