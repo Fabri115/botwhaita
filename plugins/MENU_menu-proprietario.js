@@ -31,6 +31,7 @@ let text = `
 │⭔ ${usedPrefix}unblock @
 │⭔ ${usedPrefix}join
 │⭔ ${usedPrefix}out
+│⭔ ${usedPrefix}ds (risolve il problema dei messaggi in attesa)
 │⭔ ${usedPrefix}spamgp (link)
 │⭔ ${usedPrefix}cleartmp
 │⭔ ${usedPrefix}blocklist
