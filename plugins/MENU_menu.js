@@ -59,16 +59,6 @@ let text = `  *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mən
 ┊─•✧*𝙐𝙋𝙏𝙄𝙈𝙀:* ${uptime} 
 ┊─•✧*𝘿𝘼𝙏𝘼𝘽𝘼𝙎𝙀:* ${rtotalreg} 𝑭𝑹𝑶𝑴 ${totaluser}
 ┊─•✧*𝑼𝙏𝑬𝙉𝙏𝙄 𝑻𝑶𝑻𝑨𝑳𝙄:* ${totaluser}
-└─── •✧✧• ────┘
-
-┌──*𝑪𝒐𝒎𝒂𝒏𝒅𝒊 𝒑𝒓𝒊𝒏𝒄𝒊𝒑𝒂𝒍𝒊!*──┐
-┊➤ ' ${usedPrefix} ' *𝑴𝑬𝑵𝑼𝑶𝑾𝑵𝑬𝑹*
-┊➤ ' ${usedPrefix} ' *𝑴𝑬𝑵𝑼𝑨𝑻𝑻𝑰𝑽𝑨*
-┊➤ ' ${usedPrefix} ' *𝑴𝑬𝑵𝑼𝑮𝑹𝑼𝑷𝑷𝑶*
-┊➤ ' ${usedPrefix} ' *𝑴𝑬𝑵𝑼𝑨𝑼𝑫𝑰𝑶*
-┊➤ ' ${usedPrefix} ' *𝑴𝑬𝑵𝑼𝑴𝑬𝑫𝑰𝑨*
-┊➤ ' ${usedPrefix} ' *𝑪𝑶𝑴𝑨𝑵𝑫𝑰*
-┊➤ ' ${usedPrefix} ' *𝑵𝑬𝑾𝑺*
 └──𝑩𝑶𝑻𝑾𝑯𝑨𝑰𝑻𝑨 V${vs}
 
 ┌─*𝑱𝒐𝒊𝒏 𝒘𝒊𝒕𝒉 𝒖𝒔*
@@ -78,13 +68,31 @@ let text = `  *☁️𝑴𝒐𝒐𝒏𝑪𝒍𝒐𝒖𝒅𝒔⇝𝐁Ꮻ𝐓|mən
 ┊ https://chat.whatsapp.com/InZqSk4lsyzKJUtSWfsdjF 
 ┊─• *𝑻𝒖𝒕𝒐𝒓𝒊𝒂𝒍:*
 ┊ https://www.youtube.com/watch?v=6Cg1yUMz-Do
-└── ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*`.trim() 
-conn.reply(m.chat, text, prova, m, doc, false, )
+└── ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*`
+const templateButtons = [
+    {index: 1, quickReplyButton: {displayText: 'Zmenuowner'}},
+    {index: 2, quickReplyButton: {displayText: 'Zmenuattiva'}},
+    {index: 3, quickReplyButton: {displayText: 'Zmenugruppo'}},
+    {index: 4, quickReplyButton: {displayText: 'Zmenuaudio'}},
+    {index: 5, quickReplyButton: {displayText: 'Zmenumedia'}},
+    {index: 6, quickReplyButton: {displayText: 'Zcomandi'}},
+    {index: 7, quickReplyButton: {displayText: 'Znews'}},
 
+
+]
+let tm = {
+text: text,
+footer: global.wm,
+templateButtons: templateButtons,
+image : 'no.png'
+}
+conn.sendMessage(m.chat,tm, m)
 }
 handler.help = ['menu']
 handler.tags = ['menu']
-handler.command = /^(menu)$/i
+handler.command = /^menu$/i
+
+
 export default handler
 
 function clockString(ms) {
