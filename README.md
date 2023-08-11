@@ -273,7 +273,7 @@ DIGITA QUESTI COMANDI:
   
 | [![Fabri115](https://github.com/Fabri115.png?size=200)](https://github.com/Fabri115) |
 |----|
-|   <div align="center">[꧁𓊈𒆜SUPER FABRI𒆜𓊉꧂](https://github.com/Fabri115) |
+|   <div align="center">[꧁𓊈𒆜Fabri115𒆜𓊉꧂](https://github.com/Fabri115) |
 |  𒆜Bug report,updates, news, 𒆜 |></a>
 
 ```SE MI VUOI BENE, DONA PER FARMI COMPRARE LE API KEYS VIP ```
