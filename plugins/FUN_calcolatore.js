@@ -12,7 +12,19 @@ conn.reply(m.chat, `
 ${text} è ${command.replace('how', '')} 🏳️‍🌈 al ${(100).getRandom()}%
 `.trim(), m, m.mentionedJid ? {
 mentions: m.mentionedJid
-} : {})} 
+} : {})}
+if (command == 'terrone') {
+conn.reply(m.chat, `
+${text} è ${command.replace('how', '')} 🦍 al ${(100).getRandom()}%
+`.trim(), m, m.mentionedJid ? {
+mentions: m.mentionedJid
+} : {})}
+if (command == 'nerd') {
+conn.reply(m.chat, `
+${text} è ${command.replace('how', '')} 🤓 al ${(100).getRandom()}%
+`.trim(), m, m.mentionedJid ? {
+mentions: m.mentionedJid
+} : {})}
 if (command == 'frocio') {
 conn.reply(m.chat, `
 ${text} è ${command.replace('how', '')} 🏳️‍🌈 al ${(100).getRandom()}%
@@ -56,7 +68,7 @@ ${text} è al ${(100).getRandom()}% ${command.replace('how', '')} 🔞
 mentions: m.mentionedJid
 } : {})}   
 }
-handler.help = ['gay', 'lesbica', 'pajero', 'pajera', 'puto', 'puttana', 'manco', 'manca', 'rata', 'prostituta', 'puttaniere'].map(v => v + ' @tag | nombre')
+handler.help = ['gay', 'lesbica', 'pajero', 'pajera', 'puto', 'puttana', 'manco', 'manca', 'rata', 'prostituta', 'puttaniere', 'terrone', 'nerd'].map(v => v + ' @tag | nombre')
 handler.tags = ['calculator']
-handler.command = /^gay|lesbica|frocio|random|puto|puttana|nero|nera|rata|prostituta|puttaniere/i
+handler.command = /^gay|lesbica|frocio|random|puto|puttana|nero|nera|rata|prostituta|puttaniere|terrone|nerd/i
 export default handler
