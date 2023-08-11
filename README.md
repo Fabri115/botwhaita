@@ -286,3 +286,4 @@ DIGITA QUESTI COMANDI:
 <a href="https://github.com/MoonContentCreator"><img src="https://github.com/MoonContentCreator.png" width="200" height="200" alt="MoonContentCreator"/></a>
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="200" height="200" alt="BrunoSobrino"/></a>
 <a href="https://github.com/Davide116"><img src="https://github.com/Davide116.png" width="200" height="200" alt="Davide116"/></a>
+<a href="https://github.com/Angiolettopazz"><img src="https://github.com/Angiolettopazz.png" width="200" height="200" alt="Angiolettopazz"/></a>
