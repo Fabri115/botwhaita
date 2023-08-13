@@ -1,19 +1,18 @@
-import { watchFile, unwatchFile } from 'fs'
-import chalk from 'chalk'
-import { fileURLToPath } from 'url'
-import fs from 'fs'
-import cheerio from 'cheerio'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import moment from 'moment-timezone' 
+import {watchFile, unwatchFile} from 'fs';
+import chalk from 'chalk';
+import {fileURLToPath} from 'url';
+import fs from 'fs'; 
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import axios from 'axios';
+import moment from 'moment-timezone';
 
 global.owner = [
-  ['393518398856', 'nobody|'],
-  ['5511932338323', 'nobody|']
+  ['390371717717', 'nobody|'],
 ]
-global.suittag = ['393518398856'] 
-global.prems = ['393518398856'] 
-global.reportes_solicitudes = ['393518398856']
+global.suittag = ['390371717717'] 
+global.prems = ['390371717717'] 
+global.reportes_solicitudes = ['390371717717']
 
 global.packname = '(☞ﾟ∀ﾟ)☞'
 global.author = '★ცơɬῳɧąıɬą★'
@@ -30,7 +29,7 @@ global.imagen5 = fs.readFileSync('./src/+18.jpg')
 
 global.mods = [] 
 
-//********Tiempo***************
+//* *******Tiempo***************
 global.d = new Date(new Date + 3600000)
 global.locale = 'it'
 global.dia = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -67,10 +66,18 @@ global.botdate = `⫹⫺ Date :  ${moment.tz('Europe/Berlin').format('DD/MM/YY')
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Europe/Berlin').format('HH:mm:ss')}`//America/Los_Angeles
 global.fgif = {key: { participant : '0@s.whatsapp.net'}, message: { "videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999',  'gifPlayback': 'true',  'caption': bottime, 'jpegThumbnail': fs.readFileSync('./Menu.png')}}}
 global.multiplier = 99
-//*************************
+global.flaaa = [
+  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
+  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&doScale=true&scaleWidth=800&scaleHeight=500&text=',
+  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
+  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=',
+];
+//* ************************
 
-let file = fileURLToPath(import.meta.url)
+const file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
-unwatchFile(file)
-console.log(chalk.redBright("Update 'config.js'"))
-import(`${file}?update=${Date.now()}`)})
+  unwatchFile(file);
+  console.log(chalk.redBright('Update \'config.js\''));
+  import(`${file}?update=${Date.now()}`);
+});
