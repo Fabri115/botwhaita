@@ -50,16 +50,31 @@ const handler = async (m, {conn, text}) => {
       mimetype: 'image/jpeg',
       copyright: 'Copyright Darlyn ©2023',
     };
+    
     await fs.promises.writeFile(filePath, spty.audio);
     await NodeID3.write(tags, filePath);
+      async function loading() {
+      var hawemod = [
+      "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
+      "《 ████▒▒▒▒▒▒▒▒》30%",
+      "《 ███████▒▒▒▒▒》50%",
+      "《 ██████████▒▒》80%",
+      "《 ████████████》100%"
+      ]
+            let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡CARICAMENTO!! ☠*`}, {quoted: m})
+       for (let i = 0; i < hawemod.length; i++) {
+         await new Promise(resolve => setTimeout(resolve, 1000)); 
+         await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m}); 
+       }}
+      loading()    
     const spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TÍTOLO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *𝚄𝚁𝙻*: ${linkDL}\n┴`;
     await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m);
-    await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mp4'}, {quoted: m});
+    await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg'}, {quoted: m});
   } catch (error) {
     console.error(error);
     throw '*[❗] Errore.*';
   }
-};
+}
 handler.command = /^(spotify|music)$/i;
 export default handler;
 
