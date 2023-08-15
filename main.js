@@ -105,7 +105,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `botwhaitasession`;
+global.authFile = `botwhaitaSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const {version} = await fetchLatestBaileysVersion();
@@ -140,7 +140,7 @@ const connectionOptions = {
 global.conn = makeWASocket(connectionOptions);
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`ƇARICO．．．\n`);
+conn.logger.info(`Carico\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -185,13 +185,13 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./botwhaitasession")
+let directorio = readdirSync("./botwhaitaSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./botwhaitasession/${files}`)
+unlinkSync(`./botwhaitaSession/${files}`)
 })
 } 
 
@@ -210,13 +210,13 @@ unlinkSync(`./jadibts/${directorio}/${fileInDir}`)
 })
 }
 })
-if (SBprekey.length === 0) console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
+if (SBprekey.length === 0) return; //console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
 } catch (err) {
-console.log(chalk.bold.red(`=> Algo salio mal durante la eliminación, archivos no eliminados`))
+console.log(chalk.bold.red(`=> Qualcosa è andato storto durante l'eliminazione, file non ideati`))
 }}
 
 function purgeOldFiles() {
-const directories = ['./botwhaitasession/', './jadibts/']
+const directories = ['./botwhaitaSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -228,10 +228,10 @@ if (err) throw err;
 if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
 unlinkSync(filePath, err => {  
 if (err) throw err
-console.log(chalk.bold.green(`Archivo ${file} borrado con éxito`))
+console.log(chalk.bold.green(`Archivio ${file} Cancellato con successo`))
 })
 } else {  
-console.log(chalk.bold.red(`Archivo ${file} no borrado` + err))
+console.log(chalk.bold.red(`Archivio ${file} non cancellato` + err))
 } }) }) }) })
 }
 
@@ -246,16 +246,54 @@ async function connectionUpdate(update) {
   }
   if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🚩ㅤScan il QRcode hai 60 sec.'))
+    console.log(chalk.yellow('🚩ㅤScansionare questo codice QR, il codice QR scade in 60 secondi.'));
   }
   if (connection == 'open') {
-  console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'))}
-  
-  if (connection == 'close') {
-  console.log(chalk.yellow(`🚩ㅤDISCONNESSO`))}
+    console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'));
   }
-  
-  process.on('uncaughtException', console.error)
+let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+if (connection === 'close') {
+    if (reason === DisconnectReason.badSession) {
+        conn.logger.error(`[ ⚠ ] Sessione errata, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
+        //await connectionUpdate();
+        //process.exit();
+    } else if (reason === DisconnectReason.connectionClosed) {
+        conn.logger.warn(`[ ⚠ ] Connessione chiusa, riconnessione...`);
+        //await connectionUpdate();
+        //process.exit();
+    } else if (reason === DisconnectReason.connectionLost) {
+        conn.logger.warn(`[ ⚠ ] Connessione persa con il server, riconnettersi...`);
+        //await connectionUpdate();
+        //process.exit();
+    } else if (reason === DisconnectReason.connectionReplaced) {
+        conn.logger.error(`[ ⚠ ] Connessione sostituita, è stata aperta un'altra nuova sessione.Si prega di chiudere prima la sessione corrente.`);
+        //await connectionUpdate();
+        //process.exit();
+    } else if (reason === DisconnectReason.loggedOut) {
+        conn.logger.error(`[ ⚠ ] Connessione chiusa, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
+        //await connectionUpdate();
+        //process.exit();
+    } else if (reason === DisconnectReason.restartRequired) {
+        conn.logger.info(`[ ⚠ ]Riavvio necessario, riavvio...`);
+        //await connectionUpdate(); 
+        //process.exit();
+        //process.send('reset');
+    } else if (reason === DisconnectReason.timedOut) {
+        conn.logger.warn(`[ ⚠ ] Tempo di connessione esausto, riconnessione...`);
+        //await connectionUpdate();
+        //process.exit();
+    } else {
+        conn.logger.warn(`[ ⚠ ] Motivo di disconnessione sconosciuta. ${reason || ''}: ${connection || ''}`);
+        //await connectionUpdate();
+        //process.exit();
+    }
+}
+  /*if (connection == 'close') {
+    console.log(chalk.yellow(`🚩ㅤConnessione chiusa, elimina la cartella ${global.authFile}e ricreare il codice QR`));
+  }*/
+}
+
+process.on('uncaughtException', console.error);
 
 let isInit = true;
 let handler = await import('./handler.js');
@@ -285,16 +323,15 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = '@user 𝐛𝐞𝐧𝐯𝐞𝐧𝐮𝐭𝐨/𝐚 𝐢𝐧 @subject'
-  conn.bye = '@user 𝐬𝐞 𝐧𝐞 𝐯𝐚'
-  conn.spromote = '@user 𝐞̀ 𝐨𝐫𝐚 𝐚𝐝𝐦𝐢𝐧'
-  conn.sdemote = '@user 𝐧𝐨𝐧 𝐞̀ 𝐩𝐢𝐮̀ 𝐚𝐝𝐦𝐢𝐧'
-  conn.sDesc = '𝐝𝐞𝐬𝐜𝐫𝐢𝐳𝐢𝐨𝐧𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚 𝐢𝐧: @desc'
-  conn.sSubject = '𝐧𝐨𝐦𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐨 𝐢𝐧: @subject'
-  conn.sIcon = '𝐢𝐦𝐦𝐚𝐠𝐢𝐧𝐞 𝐠𝐫𝐮𝐩𝐩𝐨 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚'
-  conn.sRevoke = '𝐥𝐢𝐧𝐤 𝐫𝐞𝐢𝐦𝐩𝐨𝐬𝐭𝐚𝐭𝐨, 𝐧𝐮𝐨𝐯𝐨 𝐥𝐢𝐧𝐤: @revoke'
+  conn.welcome = '@user 𝐛𝐞𝐧𝐯𝐞𝐧𝐮𝐭𝐨/𝐚 𝐢𝐧 @subject';
+  conn.bye = '@user 𝐬𝐞 𝐧𝐞 𝐯𝐚';
+  conn.spromote = '@user 𝐞̀ 𝐨𝐫𝐚 𝐚𝐝𝐦𝐢𝐧';
+  conn.sdemote = '@user 𝐧𝐨𝐧 𝐞̀ 𝐩𝐢𝐮̀ 𝐚𝐝𝐦𝐢𝐧';
+  conn.sDesc = '𝐝𝐞𝐬𝐜𝐫𝐢𝐳𝐢𝐨𝐧𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚 𝐢𝐧: @desc';
+  conn.sSubject = '𝐧𝐨𝐦𝐞 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐨 𝐢𝐧: @subject';
+  conn.sIcon = '𝐢𝐦𝐦𝐚𝐠𝐢𝐧𝐞 𝐠𝐫𝐮𝐩𝐩𝐨 𝐦𝐨𝐝𝐢𝐟𝐢𝐜𝐚𝐭𝐚';
+  conn.sRevoke = '𝐥𝐢𝐧𝐤 𝐫𝐞𝐢𝐦𝐩𝐨𝐬𝐭𝐚𝐭𝐨, 𝐧𝐮𝐨𝐯𝐨 𝐥𝐢𝐧𝐤: @revoke';
 
-  
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn);
