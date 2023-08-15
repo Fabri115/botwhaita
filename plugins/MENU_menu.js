@@ -81,8 +81,23 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, isPrems,
 ┊─• *last news:*
 ┊─• ${global.prefix} MenuIos
 └── ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*`.trim();
-  conn.reply(m.chat, text, prova, m, doc, false);
-};
+async function loading() {
+  var hawemod = [
+  "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
+  "《 ████▒▒▒▒▒▒▒▒》30%",
+  "《 ███████▒▒▒▒▒》50%",
+  "《 ██████████▒▒》80%",
+  "《 ████████████》100%"
+  ]
+        let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡CARICAMENTO!! ☠*`}, {quoted: m})
+   for (let i = 0; i < hawemod.length; i++) {
+     await new Promise(resolve => setTimeout(resolve, 1000)); 
+     await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m}); 
+    }
+    await conn.sendMessage(m.chat, {text: text, edit: key, mentions: conn.parseMention(name)}, {quoted: m});         
+   }
+  loading()    
+  };
 handler.help = ['menu'];
 handler.tags = ['menu'];
 handler.command = /^(menu)$/i;
