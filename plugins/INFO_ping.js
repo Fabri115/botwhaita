@@ -38,8 +38,23 @@ const handler = async (m, {conn, usedPrefix}) => {
 ┣➛ *𝓥𝓮𝓵𝓸𝓬𝓲𝓽à : ${speed} 𝐬𝐞𝐜𝐨𝐧𝐝𝐢* 
 
 `.trim();
-  conn.reply(m.chat, info, prova, m);
-};
+async function loading() {
+  var hawemod = [
+  "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
+  "《 ████▒▒▒▒▒▒▒▒》30%",
+  "《 ███████▒▒▒▒▒》50%",
+  "《 ██████████▒▒》80%",
+  "《 ████████████》100%"
+  ]
+        let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡CARICAMENTO!! ☠*`}, {quoted: m})
+   for (let i = 0; i < hawemod.length; i++) {
+     await new Promise(resolve => setTimeout(resolve, 1000)); 
+     await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m}); 
+    }
+    await conn.sendMessage(m.chat, {text: info, edit: key, mentions: conn.parseMention(name)}, {quoted: m});         
+   }
+  loading()    
+  };
 handler.help = ['infobot', 'speed'];
 handler.tags = ['info', 'tools'];
 handler.command = /^(ping)$/i;
