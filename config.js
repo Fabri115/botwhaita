@@ -17,7 +17,7 @@ global.reportes_solicitudes = ['390371717717']
 global.packname = '(☞ﾟ∀ﾟ)☞'
 global.author = '★ცơɬῳɧąıɬą★'
 global.wm = '★ცơɬῳɧąıɬą ★'
-global.vs = '3.0'
+global.vs = '4.0'
 global.igfg = '★ცơɬῳɧąıɬą★'
 global.wait = '*[❗]⌛ _Caricando..._*\n*▰▰▰▱▱▱▱▱*'
 
