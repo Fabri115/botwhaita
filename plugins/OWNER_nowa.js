@@ -23,7 +23,7 @@ const handler = async (m, {conn, text, usedPrefix, command, isOwner}) => {
   m.reply(txt);
 };
 handler.command = /^nowa$/i;
-handler.owner = true;
+handler.admin = true;
 export default handler;
 function formatDate(n, locale = 'id') {
   const d = new Date(n);
