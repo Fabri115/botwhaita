@@ -16,7 +16,7 @@ let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
 if (!mime) 
 if (!/image\/(jpe?g|png)/.test(mime)) 
-let img = await q.download()
+img = await q.download()
 let url = await uploadImage(img)
 let apiUrl = global.API('https://some-random-api.ml/canvas/', encodeURIComponent(effect), {
 avatar: url

@@ -91,7 +91,7 @@ async function loading() {
   ]
         let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡CARICAMENTO!! ☠*`}, {quoted: m})
    for (let i = 0; i < hawemod.length; i++) {
-     await new Promise(resolve => setTimeout(resolve, 1000)); 
+     await new Promise(resolve => setTimeout(resolve, 500)); 
      await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m}); 
     }
     await conn.sendMessage(m.chat, {text: text, edit: key, mentions: conn.parseMention(name)}, {quoted: m});         

@@ -1356,6 +1356,15 @@ export async function handler(chatUpdate) {
     // console.log(global.db.data.users[m.sender])
     let user; let chat; const stats = global.db.data.stats;
     if (m) {
+let utente = global.db.data.users[m.sender]
+if (utente.muto == true) {
+let bang = m.key.id
+let cance = m.key.participant
+await conn.sendMessage(m.chat, {
+delete: {
+remoteJid: m.chat, fromMe: false, id: bang, participant: cance }
+})
+}
       if (m.sender && (user = global.db.data.users[m.sender]) && (chat = global.db.data.chats[m.chat])) {
         user.exp += m.exp
         user.limit -= m.limit * 1

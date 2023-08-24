@@ -9,5 +9,5 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
 };
 handler.help = ['cerca <query>', 'imagen <query>'];
 handler.tags = ['internet', 'tools'];
-handler.command = /^(cerca)$/i;
+handler.command = /^(immagini)$/i;
 export default handler;

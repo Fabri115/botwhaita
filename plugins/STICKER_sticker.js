@@ -44,7 +44,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 };
 handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>'];
 handler.tags = ['sticker'];
-handler.command = /^s(tic?ker)?(gif)?(wm)?$/i;
+handler.command = /^(stic?ker)?(gif)?(wm)?$/i;
 export default handler;
 
 const isUrl = (text) => {

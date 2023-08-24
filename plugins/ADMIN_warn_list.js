@@ -6,12 +6,12 @@ const handler = async (m, {conn, isAdmin}) => {
 *╭•·–––––––––––––––––––·•*
 │ *Tot : ${adv.length} User* ${adv ? '\n' + adv.map(([jid, user], i) => `
 │
-│ *${i + 1}.* ${conn.getName(jid) == undefined ? 'Sin Usuarios' : conn.getName(jid) + ` *(${user.warn}/4)*`}
+│ *${i + 1}.* ${conn.getName(jid) == undefined ? 'Sin Usuarios' : conn.getName(jid) + ` *(${user.warn}/3)*`}
 │ ${isAdmin ? '@' + jid.split`@`[0] : jid}\n│ - - - - - - - - -`.trim()).join('\n') : ''}
 *╰•·–––––––––––––––––––·•*`;
   m.reply(caption, null, {mentions: conn.parseMention(caption)});
 };
 
-handler.command = /^(listaadv|listadv|adv|advlist|advlista)$/i;
+handler.command = /^(listaadv|listwarn|adv|advlist|advlista)$/i;
 
 export default handler;
