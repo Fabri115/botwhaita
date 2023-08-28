@@ -105,7 +105,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `botwhaitaSession`;
+global.authFile = `BotWhaItaSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const {version} = await fetchLatestBaileysVersion();
@@ -132,7 +132,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['botwhaita', 'Safari', '1.0.0'],
+  browser: ['BotWhaita', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
@@ -140,7 +140,7 @@ const connectionOptions = {
 global.conn = makeWASocket(connectionOptions);
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`Carico\n`);
+conn.logger.info(`Ƈᴀʀico．．．\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -185,13 +185,13 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./botwhaitaSession")
+let directorio = readdirSync("./BotWhaItaSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./botwhaitaSession/${files}`)
+unlinkSync(`./BotWhaItaSession/${files}`)
 })
 } 
 
@@ -212,11 +212,11 @@ unlinkSync(`./jadibts/${directorio}/${fileInDir}`)
 })
 if (SBprekey.length === 0) return; //console.log(chalk.cyanBright(`=> No hay archivos por eliminar.`))
 } catch (err) {
-console.log(chalk.bold.red(`=> Qualcosa è andato storto durante l'eliminazione, file non ideati`))
+console.log(chalk.bold.red(`=> Qualcosa è andato storto durante l'eliminazione, file non eliminati`))
 }}
 
 function purgeOldFiles() {
-const directories = ['./botwhaitaSession/', './jadibts/']
+const directories = ['./BotWhaItaSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -228,7 +228,7 @@ if (err) throw err;
 if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
 unlinkSync(filePath, err => {  
 if (err) throw err
-console.log(chalk.bold.green(`Archivio ${file} Cancellato con successo`))
+console.log(chalk.bold.green(`Archivio ${file} cancellato con successo`))
 })
 } else {  
 console.log(chalk.bold.red(`Archivio ${file} non cancellato` + err))
@@ -241,12 +241,13 @@ async function connectionUpdate(update) {
   if (isNewLogin) conn.isInit = true;
   const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-    console.log(await global.reloadHandler(true).catch(console.error));
+    await global.reloadHandler(true).catch(console.error);
+    //console.log(await global.reloadHandler(true).catch(console.error));
     global.timestamp.connect = new Date;
   }
   if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🚩ㅤScansionare questo codice QR, il codice QR scade in 60 secondi.'));
+    console.log(chalk.yellow('🚩ㅤScansiona questo codice QR, il codice QR scade tra 60 secondi.'));
   }
   if (connection == 'open') {
     console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'));
@@ -254,42 +255,33 @@ async function connectionUpdate(update) {
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`[ ⚠ ] Sessione errata, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
-        //await connectionUpdate();
+        conn.logger.error(`[ ⚠ ] Sessione errata, elimina la cartella ${global.authFile} ed eseguire nuovamente la scansione.`);
         //process.exit();
     } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`[ ⚠ ] Connessione chiusa, riconnessione...`);
-        //await connectionUpdate();
-        //process.exit();
+        conn.logger.warn(`[ ⚠ ] Connessione chiusa, riconnessione in corso...`);
+        process.send('reset');
     } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`[ ⚠ ] Connessione persa con il server, riconnettersi...`);
-        //await connectionUpdate();
-        //process.exit();
+        conn.logger.warn(`[ ⚠ ] Connessione persa con il server, riconnessione...`);
+        process.send('reset');
     } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`[ ⚠ ] Connessione sostituita, è stata aperta un'altra nuova sessione.Si prega di chiudere prima la sessione corrente.`);
-        //await connectionUpdate();
+        conn.logger.error(`[ ⚠ ] Connessione sostituita, è stata aperta un'altra nuova sessione.Per prima cosa disconnettiti dalla sessione corrente.`);
         //process.exit();
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`[ ⚠ ] Connessione chiusa, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
-        //await connectionUpdate();
+        conn.logger.error(`[ ⚠ ] Connessione chiusa, elimina la cartella ${global.authFile} ed eseguire nuovamente la scansione.`);
         //process.exit();
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`[ ⚠ ]Riavvio necessario, riavvio...`);
-        //await connectionUpdate(); 
-        //process.exit();
+        conn.logger.info(`[ ⚠ ] Riavvio richiesto, riavviare il server in caso di problemi.`);
         //process.send('reset');
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`[ ⚠ ] Tempo di connessione esausto, riconnessione...`);
-        //await connectionUpdate();
-        //process.exit();
+        conn.logger.warn(`[ ⚠ ] Connessione scaduta, riconnessione in corso...`);
+        process.send('reset');
     } else {
-        conn.logger.warn(`[ ⚠ ] Motivo di disconnessione sconosciuta. ${reason || ''}: ${connection || ''}`);
-        //await connectionUpdate();
+        conn.logger.warn(`[ ⚠ ]motivo di disconnessione sconosciuto. ${reason || ''}: ${connection || ''}`);
         //process.exit();
     }
 }
   /*if (connection == 'close') {
-    console.log(chalk.yellow(`🚩ㅤConnessione chiusa, elimina la cartella ${global.authFile}e ricreare il codice QR`));
+    console.log(chalk.yellow(`🚩ㅤConnessione chiusa, elimina la cartella ${global.authFile} e scansiona nuovamente il codice QR`));
   }*/
 }
 
@@ -463,22 +455,22 @@ async function _quickTest() {
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const a = await clearTmp();
-  console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ 𝙰𝚁𝙲𝙷𝙸𝚅𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾𝚂 ✅\n│\n▣───────────────────────────────────────···\n`));
+  console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`));
 }, 180000);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
-  console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+  console.log(chalk.cyanBright(`\n▣────────[ AUTOPURGESESSIONS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSessionSB();
-  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_SESSIONS_SUB-BOTS ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeOldFiles();
-  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVOS ELIMINADOS ✅\n│\n▣────────────────────────────────────···\n`));
+  console.log(chalk.cyanBright(`\n▣────────[ AUTO_PURGE_OLDFILES ]───────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣────────────────────────────────────···\n`));
 }, 1000 * 60 * 60);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
@@ -491,6 +483,6 @@ function clockString(ms) {
   const h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24;
   const m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60;
   const s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60;
-  return [d, ' Giorno(i) ️', h, ' Ora(e) ', m, ' Minuto() ', s, ' Secondo(i) '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' giorno(i) ️', h, ' ora(e) ', m, ' minuto(i) ', s, ' secondo(i) '].map((v) => v.toString().padStart(2, 0)).join('');
 }
 _quickTest().catch(console.error);
