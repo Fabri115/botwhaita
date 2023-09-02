@@ -252,34 +252,34 @@ async function connectionUpdate(update) {
   if (connection == 'open') {
     console.log(chalk.yellow('▣──────────────────────────────···\n│\n│❧ CONNESSO ✅\n│\n▣──────────────────────────────···'));
   }
-let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
-if (connection === 'close') {
-    if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`[ ⚠ ] Sessione errata, elimina la cartella ${global.authFile} ed eseguire nuovamente la scansione.`);
-        //process.exit();
-    } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`[ ⚠ ] Connessione chiusa, riconnessione in corso...`);
-        process.send('reset');
-    } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`[ ⚠ ] Connessione persa con il server, riconnessione...`);
-        process.send('reset');
-    } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`[ ⚠ ] Connessione sostituita, è stata aperta un'altra nuova sessione.Per prima cosa disconnettiti dalla sessione corrente.`);
-        //process.exit();
-    } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`[ ⚠ ] Connessione chiusa, elimina la cartella ${global.authFile} ed eseguire nuovamente la scansione.`);
-        //process.exit();
-    } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`[ ⚠ ] Riavvio richiesto, riavviare il server in caso di problemi.`);
-        //process.send('reset');
-    } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`[ ⚠ ] Connessione scaduta, riconnessione in corso...`);
-        process.send('reset');
-    } else {
-        conn.logger.warn(`[ ⚠ ]motivo di disconnessione sconosciuto. ${reason || ''}: ${connection || ''}`);
-        //process.exit();
-    }
-}
+  let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+  if (connection === 'close') {
+      if (reason === DisconnectReason.badSession) {
+          conn.logger.error(`[ ⚠ ] Sessione errata, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
+          //process.exit();
+      } else if (reason === DisconnectReason.connectionClosed) {
+          conn.logger.warn(`[ ⚠ ] Connessione chiusa, riconnessione...`);
+          await global.reloadHandler(true).catch(console.error);
+      } else if (reason === DisconnectReason.connectionLost) {
+          conn.logger.warn(`[ ⚠ ] Connessione persa con il server, riconnettersi...`);
+          await global.reloadHandler(true).catch(console.error);
+      } else if (reason === DisconnectReason.connectionReplaced) {
+          conn.logger.error(`[ ⚠ ] Connessione sostituita, è stata aperta un'altra nuova sessione.Si prega di chiudere prima la sessione corrente.`);
+          //process.exit();
+      } else if (reason === DisconnectReason.loggedOut) {
+          conn.logger.error(`[ ⚠ ] Connessione chiusa, rimuovere la cartella ${global.authFile} E scansionare di nuovo.`);
+          //process.exit();
+      } else if (reason === DisconnectReason.restartRequired) {
+          conn.logger.info(`[ ⚠ ] Riavvio necessario, riavviare il server se presenta qualche problema.`);
+          await global.reloadHandler(true).catch(console.error);
+      } else if (reason === DisconnectReason.timedOut) {
+          conn.logger.warn(`[ ⚠ ] Tempo di connessione esausto, riconnessione...`);
+          await global.reloadHandler(true).catch(console.error);
+      } else {
+          conn.logger.warn(`[ ⚠ ] Motivo di disconnessione sconosciuta. ${reason || ''}: ${connection || ''}`);
+          await global.reloadHandler(true).catch(console.error);
+      }
+  }
   /*if (connection == 'close') {
     console.log(chalk.yellow(`🚩ㅤConnessione chiusa, elimina la cartella ${global.authFile} e scansiona nuovamente il codice QR`));
   }*/
