@@ -1,9 +1,10 @@
-/* Creditos de los tags a @darlyn1234 */
+/* Creditos de los tags a @darlyn1234 y diseño a @ALBERTO9883 */
 import fetch from 'node-fetch';
 import Spotify from 'spotifydl-x';
 import fs from 'fs';
 import NodeID3 from 'node-id3';
 import axios from 'axios';
+import {find_lyrics} from '@brandond/findthelyrics';
 
 const credentials = {
   clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
@@ -11,8 +12,8 @@ const credentials = {
 };
 const spotify = new Spotify.default(credentials);
 
-const handler = async (m, {conn, text}) => {
-  if (!text) throw `*[❗] Inserisci il nome di una canzone da Spotify.*`;
+const handler = async (m, { conn, text }) => {
+ if (!text) throw `*[❗] Ingrese el nombre de alguna canción de spotify.*`;
   try {
     const resDL = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkeysapi}&query=${text}`);
     const jsonDL = await resDL.json();
@@ -24,19 +25,23 @@ const handler = async (m, {conn, text}) => {
     const randomName = getRandom('.mp3');
     const filePath = `./tmp/${randomName}`;
     const artist = spty.data.artists.join(', ') || '-';
+    const img = await (await fetch(`${spty.data.cover_url}`)).buffer()  
+    const letra_s = await find_lyrics(spty.data.name ? spty.data.name : '');
+    let letra;
+    letra = `${letra_s ? letra_s + '\n\n🤴🏻 Scarica da Fabri115 e BOTWHAITA 🤖' : '🤴🏻 Scarica da Fabri115 e BOTWHAITA 🤖'}`  
     const tags = {
       title: spty.data.name || '-',
       artist: artist,
       album: spty.data.album_name || '-',
       year: spty.data.release_date || '-',
-      genre: '-',
+      genre: 'Música',
       comment: {
         language: 'spa',
-        text: '🤴🏻 вσтωнαιтα є∂ιт ƒαвяι115© 🤖',
+        text: letra,
       },
       unsynchronisedLyrics: {
         language: 'spa',
-        text: '🤴🏻 вσтωнαιтα є∂ιт ƒαвяι115© 🤖',
+        text: letra,
       },
       image: {
         mime: 'image/jpeg',
@@ -45,36 +50,26 @@ const handler = async (m, {conn, text}) => {
           name: 'front cover',
         },
         description: 'Spotify Thumbnail',
-        imageBuffer: await axios.get(spty.data.cover_url, {responseType: 'arraybuffer'}).then((response) => Buffer.from(response.data, 'binary')),
+        imageBuffer: await axios.get(spty.data.cover_url, {responseType: "arraybuffer"}).then((response) => Buffer.from(response.data, "binary")),
       },
       mimetype: 'image/jpeg',
       copyright: 'Copyright Darlyn ©2023',
     };
-    
     await fs.promises.writeFile(filePath, spty.audio);
     await NodeID3.write(tags, filePath);
-      async function loading() {
-      var hawemod = [
-      "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
-      "《 ████▒▒▒▒▒▒▒▒》30%",
-      "《 ███████▒▒▒▒▒》50%",
-      "《 ██████████▒▒》80%",
-      "《 ████████████》100%"
-      ]
-            let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡CARICAMENTO!! ☠*`}, {quoted: m})
-       for (let i = 0; i < hawemod.length; i++) {
-         await new Promise(resolve => setTimeout(resolve, 1000)); 
-         await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m}); 
-       }}
-      loading()    
-    const spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TÍTOLO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *𝚄𝚁𝙻*: ${linkDL}\n┴`;
-    await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m);
+    let spotifyi = `*• 💽 Spotify Download •*\n\n`
+         spotifyi += `	◦  *Titolo:* ${spty.data.name}\n`
+         spotifyi += `	◦  *artista:* ${spty.data.artists}\n`
+         spotifyi += `	◦  *album:* ${spty.data.album_name}\n`                 
+         spotifyi += `	◦  *Pubblicato:* ${spty.data.release_date}\n\n`   
+         spotifyi += `L'audio sta inviando, aspetta un momento..`
+    await conn.sendMessage(m.chat, {text: spotifyi.trim(), contextInfo: {forwardingScore: 9999999, isForwarded: true, "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm2, "containsAutoReply": true, "mediaType": 1, "thumbnail": img, "thumbnailUrl": img, "mediaUrl": linkDL, "sourceUrl": linkDL}}}, {quoted: m});
     await conn.sendMessage(m.chat, {audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg'}, {quoted: m});
   } catch (error) {
     console.error(error);
-    throw '*[❗] Errore.*';
+    throw '*[❗] Error.*';
   }
-}
+};
 handler.command = /^(spotify|music)$/i;
 export default handler;
 
@@ -84,12 +79,12 @@ async function spotifydl(url) {
       const res = await spotify.getTrack(url);
       const timeoutPromise = new Promise((_, reject) => {
         setTimeout(() => {
-          reject(new Error('Tempo esaurito'));
+          reject(new Error('Tempo scaduto'));
         }, 300000);
       });
       const audioPromise = spotify.downloadTrack(url);
       const audio = await Promise.race([audioPromise, timeoutPromise]);
-      resolve({data: res, audio});
+      resolve({ data: res, audio });
     } catch (error) {
       reject(error);
     }

@@ -1,4 +1,4 @@
-
+/*
 
 const users = global.db.data.users;
 
@@ -53,7 +53,7 @@ const handler = async (m, {conn, text, usedPrefix}) => {
 };
 
 const rouletteHandler = async (m) => {
-  if (m.isGroup && global.db.data.chats[m.chat].spacobot !== false && /^roulette|pisda$/i.test(m.text)) {
+  if (m.isGroup && global.db.data.chats[m.chat].spacobot !== false && /^roulette|pisda|rr$/i.test(m.text)) {
     const sticker = `./Media/Moneta/${pickRandom(['01', '02'])}.webp`;
     await conn.sendFile(m.chat, sticker, 'sticker.webp', '', m);
   }
@@ -66,6 +66,6 @@ const pickRandom = (list) => {
 export {handler as mutetimeHandler, rouletteHandler};
 
 
-handler.command = /^rr$/i;
+handler.command = /^roulette|pisda|rr $/i;
 handler.admin = true;
-export default handler;
+export default handler;/*

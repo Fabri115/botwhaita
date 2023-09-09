@@ -1,30 +1,30 @@
-
 const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
   const grup = './Menu2.jpg';
-  const menuText = `
+  const { benvenuto, antidelete, antipaki, delete: del , public: publico, antilink, antilinkgp, antiinsta, antiviewonce, autosticker, antispam, antitrava, detect, restrict, anticall, antiprivato, autoread, soloprivato, chatbot, sologruppo, swonly } = global.db.data.chats[m.chat]
+  const optionsFull = `
 Lista Attiva/Disattiva:
-╭──» ${wm} 𓃠 «───✦ 
-┊ ✨ | Benvenuto: ${usedPrefix + command} benvenuto
-┊ 🚫 | Antidelete: ${usedPrefix + command} antidelete
-┊ 🚫 | AntiPaki: ${usedPrefix + command} antipaki
-┊ 🚫 | Delete: ${usedPrefix + command} delete
-┊ 🌎 | Public: ${usedPrefix + command} public
-┊ 🔗 | Antilink: ${usedPrefix + command} antilink
-┊ 🔗 | AntilinkGP: ${usedPrefix + command} antilinkgp
-┊ 🔗 | AntilinkINSTA: ${usedPrefix + command} antiinsta
-┊ 👁️ | Antiviewonce: ${usedPrefix + command} antiviewonce
-┊ 🚧 | Autosticker: ${usedPrefix + command} autosticker
-┊ 🚫 | AntiSpam: ${usedPrefix + command} antispam
-┊ 📛 | AntiTrava: ${usedPrefix + command} antitrava
-┊ 🔎 | Detect: ${usedPrefix + command} detect
-┊ ❗ | Restrict: ${usedPrefix + command} restrict
-┊ 😐 | AntiChiamata: ${usedPrefix + command} anticall
-┊ 😐 | AntiPrivato: ${usedPrefix + command} antiprivato
-┊ ☑️ | Autoread: ${usedPrefix + command} autoread
-┊ 💬 | SoloPrivato: ${usedPrefix + command} soloprivato
-┊ 💬 | ChatBot: ${usedPrefix + command} chatbot
-┊ 🏢 | SoloGruppo: ${usedPrefix + command} sologruppo
-┊ 📷 | StatusOnly: ${usedPrefix + command} swonly
+╭──» ${wm} 𓃠 «───✦
+┊ ✨ |${benvenuto ? '√' : 'ﾒ'} |Benvenuto: ${usedPrefix + command} benvenuto
+┊ 🚫 |${antidelete ? '√' : 'ﾒ'} |Antidelete: ${usedPrefix + command} antidelete
+┊ 🚫 |${antipaki ? '√' : 'ﾒ'} |AntiPaki: ${usedPrefix + command} antipaki
+┊ 🚫 |${del ? '√' : 'ﾒ'} |Delete: ${usedPrefix + command} delete
+┊ 🌎 |${publico ? '√' : 'ﾒ'} |Public: ${usedPrefix + command} public
+┊ 🔗 |${antilink ? '√' : 'ﾒ'} |Antilink: ${usedPrefix + command} antilink
+┊ 🔗 |${antilinkgp ? '√' : 'ﾒ'} |AntilinkGP: ${usedPrefix + command} antilinkgp
+┊ 🔗 |${antiinsta ? '√' : 'ﾒ'} |AntilinkINSTA: ${usedPrefix + command} antiinsta
+┊ 👁️ |${antiviewonce ? '√' : 'ﾒ'} |Antiviewonce: ${usedPrefix + command} antiviewonce
+┊ 🚧 |${autosticker ? '√' : 'ﾒ'} |Autosticker: ${usedPrefix + command} autosticker
+┊ 🚫 |${antispam ? '√' : 'ﾒ'} |AntiSpam: ${usedPrefix + command} antispam
+┊ 📛 |${antitrava ? '√' : 'ﾒ'} | AntiTrava: ${usedPrefix + command} antitrava
+┊ 🔎 |${detect ? '√' : 'ﾒ'} | Detect: ${usedPrefix + command} detect
+┊ ❗ |${restrict ? '√' : 'ﾒ'} |Restrict: ${usedPrefix + command} restrict
+┊ 😐 |${anticall ? '√' : 'ﾒ'} |AntiChiamata: ${usedPrefix + command} anticall
+┊ 😐 |${antiprivato ? '√' : 'ﾒ'} |AntiPrivato: ${usedPrefix + command} antiprivato
+┊ ☑️ |${autoread ? '√' : 'ﾒ'} |Autoread: ${usedPrefix + command} autoread
+┊ 💬 |${soloprivato ? '√' : 'ﾒ'} |SoloPrivato: ${usedPrefix + command} soloprivato
+┊ 💬 |${chatbot ? '√' : 'ﾒ'} |ChatBot: ${usedPrefix + command} chatbot
+┊ 🏢 |${sologruppo ? '√' : 'ﾒ'} |SoloGruppo: ${usedPrefix + command} sologruppo
+┊ 📷 |${swonly ? '√' : 'ﾒ'} |StatusOnly: ${usedPrefix + command} swonly
 ╰────────────✦`;
 
 
@@ -267,10 +267,10 @@ Lista Attiva/Disattiva:
       break;
 
     default:
-      conn.reply(m.chat, menuText, null, {contextInfo: {mentionedJid: [conn.user.jid]}});
-      break;
-  }
-  conn.reply(m.chat, `${type} ${isEnable ? '✓ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? 'disabilita ' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m);
+    if (!/[]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
+       throw false;
+}
+  conn.reply(m.chat, `${type} ${isEnable ? '√ 𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨' : '✗ 𝐝𝐢𝐬𝐚𝐭𝐭𝐢𝐯𝐚𝐭𝐨'}`, null, [[`${isEnable ? 'disabilita ' : '𝐚𝐭𝐭𝐢𝐯𝐚'}`, `${isEnable ? `${usedPrefix}0 ${type}` : `${usedPrefix}1 ${type}`}`]], m);
 };
 
 

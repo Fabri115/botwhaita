@@ -70,13 +70,13 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, isPrems,
 ┊ https://www.youtube.com/watch?v=6Cg1yUMz-Do
 └── ⇝ *ꪶ͢𝑴☁️ꫂ ᵉᵈᶦᶻ ²⁰²³*`;
   const templateButtons = [
-    {index: 1, quickReplyButton: {displayText: 'Zmenuowner'}},
-    {index: 2, quickReplyButton: {displayText: 'Zmenuattiva'}},
-    {index: 3, quickReplyButton: {displayText: 'Zmenugruppo'}},
-    {index: 4, quickReplyButton: {displayText: 'Zmenuaudio'}},
-    {index: 5, quickReplyButton: {displayText: 'Zmenumedia'}},
-    {index: 6, quickReplyButton: {displayText: 'Zcomandi'}},
-    {index: 7, quickReplyButton: {displayText: 'Znews'}},
+    {index: 1, quickReplyButton: {displayText: '.menuowner'}},
+    {index: 2, quickReplyButton: {displayText: '.menuattiva'}},
+    {index: 3, quickReplyButton: {displayText: '.menugruppo'}},
+    {index: 4, quickReplyButton: {displayText: '.menuaudio'}},
+    {index: 5, quickReplyButton: {displayText: '.menumedia'}},
+    {index: 6, quickReplyButton: {displayText: '.comandi'}},
+    {index: 7, quickReplyButton: {displayText: '.news'}},
 
 
   ];
@@ -90,7 +90,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, isPrems,
 };
 handler.help = ['text2'];
 handler.tags = ['maker'];
-handler.command = /^menuios$/i;
+handler.command = /^menudani$/i;
 
 
 export default handler;
