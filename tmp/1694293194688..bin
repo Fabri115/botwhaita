@@ -1,0 +1,5 @@
+{
+  "status": false,
+  "message": "Internal Server Error",
+  "error": "SyntaxError: Unexpected token u in JSON at position 0"
+}
