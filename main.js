@@ -3,6 +3,7 @@ import './config.js';
 import './api.js';
 import {createRequire} from 'module';
 import path, {join} from 'path';
+import clearTmp from './lib/tmpclear.js'
 import {fileURLToPath, pathToFileURL} from 'url';
 import {platform} from 'process';
 import * as ws from 'ws';
@@ -172,16 +173,24 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
    Ninguno es mejor que tilin god
         - atte: sk1d             */
 
-function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, './tmp')];
-  const filename = [];
-  tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
-  return filename.map((file) => {
-    const stats = statSync(file);
-    if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file); // 3 minutes
-    return false;
-  });
-}
+function runCleanup() {
+   
+    clearTmp()
+      .then(() => {
+        console.log('Temporary file cleanup completed.');
+      })
+      .catch((error) => {
+        console.error('An error occurred during temporary file cleanup:', error);
+      })
+      .finally(() => {
+        // Schedule the next cleanup after 2 minutes
+        setTimeout(runCleanup, 1000 * 60 * 2);
+      });
+  }
+  
+ 
+  runCleanup();
+
 
 function purgeSession() {
 let prekey = []
@@ -452,11 +461,6 @@ async function _quickTest() {
   const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
   Object.freeze(global.support);
 }
-setInterval(async () => {
-  if (stopped === 'close' || !conn || !conn.user) return;
-  const a = await clearTmp();
-  console.log(chalk.cyanBright(`\n▣───────────[ 𝙰𝚄𝚃𝙾𝙲𝙻𝙴𝙰𝚁TMP ]──────────────···\n│\n▣─❧ ARCHIVIO ELIMINATO ✅\n│\n▣───────────────────────────────────────···\n`));
-}, 180000);
 setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   await purgeSession();
