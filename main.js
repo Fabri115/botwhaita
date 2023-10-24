@@ -132,7 +132,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['𝐁𝐢𝐱𝐛𝐲-𝐁𝐨𝐭-𝐌𝐝 𝟏.𝟗', 'Safari', '1.0.0'],
+  browser: ['𝐁𝐢𝐱𝐛𝐲-𝐁𝐨𝐭-𝐌𝐝 𝟐.𝟎', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
