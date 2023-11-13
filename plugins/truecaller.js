@@ -2,6 +2,7 @@
 //Get caller id of Number
 //https://www.npmjs.com/package/truesearch
 //Api Available at https://github.com/Guru322/Truecaller-Api
+//Get installation id From https://truecallerjs.vercel.app/cli-usage/2-login
 
 import fetch from 'node-fetch';
 
@@ -18,7 +19,7 @@ let handler = async (m, { conn, text }) => {
   }
 
   try {
-    const installationId = 'a1i0D--j3deY0V_k_vQthFibnfb2sS3cf7uttIZnc7UNs9W9JkCGQCwS671R85tI';
+    const installationId = 'a1i0D--j3deY0V_k_vQthFibnfb2sS3cf7uttIZnc7UNs9W9JkCGQCwS671R85tI'; //Replace this with yours
     const apiurl = `https://truecaller-api.vercel.app/search?phone=${encodeURIComponent(phoneNumber)}&id=${installationId}`;
 
     let response = await fetch(apiurl);
