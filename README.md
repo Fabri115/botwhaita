@@ -17,7 +17,7 @@
 <a href="https://github.com/Fabri115/botwhaita/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a
 <img width="" src="https://img.shields.io/github/repo-size/fabri115/botwhaita?color=red&label=Repo%20Size&style=for-the-badge&logo=appveyor">
 <p align="center">
-<a href="https://wa.me/393518398856" target="_blank"><img src="https://img.shields.io/badge/Whatsapp-%808080.svg?&style=flat-square&logo=Whatsapp&logoColor=white" alt="WhatsApp"></a>
+<a href="https://wa.me/59894243071" target="_blank"><img src="https://img.shields.io/badge/Whatsapp-%808080.svg?&style=flat-square&logo=Whatsapp&logoColor=white" alt="WhatsApp"></a>
 <a href="https://github.com/Fabri115"><img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github"></a>
 <a href="https://chat.whatsapp.com/FMK2Dg7hZOJDpDX4cQPQ3W" target="_blank"><img src="https://img.shields.io/badge/Grupo-%808080.svg?&style=flat-square&logo=whatsapp&logoColor=white" alt="Whatsapp"></a>
 
@@ -287,3 +287,4 @@ DIGITA QUESTI COMANDI:
 <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="200" height="200" alt="BrunoSobrino"/></a>
 <a href="https://github.com/Davide116"><img src="https://github.com/Davide116.png" width="200" height="200" alt="Davide116"/></a>
 <a href="https://github.com/Angiolettopazz"><img src="https://github.com/Angiolettopazz.png" width="200" height="200" alt="Angiolettopazz"/></a>
+⚔️ © Powered By[GATABOT-MD Y VÍCTOR BOT🇺🇾] 👑
