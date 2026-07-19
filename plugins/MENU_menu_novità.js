@@ -5,8 +5,6 @@ import MessageType from '@whiskeysockets/baileys';
 import fs from 'fs';
 import {performance} from 'perf_hooks';
 const handler = async (m, {conn, usedPrefix}) => {
-  const _uptime = process.uptime() * 1000;
-  const uptime = clockString(_uptime);
   const totalreg = Object.keys(global.db.data.users).length;
   const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats);
   const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'));
